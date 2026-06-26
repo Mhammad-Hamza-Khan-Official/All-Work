@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Work - ServiceHub Prime</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#ffddb8",
+              "primary-fixed-dim": "#b4c5ff",
+              "primary-fixed": "#dbe1ff",
+              "tertiary": "#943700",
+              "surface-container": "#edeeef",
+              "secondary-container": "#fea619",
+              "primary-container": "#2563eb",
+              "on-surface": "#191c1d",
+              "surface-container-high": "#e7e8e9",
+              "on-tertiary": "#ffffff",
+              "surface-dim": "#d9dadb",
+              "background": "#f8f9fa",
+              "surface-tint": "#0053db",
+              "outline-variant": "#c3c6d7",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#ffb596",
+              "on-secondary-fixed": "#2a1700",
+              "tertiary-fixed": "#ffdbcd",
+              "on-secondary-container": "#684000",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "surface-variant": "#e1e3e4",
+              "on-primary-fixed": "#00174b",
+              "error": "#ba1a1a",
+              "on-primary-container": "#eeefff",
+              "surface": "#f8f9fa",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#b4c5ff",
+              "surface-bright": "#f8f9fa",
+              "on-primary-fixed-variant": "#003ea8",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-secondary-fixed-variant": "#653e00",
+              "outline": "#737686",
+              "on-background": "#191c1d",
+              "inverse-on-surface": "#f0f1f2",
+              "on-tertiary-container": "#ffede6",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#855300",
+              "on-surface-variant": "#434655",
+              "surface-container-highest": "#e1e3e4",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#360f00",
+              "tertiary-container": "#bc4800",
+              "surface-container-low": "#f3f4f5",
+              "primary": "#004ac6"
+            },
+            fontFamily: {
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+              "label": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body pb-32">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-sm">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 transition-transform p-1 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-manrope font-bold tracking-tight text-xl font-extrabold text-slate-900 dark:text-slate-100">My Work</h1>
+</div>
+<button class="text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors active:scale-95 transition-transform p-1 rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+</div>
+</header>
+<main class="pt-20 px-4 max-w-2xl mx-auto">
+<!-- Earnings Summary (Subtle) -->
+<section class="mb-8">
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/10 flex items-center justify-between">
+<div>
+<p class="text-on-surface-variant text-sm font-medium mb-1">This Week's Earnings</p>
+<h2 class="text-primary text-2xl font-bold font-headline">$1,248.50</h2>
+</div>
+<div class="bg-primary/5 p-3 rounded-full">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+</div>
+</section>
+<!-- Status Tabs (Optimized for Mobile) -->
+<nav class="flex gap-2 mb-6 overflow-x-auto no-scrollbar pb-2">
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary text-sm font-semibold whitespace-nowrap active:scale-95 transition-all">All</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-semibold whitespace-nowrap hover:bg-surface-variant transition-colors">In-Progress</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-semibold whitespace-nowrap hover:bg-surface-variant transition-colors">Completed</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-semibold whitespace-nowrap hover:bg-surface-variant transition-colors">Drafts</button>
+</nav>
+<!-- Job Cards Stack -->
+<div class="space-y-4">
+<!-- In-Progress Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border-l-4 border-primary">
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<span class="px-2 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase tracking-wider rounded">In-Progress</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chat</span>
+</button>
+</div>
+<h3 class="text-lg font-bold font-headline mb-1 text-on-surface">Kitchen Cabinet Repair</h3>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-6 h-6 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="portrait of a smiling middle-aged woman with curly hair against a soft natural outdoor background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy0LtOOpWYOlHHakS9RFVGFn-6fbY3s-V6L5Qitu24NGkTDjEZ-ruSftQIhvJGwDfvZmXoR_rxGNSMYqF1o2n1I3wKCZZJ1_ODnxayGplUl1PfmllmprWgaOG7LsJbB_LDmK4fhB1Ruru3dOuHUayL_SxPzJXX-U60hC5P8IDYXy6rXyJ_qEfTNg3vNejwvSbifxxjETXziOkZd1mPdqVo7ol4d5fL3FmU10jnfq2ARROJamIpZkcsOJ2_TtlVF2liuVDOlSYhSWA"/>
+</div>
+<span class="text-on-surface-variant text-sm font-medium">Sarah Jenkins</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">location_on</span>
+<span class="text-xs text-on-surface-variant">Northside Heights</span>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all">Update Milestone</button>
+</div>
+</div>
+</div>
+<!-- Upcoming/Upcoming Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border-l-4 border-secondary-container">
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<span class="px-2 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold uppercase tracking-wider rounded">Upcoming</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">chat</span>
+</button>
+</div>
+<h3 class="text-lg font-bold font-headline mb-1 text-on-surface">Garden Irrigation Install</h3>
+<div class="flex items-center gap-2 mb-4">
+<div class="w-6 h-6 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="close up headshot of a professional man with short dark hair in a casual business setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxUdyAv16dUUkAPl30NOjDZm4LOyl4rcav3lJEIXrM8IJCUpL6BjxnEjwyvEQjLuCSEPoi2DtTctijLKW7LoKMX8AdiuBor4eDatcvhzxyb3xHebg2lCsHSD-JPx0nNBDDK1wLsk8WEGWsNu2ERwvuVALtayYSjJfqTH3D8TL3fxsNN4nEMg1QTpr34xGClNLSkmb-pEv4ZdCupI7Bu4OeVa8AreGneBsqNtGRCgMzafsqzoerC2IxnHRN1wikspY-98TTalLBUNU"/>
+</div>
+<span class="text-on-surface-variant text-sm font-medium">David Chen</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">schedule</span>
+<span class="text-xs font-bold text-secondary">Today, 2:00 PM</span>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all">Confirm Arrival</button>
+</div>
+</div>
+</div>
+<!-- Draft/Awaiting Quote Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border-l-4 border-tertiary">
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<span class="px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase tracking-wider rounded">Draft</span>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">edit</span>
+</div>
+<h3 class="text-lg font-bold font-headline mb-4 text-on-surface">Master Suite Flooring</h3>
+<div class="grid grid-cols-2 gap-4 mb-4">
+<div class="bg-surface-container-low p-3 rounded-lg">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Est. Value</p>
+<p class="text-lg font-bold text-primary font-headline">$2,400</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg">
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Est. Duration</p>
+<p class="text-lg font-bold text-on-surface font-headline">3 Days</p>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<button class="w-full bg-surface-container-highest text-on-surface px-4 py-2 rounded-lg text-sm font-bold active:scale-95 transition-all">Review &amp; Send Quote</button>
+</div>
+</div>
+</div>
+<!-- Completed Card -->
+<div class="bg-surface-container-low/50 rounded-xl overflow-hidden shadow-sm border-l-4 border-outline-variant">
+<div class="p-5">
+<div class="flex justify-between items-start mb-3">
+<span class="px-2 py-1 bg-surface-variant text-on-surface-variant text-[10px] font-bold uppercase tracking-wider rounded">Completed</span>
+<span class="material-symbols-outlined text-green-600" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h3 class="text-lg font-bold font-headline mb-1 text-on-surface opacity-70">Custom Bookshelf Install</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-on-surface-variant text-xs font-medium italic">Finished Oct 12, 2023</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/20 flex items-center justify-between">
+<div class="text-primary font-bold">$850.00 Paid</div>
+<button class="text-primary text-sm font-bold underline hover:no-underline active:scale-95 transition-all">View Receipt</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-2xl">
+<!-- Jobs (Active) -->
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl px-4 py-1.5 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Jobs</span>
+</a>
+<!-- Schedule -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Schedule</span>
+</a>
+<!-- Earnings -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Earnings</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

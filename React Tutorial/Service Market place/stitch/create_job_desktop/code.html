@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Job | Artisan Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e1e3e4",
+              "surface": "#f8f9fa",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#ffdbcd",
+              "on-background": "#191c1d",
+              "secondary-container": "#fea619",
+              "on-secondary-fixed": "#2a1700",
+              "on-secondary-container": "#684000",
+              "on-primary-fixed": "#00174b",
+              "on-primary-container": "#eeefff",
+              "surface-tint": "#0053db",
+              "on-primary-fixed-variant": "#003ea8",
+              "surface-container-high": "#e7e8e9",
+              "on-surface-variant": "#434655",
+              "background": "#f8f9fa",
+              "tertiary": "#943700",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed": "#ffddb8",
+              "primary-fixed": "#dbe1ff",
+              "outline": "#737686",
+              "inverse-on-surface": "#f0f1f2",
+              "primary": "#004ac6",
+              "primary-container": "#2563eb",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#c3c6d7",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary-container": "#bc4800",
+              "surface-container": "#edeeef",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#b4c5ff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#b4c5ff",
+              "surface-dim": "#d9dadb",
+              "secondary": "#855300",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-tertiary-fixed": "#360f00",
+              "on-primary": "#ffffff",
+              "surface-bright": "#f8f9fa",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-tertiary-container": "#ffede6",
+              "surface-container-low": "#f3f4f5",
+              "surface-variant": "#e1e3e4",
+              "on-surface": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-line { border: none !important; }
+      .tonal-shift { background-color: #f3f4f5; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full w-64 z-50 flex flex-col py-8 px-4 bg-slate-50 border-r border-slate-100 shadow-[20px_0px_40px_rgba(25,28,29,0.04)]">
+<div class="mb-10 px-4">
+<span class="text-lg font-bold text-blue-900 tracking-tight">Artisan Pro</span>
+</div>
+<div class="mb-8 px-4">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Welcome back</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-bold">JD</div>
+<div>
+<p class="text-sm font-bold text-on-surface">John Doe</p>
+<p class="text-[10px] text-slate-500">Premium Member</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-blue-50/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-blue-50/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-medium text-sm">My Jobs</span>
+</a>
+<!-- Active State: Create Job -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-blue-700 font-bold border-r-4 border-blue-600 bg-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="font-medium text-sm">Create Job</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-blue-50/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-medium text-sm">Find Workers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-blue-50/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-medium text-sm">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-blue-50/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t border-slate-100 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-blue-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-medium text-sm">Help Center</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-blue-50/50 transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-medium text-sm">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-white/80 backdrop-blur-md z-40 flex justify-between items-center px-8 shadow-sm">
+<div class="flex items-center flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-slate-100/50 border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search tasks, workers, or help..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<button class="flex items-center gap-2 hover:bg-slate-50 p-1 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-slate-600">account_circle</span>
+<span class="text-sm font-semibold text-slate-700">Account</span>
+</button>
+</div>
+</header>
+<!-- Content Canvas -->
+<section class="pt-24 pb-12 px-12 max-w-6xl mx-auto">
+<!-- Header Section (Asymmetric Editorial Style) -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12 items-end">
+<div class="md:col-span-3">
+<h1 class="font-headline text-5xl font-extrabold text-on-surface tracking-tight mb-4">Post a new <span class="text-primary italic">masterpiece.</span></h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl leading-relaxed">Describe your project requirements, set your budget, and find the perfect artisan to bring your vision to life. Quality starts with a clear brief.</p>
+</div>
+<div class="md:col-span-2 flex flex-col items-end gap-2">
+<div class="flex items-center gap-2 px-4 py-2 bg-tertiary-container/10 rounded-full border border-tertiary-container/20">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs font-bold text-tertiary uppercase tracking-wider">Verified Listing</span>
+</div>
+</div>
+</div>
+<!-- Multi-Step Multi-Card Layout -->
+<div class="flex flex-col gap-8">
+<!-- Stepper Progress -->
+<nav class="flex justify-between items-center bg-surface-container-low p-2 rounded-2xl overflow-hidden">
+<div class="flex-1 flex items-center justify-center gap-3 py-4 bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">1</span>
+<span class="font-headline font-bold text-primary">Job Details</span>
+</div>
+<div class="flex-1 flex items-center justify-center gap-3 py-4 text-on-surface-variant/40">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-sm font-bold">2</span>
+<span class="font-headline font-semibold">Budget &amp; Location</span>
+</div>
+<div class="flex-1 flex items-center justify-center gap-3 py-4 text-on-surface-variant/40">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-sm font-bold">3</span>
+<span class="font-headline font-semibold">Review</span>
+</div>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Form Section -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Step 1: Job Details Card -->
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-Premium">
+<h2 class="text-2xl font-headline font-bold mb-8 text-on-surface">The Foundation</h2>
+<div class="space-y-8">
+<!-- Job Title -->
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-3">What do you need help with?</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary/40 transition-all text-lg font-medium" placeholder="e.g., Fix Leaking Sink in Kitchen" type="text"/>
+</div>
+<!-- Category & Urgent -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-3">Service Category</label>
+<div class="relative">
+<select class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface appearance-none focus:ring-2 focus:ring-primary/40 transition-all font-medium">
+<option>Plumbing</option>
+<option>Electrical</option>
+<option>Carpentry</option>
+<option>Painting</option>
+<option>HVAC</option>
+<option>Landscaping</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-3">Priority Level</label>
+<div class="flex gap-2">
+<button class="flex-1 py-4 px-2 rounded-lg bg-surface-container-highest text-on-surface-variant font-bold hover:bg-primary-container hover:text-white transition-all">Normal</button>
+<button class="flex-1 py-4 px-2 rounded-lg bg-secondary-container text-on-secondary-fixed font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                                                Urgent
+                                            </button>
+</div>
+</div>
+</div>
+<!-- Description -->
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-3">Project Description</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary/40 transition-all leading-relaxed" placeholder="Please provide specific details about the issue or task..." rows="5"></textarea>
+</div>
+<!-- Image Upload -->
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-3">Visual Context (Photos)</label>
+<div class="border-2 border-dashed border-outline-variant/30 rounded-xl p-12 flex flex-col items-center justify-center bg-surface-container-low/50 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">upload_file</span>
+</div>
+<p class="text-on-surface font-bold mb-1">Drag and drop images here</p>
+<p class="text-xs text-on-surface-variant">or click to browse your files (Max 10MB)</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 2: Budget & Location (In-view for this demo multi-step feel) -->
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-Premium opacity-50 select-none grayscale-[0.5]">
+<h2 class="text-2xl font-headline font-bold mb-8 text-on-surface flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">lock</span>
+                                Budget &amp; Logistics
+                             </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant mb-6">Estimate your budget range</label>
+<div class="relative pt-1">
+<div class="h-2 bg-surface-container-highest rounded-full w-full">
+<div class="h-2 bg-primary-container rounded-full w-1/3"></div>
+</div>
+<div class="flex justify-between mt-4">
+<span class="text-primary font-bold text-xl">$50</span>
+<span class="text-primary font-bold text-xl">$500+</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-bold text-on-surface-variant">Project Location</label>
+<div class="relative h-48 rounded-lg overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="minimalist clean digital map representation of a suburban neighborhood in San Francisco with subtle blue waypoints" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwmIMWiJxf33WGU-ig2wVi2zF4K84Nx4aMUwQmFN6gEOizjdddidsfB6LmYVMfUIos9hJVwny8wZP3bgvBFTc1jHbsaVTLrOdCGGbX5nMDq0ADEsF9X47g1c1jsnr7kIsnhr85hbvs-DjDICw8-Px8bCVYGjLHBba-W6yZmVdPGuS7GY04BKph615afc8POyD8ceMpNUIRz_pq97KEMLjt59jiS-V98aVoKxrLkpn7SEWm1v918hROQQTvyuCdO6j-nnol8t8M8xU"/>
+<div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+<span class="bg-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">Enter Address to View</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar: Summary & Tips (Asymmetric Placement) -->
+<div class="lg:col-span-4 space-y-8">
+<div class="bg-primary text-white p-8 rounded-xl shadow-Premium sticky top-24">
+<h3 class="font-headline text-xl font-bold mb-6">Posting Summary</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-start border-b border-white/10 pb-4">
+<span class="text-white/60 text-sm">Job Type</span>
+<span class="font-bold text-right">Plumbing Service</span>
+</div>
+<div class="flex justify-between items-start border-b border-white/10 pb-4">
+<span class="text-white/60 text-sm">Status</span>
+<span class="px-2 py-1 bg-white/20 rounded text-[10px] font-bold uppercase tracking-widest">Drafting</span>
+</div>
+<div class="flex justify-between items-start border-b border-white/10 pb-4">
+<span class="text-white/60 text-sm">Fee Estimate</span>
+<span class="font-bold">$0.00</span>
+</div>
+<div class="pt-4">
+<button class="w-full bg-white text-primary font-bold py-4 rounded-xl hover:bg-on-primary-container transition-all flex items-center justify-center gap-2 group">
+                                        Continue to Budget
+                                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-white/50 mt-4 uppercase tracking-tighter">Next step: Set your pricing and location</p>
+</div>
+</div>
+</div>
+<!-- Pro Tip Card -->
+<div class="bg-secondary-container/10 p-8 rounded-xl border border-secondary-container/20">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed text-xl">lightbulb</span>
+</div>
+<h4 class="font-headline font-bold text-on-secondary-container">Pro Tip</h4>
+</div>
+<p class="text-sm text-on-secondary-container leading-relaxed">
+                                Detailed descriptions with clear photos receive up to <span class="font-bold">40% more quotes</span> from top-rated artisans. Include photos of the specific area needing work.
+                            </p>
+</div>
+<!-- Featured Artisan Preview -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-4">Top Rated Plumbers Nearby</p>
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="portrait of a professional male plumber in blue work uniform smiling in a bright workshop environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5fQFVOddpu0N3FThf_yLyI2D8r07vyu6doQlhIfHwx82tLyfuwju_5j-rDVSiBn4vcFn0m_3K4LRg_qV-Bbm-vpWJ44Pz6ARfDWURTUIusMI74zUj6oZAnwTO6ou8t-bci1_gHjra46MtOEBwJXHxeWEHwcadTG236-_Hr-lNtAcydfyZX9zL9AIyMtOyS1oyrX2FhpTXYof92wt9_zYL_GF4iqU3x9TgpU3NloYTLDr4FgZZtA-8ABz5QeqcaA1IbkIZLV9cZlk"/>
+<div>
+<p class="text-sm font-bold">Marcus Chen</p>
+<div class="flex items-center gap-1 text-[10px] text-secondary">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-1 text-on-surface-variant">4.9 (124 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<footer class="mt-20 pt-8 border-t border-surface-container-highest flex justify-between items-center text-on-surface-variant/40 text-xs">
+<p>© 2024 Artisan Pro Marketplace. Architectural Standards Applied.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Safety Guidelines</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</footer>
+</section>
+</main>
+<!-- FAB Suppression Rule Applied (Not rendered on details/creation screens) -->
+</body></html>

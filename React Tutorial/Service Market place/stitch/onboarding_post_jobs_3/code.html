@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post Your Project - ServiceHub Prime</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#653e00",
+              "surface-container-highest": "#e1e3e4",
+              "on-surface-variant": "#434655",
+              "on-primary": "#ffffff",
+              "inverse-primary": "#b4c5ff",
+              "surface-container": "#edeeef",
+              "secondary-container": "#fea619",
+              "outline": "#737686",
+              "tertiary-fixed": "#ffdbcd",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-bright": "#f8f9fa",
+              "primary-fixed": "#dbe1ff",
+              "tertiary-fixed-dim": "#ffb596",
+              "inverse-surface": "#2e3132",
+              "on-primary-fixed-variant": "#003ea8",
+              "on-error": "#ffffff",
+              "surface-variant": "#e1e3e4",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-dim": "#d9dadb",
+              "surface-container-high": "#e7e8e9",
+              "primary-container": "#2563eb",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "secondary-fixed-dim": "#ffb95f",
+              "surface-container-low": "#f3f4f5",
+              "tertiary": "#943700",
+              "primary": "#004ac6",
+              "surface-tint": "#0053db",
+              "on-secondary-container": "#684000",
+              "on-background": "#191c1d",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#bc4800",
+              "outline-variant": "#c3c6d7",
+              "background": "#f8f9fa",
+              "on-tertiary-container": "#ffede6",
+              "on-primary-container": "#eeefff",
+              "on-secondary-fixed": "#2a1700",
+              "on-tertiary-fixed": "#360f00",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#ffddb8",
+              "on-primary-fixed": "#00174b",
+              "on-secondary": "#ffffff",
+              "on-surface": "#191c1d",
+              "surface": "#f8f9fa",
+              "secondary": "#855300"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .premium-shadow {
+        box-shadow: 0px 20px 40px rgba(25, 28, 29, 0.06);
+      }
+      .bg-glass {
+        backdrop-filter: blur(24px);
+        background-color: rgba(248, 249, 250, 0.8);
+      }
+      .gradient-cta {
+        background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-end items-center px-6 py-4 bg-transparent">
+<button class="text-blue-700 dark:text-blue-400 font-manrope text-sm font-semibold tracking-tight hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+            Skip
+        </button>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-20 pb-32 max-w-5xl mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+<!-- Content Side (Asymmetric 5/12 split) -->
+<div class="lg:col-span-5 text-left space-y-6">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface leading-tight">
+                    Post Your Project
+                </h1>
+<p class="text-on-surface-variant text-lg md:text-xl font-body leading-relaxed max-w-md">
+                    Describe your needs, set your budget, and receive quotes from top-rated artisans in minutes.
+                </p>
+<!-- Progress Indicators -->
+<div class="flex gap-3 pt-4">
+<div class="h-1.5 w-8 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 w-12 rounded-full bg-primary"></div>
+<div class="h-1.5 w-8 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+<!-- Illustration/Form Side (Asymmetric 7/12 split) -->
+<div class="lg:col-span-7 relative">
+<div class="bg-surface-container-low rounded-xl p-8 lg:p-12 relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute top-0 right-0 w-64 h-64 gradient-cta opacity-5 rounded-full -mr-20 -mt-20"></div>
+<!-- Post Project Mockup Card -->
+<div class="bg-surface-container-lowest premium-shadow rounded-xl p-6 md:p-8 space-y-6 relative z-10 border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-2">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface">New Project Brief</h3>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Drafting Mode</p>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Title Input Mock -->
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface ml-1">Project Title</label>
+<div class="bg-surface-container-highest h-12 rounded px-4 flex items-center text-on-surface-variant">
+                                    Modern Kitchen Renovation
+                                </div>
+</div>
+<!-- Description Mock -->
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface ml-1">Requirements</label>
+<div class="bg-surface-container-highest h-24 rounded p-4 text-on-surface-variant text-sm">
+                                    Looking for a certified contractor to handle cabinetry, tiling, and lighting...
+                                </div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Budget Mock -->
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface ml-1 text-primary">Budget Range</label>
+<div class="bg-surface-container-highest h-12 rounded px-4 flex items-center font-bold text-primary">
+                                        $4,500 - $6,000
+                                    </div>
+</div>
+<!-- Category Mock -->
+<div class="space-y-2">
+<label class="text-sm font-bold text-on-surface ml-1">Category</label>
+<div class="bg-surface-container-highest h-12 rounded px-4 flex items-center text-on-surface-variant">
+                                        Home Improvement
+                                    </div>
+</div>
+</div>
+</div>
+<!-- Floating Action Badge -->
+<div class="absolute -bottom-4 -right-4 bg-tertiary-container text-on-tertiary-container px-4 py-2 rounded-full text-xs font-bold premium-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Smart Matching Active
+                        </div>
+</div>
+<!-- Background Image Subtle Detail -->
+<div class="mt-8 flex justify-center opacity-40">
+<img alt="Professional project planning" class="w-full h-48 object-cover rounded-lg mix-blend-multiply grayscale" data-alt="Close-up of a professional architect's hands reviewing blueprints on a clean wooden desk with soft natural side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9G5S0ruZF8syfc8bqp990z4DfkWpz1x-4xQH131wiNcPZzPfn1PtrNz6RbpGnNjCG2ri1VIQ34OFq_yyWnK7oK63Q6wvnEiudCd69Sn50zS4HT6R_vGcHlCFbLM-GiHWUQzOSkSaQQ5nu1_pxVRwf1xrdzbT_TIDfwI5VtveA7X-Hwymn_6-G5VDu_ZFDKzrbSUO_dMlnr5ud3vAH91HqTtyj1dflkehwU5XSJREr9cIq99aDgroYOgGpFdXxjTSAd3mk5dmvU4Q"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar as Control Center -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-between items-center px-10 pb-12 bg-transparent">
+<!-- Back Button -->
+<button class="text-slate-400 dark:text-slate-500 p-4 hover:bg-blue-50 dark:hover:bg-blue-900/30 active:scale-105 transition-all duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="west">west</span>
+</button>
+<!-- Next Button - Custom Primary Action -->
+<button class="bg-blue-600 dark:bg-blue-500 text-white rounded-full py-4 px-10 flex items-center gap-3 font-bold premium-shadow hover:opacity-90 active:scale-95 transition-all">
+            Next Step
+            <span class="material-symbols-outlined" data-icon="east">east</span>
+</button>
+</nav>
+</body></html>

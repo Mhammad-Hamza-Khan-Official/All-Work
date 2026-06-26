@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Worker Profile | ServiceHub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "on-background": "#191c1d",
+              "inverse-surface": "#2e3132",
+              "on-primary-fixed-variant": "#003ea8",
+              "inverse-primary": "#b4c5ff",
+              "tertiary-fixed-dim": "#ffb596",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-secondary-container": "#684000",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#bc4800",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#191c1d",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#f0f1f2",
+              "on-tertiary-fixed": "#360f00",
+              "secondary-fixed": "#ffddb8",
+              "primary-container": "#2563eb",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary-fixed": "#2a1700",
+              "secondary": "#855300",
+              "outline-variant": "#c3c6d7",
+              "background": "#f8f9fa",
+              "primary": "#004ac6",
+              "surface-container-high": "#e7e8e9",
+              "secondary-container": "#fea619",
+              "surface-container": "#edeeef",
+              "on-tertiary": "#ffffff",
+              "outline": "#737686",
+              "on-error": "#ffffff",
+              "surface-dim": "#d9dadb",
+              "surface-variant": "#e1e3e4",
+              "surface": "#f8f9fa",
+              "tertiary": "#943700",
+              "surface-tint": "#0053db",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-primary-fixed": "#00174b",
+              "error": "#ba1a1a",
+              "on-surface-variant": "#434655",
+              "primary-fixed": "#dbe1ff",
+              "tertiary-fixed": "#ffdbcd",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-primary-container": "#eeefff",
+              "on-tertiary-container": "#ffede6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform text-blue-700 dark:text-blue-400">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-manrope font-bold text-lg tracking-tight text-on-surface">Professional Profile</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform text-blue-700 dark:text-blue-400">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full"></div>
+</header>
+<main class="pt-24 pb-32 max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Profile Left Column (Identity) -->
+<div class="lg:col-span-5 space-y-8">
+<section class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex flex-col items-center sm:items-start sm:flex-row gap-8">
+<div class="relative">
+<img class="w-32 h-32 rounded-xl object-cover ring-4 ring-primary/10" data-alt="professional headshot of a confident male master electrician in a clean uniform against a blurred industrial background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOe1RQr3xESK7xAxLCFkbjgv7LDevdAvuvw2jQDSBZOYQEeHeKDBtbx7KjlHJbFIPwifPoSY6anJS5SQ7QaVc2THNR1ft6K8mqmLqAHa1ZU2WgLL4NMyRXAgrLIrl6wszM-mpiXaHrUYXaDnoeQEmIE94FY7QRY9OQGi6z6-9DzV3H1M9iSPRhhqOqt2LM4DYIeft6KhyICUzpJBnWaXUX7C_E2WhS8_snItGIODQ_vYBThntpvTDLsytt8o1zGG2pyK-A6UiirkQ"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined !text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                PRO
+                            </div>
+</div>
+<div class="text-center sm:text-left flex-1">
+<h2 class="font-headline font-extrabold text-3xl text-on-surface leading-tight">Marcus Sterling</h2>
+<p class="text-primary font-medium text-lg mt-1">Master Electrician</p>
+<div class="mt-6 flex flex-wrap gap-3">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-bold active:scale-[0.98] transition-transform flex-1 flex items-center justify-center gap-2">
+                                    Request Quote
+                                </button>
+<button class="text-primary font-semibold px-4 py-3 rounded-xl border-2 border-primary/10 hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-outline-variant/20">
+<div class="text-center">
+<div class="flex items-center justify-center gap-1 text-secondary">
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.9</span>
+</div>
+<p class="text-[11px] text-on-surface-variant font-medium mt-1 uppercase tracking-wider">124 Reviews</p>
+</div>
+<div class="text-center border-x border-outline-variant/20">
+<div class="text-on-surface font-bold">12+</div>
+<p class="text-[11px] text-on-surface-variant font-medium mt-1 uppercase tracking-wider">Years Exp</p>
+</div>
+<div class="text-center">
+<div class="text-on-surface font-bold">245</div>
+<p class="text-[11px] text-on-surface-variant font-medium mt-1 uppercase tracking-wider">Jobs Done</p>
+</div>
+</div>
+</section>
+<!-- Professional Bio -->
+<section class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="font-headline font-bold text-xl mb-4 text-on-surface">Professional Bio</h3>
+<p class="text-on-surface-variant leading-relaxed font-body">
+                        With over a decade of experience in residential and commercial electrical systems, I specialize in delivering high-integrity solutions that prioritize safety and efficiency. My approach combines traditional craftsmanship with the latest smart home technologies.
+                    </p>
+</section>
+<!-- Specializations Chips -->
+<section class="space-y-4">
+<h3 class="font-headline font-bold text-xl text-on-surface">Specializations</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-white text-on-surface-variant text-sm font-semibold rounded-full border border-outline-variant/30">Electrical Panel Upgrades</span>
+<span class="px-4 py-2 bg-white text-on-surface-variant text-sm font-semibold rounded-full border border-outline-variant/30">EV Charger Installation</span>
+<span class="px-4 py-2 bg-white text-on-surface-variant text-sm font-semibold rounded-full border border-outline-variant/30">Smart Home Systems</span>
+<span class="px-4 py-2 bg-white text-on-surface-variant text-sm font-semibold rounded-full border border-outline-variant/30">Lighting Design</span>
+<span class="px-4 py-2 bg-white text-on-surface-variant text-sm font-semibold rounded-full border border-outline-variant/30">Emergency Repairs</span>
+</div>
+</section>
+</div>
+<!-- Profile Right Column (Proof) -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Recent Projects Bento -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-bold text-2xl text-on-surface">Recent Projects</h3>
+<a class="text-primary font-bold text-sm hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 h-[400px]">
+<div class="col-span-2 relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close up of a modern sleek electrical panel with perfectly organized wiring and labeled breakers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZps6wz1BUGixz9N6XbPZ3aw_EBp5ObpUDRaze0UPNNDxV9PciTIQRF9WqvDkqhavHxx35aH4L1KjJBSQ_vEXw7HZmRiitjQ4ZSVCGf3XMGcJSzbT0uB7wWEbDXEznJbm5zS3qQf8CU3Nu_6fEfmm2nL2sGQXkBovsUq3UswzwHPnTOe2lQ0JKPryk0umtDDJ8tXsl89jgqj1FCV7P2-vVnHzOee9yNYyiO-ArpUx96xD0lfd0NO0Jhlbr7zwJsxRrpXyE019TBTA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+<span class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Commercial</span>
+<h4 class="text-white font-bold text-lg">Main Panel Upgrade</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="luxury electric car charging station installed in a modern residential garage with soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Vw1XAN1tel5TVCYXcA-6VcqBROgHKwgnCN_OE5XRmITPaE_ZKKOauhT1Ns6NELDMpn4mTY9TUb4iTlP0FwQLBbkNlXUR_ThW_0S7uxkVTPRpJyb3EzL_STPAjBrAkfOqEfhGsNcT8v7ZYjhhH7A5zsCHPvv0HiQNc6xr88DCM3EUxn4wIuv4UDeTv4uOpcTcv-jWJcq7GYY4gdZPGFZZjCjHM9z76PU4ouM_eRAZeTDeKmOzFQB0LqbxXQp_A0cZdjpRlbo10Zk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+<h4 class="text-white font-bold text-sm">EV Station</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="contemporary living room featuring recessed smart led lighting and elegant pendant fixtures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD64zp4ZhWCc4BEuvZ9VdqU0PXn4NPXDsYU2WHuinOrOH3Rnevlv8yT-BKdN5FIwGLFVywGZjmARV2Rpua_pnyU_DbdhrVQdc1b5OJrXy9PTOrznXqwQmtsOlxEF7YBW6hdUlWldZsol7L_x5MY0w0NBCMa-Qf86eTjvaxS0cVPEObqaxBDfIEFYmxf2vxUsxOsIBfy6jQNrRIDC3etc6vVKHudZoZLtncznY64hISjATFNokhoJyhuG5QCgnFXOlhnWQR1UEjaLTU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+<h4 class="text-white font-bold text-sm">Lighting Design</h4>
+</div>
+</div>
+<div class="col-span-2 relative group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="technician hands working on a smart home control hub with glowing digital interfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMr3YZVPNCzzhO_BtsyUqEWJOEcT72qmM8sa7kpHxBE0lf9Y6mhGWlQ46OdVoOD5plChjbGUzB4CyqP17Ow9AmC3k9MP1zDovyW-f0J73Ki_xgvKCuAKPDsW1Pn-Oc7J4bXV4ajsXA9uSi6ouXxcN9dbflM9vpReNSsWOJqgsnltgPnUMOAxKl6yI4ct8uxUq0ocWSwhtw9isW4ICbrJBZViWaQQMsBLI_8QL6urwNZCv5x8kBjnpJ9BoM8UFeiw_uSVSh7PGrb5U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white font-bold text-lg">Smart Home Integration</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Credentials & Map Split -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<section class="bg-surface-container-low p-8 rounded-xl space-y-6">
+<h3 class="font-headline font-bold text-xl text-on-surface">Experience &amp; Credentials</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="bg-white p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">State Certified Master Electrician</p>
+<p class="text-xs text-on-surface-variant">License #EC12004562</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-white p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="school">school</span>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Industrial Electrical Engineering</p>
+<p class="text-xs text-on-surface-variant">Metro Tech Institute</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-white p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="work">work</span>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Former Senior Tech</p>
+<p class="text-xs text-on-surface-variant">PowerGrid Solutions (5 Years)</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-low p-8 rounded-xl space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-bold text-xl text-on-surface">Service Area</h3>
+<span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded-lg">30mi Radius</span>
+</div>
+<div class="h-[180px] w-full rounded-xl overflow-hidden grayscale contrast-125 border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="map view of a metropolitan area showing city streets and districts in a clean minimalist style" data-location="Austin, Texas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpgD_cHVzLPSTiGOaljQG-WnlU-cOeZQZGUOkHQrNBH9_Zfk17nFnMn8jihdwBsejYI7JQ72IGDfAuWrd-kXoSqiU1t9Eh4Wl_cZYtzNf_bVL9Oe8W3qC7SipD0ohyttkU-rk6EGOPfR_EMw0Ih5w4ngH4XwhfGK8yvdEZk0G9Ta0MtslTkS1MFpdIcJOpDW3WxHX3mPH-1wnWrWI-Tep-jNOkeF35VZKS7iLk3L91xgGWEFg8E4opKrAHND3j5OROkd4ccXLpS3U"/>
+</div>
+<p class="text-xs text-on-surface-variant font-medium flex items-center gap-2">
+<span class="material-symbols-outlined !text-[16px]">location_on</span>
+                    Austin, TX &amp; surrounding suburbs
+                        </p>
+</section>
+</div>
+<!-- User Feedback -->
+<section class="space-y-6">
+<h3 class="font-headline font-bold text-2xl text-on-surface">Client Feedback</h3>
+<div class="space-y-4">
+<div class="bg-white p-6 rounded-xl shadow-[0px_10px_30px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<div class="flex items-center gap-1 mb-3 text-secondary">
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-4">"Marcus was incredibly professional. He identified a dangerous wiring issue that two other electricians missed. His work is clean, labeled, and precisely finished."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex items-center justify-center text-on-primary-fixed font-bold text-sm">SD</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Sarah Drayson</p>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest">October 2023 • Panel Upgrade</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-[0px_10px_30px_rgba(0,0,0,0.04)] border border-outline-variant/10">
+<div class="flex items-center gap-1 mb-3 text-secondary">
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined !text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface italic mb-4">"Best in the city. Installed my Tesla charger in record time and the conduit looks like a work of art. Highly recommend Marcus for any high-end electrical work."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-secondary-fixed rounded-full flex items-center justify-center text-on-secondary-fixed font-bold text-sm">RM</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Robert Miller</p>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest">September 2023 • EV Charging</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 z-50 rounded-t-2xl shadow-[0px_-10px_30px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Messages</span>
+</div>
+<div class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 rounded-xl px-3 py-1 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

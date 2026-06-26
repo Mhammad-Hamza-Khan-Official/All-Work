@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Details | Master Artisan</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#00174b",
+              "outline-variant": "#c3c6d7",
+              "on-surface-variant": "#434655",
+              "surface-variant": "#e1e3e4",
+              "surface-container": "#edeeef",
+              "surface-bright": "#f8f9fa",
+              "tertiary-fixed": "#ffdbcd",
+              "on-error": "#ffffff",
+              "outline": "#737686",
+              "surface-tint": "#0053db",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-primary-container": "#eeefff",
+              "background": "#f8f9fa",
+              "surface-container-low": "#f3f4f5",
+              "inverse-on-surface": "#f0f1f2",
+              "surface": "#f8f9fa",
+              "secondary": "#855300",
+              "secondary-fixed": "#ffddb8",
+              "tertiary": "#943700",
+              "secondary-container": "#fea619",
+              "inverse-surface": "#2e3132",
+              "on-secondary-container": "#684000",
+              "surface-dim": "#d9dadb",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "surface-container-high": "#e7e8e9",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dbe1ff",
+              "error-container": "#ffdad6",
+              "on-secondary": "#ffffff",
+              "primary-container": "#2563eb",
+              "on-surface": "#191c1d",
+              "on-secondary-fixed": "#2a1700",
+              "on-background": "#191c1d",
+              "tertiary-fixed-dim": "#ffb596",
+              "error": "#ba1a1a",
+              "on-tertiary-container": "#ffede6",
+              "inverse-primary": "#b4c5ff",
+              "on-primary-fixed-variant": "#003ea8",
+              "tertiary-container": "#bc4800",
+              "primary": "#004ac6",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#b4c5ff",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-tertiary-fixed": "#360f00"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .font-manrope { font-family: 'Manrope', sans-serif; }
+      .font-inter { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-16 px-8 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-blue-700 dark:text-blue-400 tracking-tighter font-headline">Master Artisan</span>
+<nav class="hidden md:flex gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 font-manrope font-bold tracking-tight" href="#">Explore</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 font-manrope font-bold tracking-tight" href="#">Premium</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-slate-600 hover:bg-slate-50 rounded-full">notifications</button>
+<button class="material-symbols-outlined p-2 text-slate-600 hover:bg-slate-50 rounded-full">mail</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-xl font-bold hover:scale-102 transition-transform shadow-sm">Post a Job</button>
+<img alt="User Profile" class="w-10 h-10 rounded-full border-2 border-primary/10" data-alt="close-up portrait of a professional man in a clean studio setting with neutral lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtN7hRpfqDToXk2iJKUxXdXhVdorZZ88uRuF_Mi4C0uGkGsDyD1mXfq-25ha5P9xkYNH-VBz5_AblbVNIiCX4RfR_KRtbnZTje5Iq3Buynogg5KAVNREGVR_8mXONEPM6EYcXNDBudiNppR9RJh_yL2u_FL6cLyfCKMYiffr3bXWjAoDryo1GGecqdwiDXq2cv5pfPxWJDcrn7-pXM3s3vkhbBsWb4lBFa9fRuUb8xU_kvQsibrhLBMYNLKC2OVCwFD1gDj0In09E"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-12 px-8 max-w-7xl mx-auto flex gap-8">
+<!-- Content Area -->
+<div class="flex-1 space-y-8">
+<!-- Job Header Section -->
+<section class="space-y-4">
+<div class="flex items-start justify-between">
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-container text-on-tertiary-container text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Open</span>
+<span class="text-on-surface-variant font-medium">Electrical • Residential</span>
+</div>
+<h1 class="text-display-lg font-headline font-extrabold text-on-surface tracking-tight text-4xl leading-tight">Smart Home Panel Upgrade</h1>
+<div class="flex items-center gap-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-sm font-medium">North Seattle, WA</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<span class="text-sm font-medium">Posted 2 days ago</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-Premium text-right">
+<p class="text-sm text-on-surface-variant font-medium">Project Budget</p>
+<p class="text-3xl font-headline font-extrabold text-primary">$850</p>
+</div>
+</div>
+</section>
+<!-- Visual Context Gallery -->
+<section class="grid grid-cols-12 gap-4 h-[400px]">
+<div class="col-span-8 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="wide shot of a modern clean electrical panel in a garage with professional wiring and labeled breakers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWI0ilizGXWoLLZMD1xkkRTkgvCmM1cmwdH7mqCIg_xCSYcTPMzbA6zOGgWTc_jr7zjBm2KnoPG1Mdacsr-tljBwvEZj0aKw4z1Gmfk148qpu9rbrCqJkaW90x5_ILqOMsZ4G6_R6xiORaE7-UpJ4ZexVAmAyliYrEIzw2yp4v8rr45qRAVg9dUZsEz7sB2aWNeb7AsrsnaA3JTrBKO4vfBqr9n1v7lxAuSS75fig0nyOLw3V1YQ5fOD8ESuWlqghS0uydgz5u_eA"/>
+</div>
+<div class="col-span-4 flex flex-col gap-4">
+<div class="flex-1 overflow-hidden rounded-xl bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="close up of an electrician tool belt with professional pliers and voltage testers on a wooden workbench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfFqg1ele5S2Bmft3Wsim4_FrzLXnNuqc7QhKpshk31NleuMh-d2SsydtzMA0rYw4E64EY9dc6dMbh7WCVAL6b8XoFC4d1it4jPunZ2HKAQDz78u0wRYlBdITUPd5Xt8c8h_h8wNFJy5araW5gTjizaSYOVuyJAnPoWkSK3_O-3vqX0jSVOCVk5cQPvoUAamo9JdDszf3KOWpp7SiUTEBn7yKujluxGiqRsdrkfwpVyupESXqkte-VATAdxda5sO5c3rNSAuF6spg"/>
+</div>
+<div class="flex-1 overflow-hidden rounded-xl bg-surface-container-low relative group cursor-pointer">
+<img class="w-full h-full object-cover opacity-80" data-alt="close up of copper electrical wiring inside a wall cavity prepared for a new smart panel installation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsUs2cKaK6Hgk9so3UqSW3VP29ulky05EwApKRQnJV0TPZx52VmO2b5M_qSvVVsnOPIvT1AroGf2Wiq89nWEzGQRy966vcGO8lePN_eXD2AuLOGoxtAdFJiCujDSY9ayaYLxaJN3t7xZpYghjTve7rw9YG3cQ4vTu7JDdjQ4Sm1EdeDQ4evObMdidFiNiCwg2v072m2WpsDlMk3TrT0pZdclmyO49NAZo_-VzhD9rLIlqW7y0sjvhIZNXkikzRXUkjIt103s_0o7U"/>
+<div class="absolute inset-0 flex items-center justify-center bg-on-surface/40 text-white font-bold text-lg">
+                            +4 Photos
+                        </div>
+</div>
+</div>
+</section>
+<!-- Description -->
+<section class="bg-surface-container-low p-8 rounded-xl space-y-4">
+<h3 class="text-xl font-headline font-bold text-on-surface">Project Requirements</h3>
+<div class="prose prose-slate max-w-none text-on-surface-variant leading-relaxed">
+<p>Looking for a licensed electrician to upgrade a 100A main service panel to a 200A smart-ready panel. The project includes mounting the new enclosure, organizing existing circuits, and installing three dedicated lines for heavy appliances. </p>
+<ul class="list-disc pl-5 space-y-2 mt-4">
+<li>Main panel replacement (Square D or similar high-quality brand)</li>
+<li>Permit coordination with Seattle City Light</li>
+<li>Whole-home surge protection integration</li>
+<li>Labeled circuit mapping and testing</li>
+</ul>
+</div>
+</section>
+<!-- Applicants List -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-headline font-bold text-on-surface">Qualified Applicants (4)</h3>
+<button class="text-primary font-bold hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Applicant Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between shadow-sm border border-outline-variant/10 hover:shadow-Premium transition-all group">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover" data-alt="professional headshot of a smiling contractor wearing a blue work shirt in a bright office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtrdJlYrN-aulEnB0cxCd_UAtpai_VvQ-VHwOhcpllRVOD4WirYkMmPxppYNGsdQYxqBZk7tWG-QiG41lSZQ89ybJc2Z6BUcFHl-7321JS9F1GD7DuwiATong8uTaYYSQE-Jkq7O271XqIJTm3KaLE1_G7HZ84IPLW8y0MSg5GwYqD2NG_mQ2I6HZFQjN0f2BppXQCWs7HBCL651ghLWGakoWacZJMYNSKtt1qMMIwGYnTftIHFYxHh245VUXHaiK3zccoSgJSWxw"/>
+<div>
+<h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Marcus Chen</h4>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        4.9
+                                    </div>
+<span class="text-on-surface-variant text-sm">• 1.4 miles away</span>
+<span class="text-on-surface-variant text-sm">• 124 Jobs Done</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2 rounded-lg border border-primary text-primary font-bold hover:bg-primary/5 transition-colors">View Profile</button>
+<button class="px-5 py-2 rounded-lg bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold shadow-md hover:scale-105 transition-transform">Hire Marcus</button>
+</div>
+</div>
+<!-- Applicant Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between shadow-sm border border-outline-variant/10 hover:shadow-Premium transition-all group">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover" data-alt="middle aged professional electrician in a grey uniform standing confidently in front of a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF7MhD0pWAlKKiwn5VLWcZ3hTvxl2Nr60xmxG_NS3i0GIqLoWC67Xe2NsQN3cj4Af2c8AvJkv6GCP2leaMd_bx7u25CbMD0yIsGWtC-ujJ-L9txfO6PkdUWO8IDiI-M0UGtsviRqp7BVfFQq5KgAKQDo8lRzkgLF6Lb1SuRPJO_Z8tADy8DCrQKBU-ivmEdc9dl2zem24_GxtfoCh9P3Z2JBhiMKSyFWaIFJPS9KjNm7pG8jZCCm0OplTsT0hr5C7UK4j6Vg8wgyw"/>
+<div>
+<h4 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Sarah Williams</h4>
+<div class="flex items-center gap-3 mt-1">
+<div class="flex items-center gap-1 bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded text-xs font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                        5.0
+                                    </div>
+<span class="text-on-surface-variant text-sm">• 3.8 miles away</span>
+<span class="text-on-surface-variant text-sm">• 89 Jobs Done</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2 rounded-lg border border-primary text-primary font-bold hover:bg-primary/5 transition-colors">View Profile</button>
+<button class="px-5 py-2 rounded-lg bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold shadow-md hover:scale-105 transition-transform">Hire Sarah</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar Actions & Timeline -->
+<aside class="w-80 space-y-6">
+<!-- Project Status Stepper -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-Premium border border-outline-variant/10">
+<h3 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-6">Job Progress</h3>
+<div class="space-y-0">
+<!-- Step 1: Active -->
+<div class="flex gap-4 min-h-[60px]">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="w-0.5 h-full bg-primary"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold text-on-surface">Posted</p>
+<p class="text-xs text-on-surface-variant">Oct 24, 2023 • 10:15 AM</p>
+</div>
+</div>
+<!-- Step 2: Current -->
+<div class="flex gap-4 min-h-[60px]">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div class="w-0.5 h-full bg-surface-variant"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-bold text-primary">Assigned</p>
+<p class="text-xs text-on-surface-variant">Awaiting Selection</p>
+</div>
+</div>
+<!-- Step 3: Pending -->
+<div class="flex gap-4 min-h-[60px]">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center"></div>
+<div class="w-0.5 h-full bg-surface-variant"></div>
+</div>
+<div class="pb-6">
+<p class="text-sm font-medium text-outline">In Progress</p>
+</div>
+</div>
+<!-- Step 4: Pending -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center"></div>
+</div>
+<div>
+<p class="text-sm font-medium text-outline">Completed</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Job Stats & Details Card -->
+<div class="bg-surface-container-low p-6 rounded-xl space-y-4">
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+<span class="text-sm text-on-surface-variant">Job ID</span>
+<span class="text-sm font-bold font-manrope">#MA-99214</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">visibility</span>
+<div class="text-sm">
+<p class="font-bold">42 Views</p>
+<p class="text-xs text-on-surface-variant">Last 24 hours</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">bolt</span>
+<div class="text-sm">
+<p class="font-bold">Express Hiring</p>
+<p class="text-xs text-on-surface-variant">Response within 2h</p>
+</div>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-outline text-on-surface font-bold hover:bg-white transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">share</span>
+                    Share Job
+                </button>
+</div>
+<!-- Urgent Callout -->
+<div class="bg-secondary-container/10 border border-secondary-container/30 p-4 rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary pt-0.5">priority_high</span>
+<div>
+<p class="text-xs font-bold text-on-secondary-container uppercase tracking-tight">Pro Tip</p>
+<p class="text-xs text-on-secondary-container leading-snug mt-1">Hiring within the first 24 hours increases project completion rate by 40%.</p>
+</div>
+</div>
+</aside>
+</main>
+<!-- SideNavBar (Hidden on main page view but included as per requirements) -->
+<aside class="hidden fixed left-0 top-0 h-screen w-64 bg-slate-50 dark:bg-slate-950 border-r border-slate-200/50 dark:border-slate-800/50 flex flex-col p-4 space-y-2 z-[60]">
+<div class="flex flex-col mb-8 px-4">
+<span class="text-lg font-bold text-slate-900 dark:text-slate-100 font-headline">Project Studio</span>
+<span class="text-xs text-slate-500 font-inter">Professional Suite</span>
+</div>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 rounded-lg shadow-sm font-bold transition-all translate-x-1 font-inter text-sm" href="#">
+<span class="material-symbols-outlined">work</span> My Jobs
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined">add_circle</span> Create Job
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined">group</span> Find Workers
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined">chat</span> Messages
+        </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-all font-inter text-sm font-medium" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+        </a>
+<div class="mt-auto p-4 bg-primary/5 rounded-xl border border-primary/10">
+<p class="text-xs font-bold text-primary uppercase mb-2">Pro Account</p>
+<button class="w-full bg-primary text-white py-2 rounded-lg text-xs font-bold shadow-sm">Upgrade to Pro</button>
+</div>
+</aside>
+</body></html>

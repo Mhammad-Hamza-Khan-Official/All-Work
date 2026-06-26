@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Projects | ServiceHub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "error-container": "#ffdad6",
+                        "secondary": "#855300",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed": "#2a1700",
+                        "inverse-surface": "#2e3132",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-tertiary-container": "#ffede6",
+                        "on-primary-fixed": "#00174b",
+                        "surface": "#f8f9fa",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "secondary-container": "#fea619",
+                        "primary": "#004ac6",
+                        "outline-variant": "#c3c6d7",
+                        "on-surface-variant": "#434655",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "tertiary-container": "#bc4800",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "on-surface": "#191c1d",
+                        "surface-container": "#edeeef",
+                        "surface-container-high": "#e7e8e9",
+                        "on-secondary-container": "#684000",
+                        "tertiary": "#943700",
+                        "outline": "#737686",
+                        "background": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "surface-tint": "#0053db",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "on-primary-container": "#eeefff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffddb8",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-background": "#191c1d"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-font { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 flex items-center justify-between px-8 h-20 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm no-border bg-slate-100/50 dark:bg-slate-800/50">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold text-blue-700 dark:text-blue-400 tracking-tighter brand-font">ServiceHub</span>
+<div class="hidden md:flex items-center bg-surface-container rounded-full px-4 py-2 gap-2">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-64 text-on-surface-variant" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors Active: scale-95 duration-150">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors Active: scale-95 duration-150">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chat_bubble">chat_bubble</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors Active: scale-95 duration-150">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 pt-24 pb-8 bg-slate-50 dark:bg-slate-950 flex flex-col gap-2 px-4 transition-all duration-200 ease-in-out border-r border-outline-variant/10">
+<div class="px-4 mb-6">
+<h2 class="font-['Manrope'] font-black text-xl text-blue-800 dark:text-blue-300">ServiceHub Pro</h2>
+<p class="text-xs text-slate-500 font-medium uppercase tracking-widest">Customer Portal</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 text-blue-700 dark:text-blue-400 rounded-lg shadow-sm font-bold font-['Inter'] text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="work" style="font-variation-settings: 'FILL' 1;">work</span>
+                My Jobs
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                Messages
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                Payments
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-lg transition-all font-['Inter'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto px-4">
+<button class="w-full py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-semibold shadow-md hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Post a New Job
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-20 min-h-screen">
+<div class="p-10 max-w-7xl mx-auto">
+<!-- Page Header Area -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="max-w-2xl">
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">My Projects</h1>
+<p class="text-on-surface-variant text-lg opacity-80">Track and manage your active service requests and home improvement journeys.</p>
+</div>
+<button class="px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold shadow-lg hover:scale-[1.02] transition-transform flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                    Post a New Job
+                </button>
+</div>
+<!-- Bento Stats Summary -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-40 border border-transparent hover:border-primary/10 transition-colors">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Live Tracking</span>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-on-surface">Active Projects (4)</p>
+<p class="text-sm text-on-surface-variant font-medium mt-1">Ongoing service deliveries</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-40 border border-transparent hover:border-primary/10 transition-colors">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="gavel">gavel</span>
+<span class="text-xs font-bold text-secondary uppercase tracking-wider">Reviewing</span>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-on-surface">Pending Bids (12)</p>
+<p class="text-sm text-on-surface-variant font-medium mt-1">Awaiting your approval</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-40 border border-transparent hover:border-primary/10 transition-colors">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-xs font-bold text-on-tertiary-fixed-variant uppercase tracking-wider">Portfolio</span>
+</div>
+<div>
+<p class="text-4xl font-extrabold text-on-surface">Total Invested ($2.4k)</p>
+<p class="text-sm text-on-surface-variant font-medium mt-1">Lifetime service expenditure</p>
+</div>
+</div>
+</section>
+<!-- Job Cards List (Asymmetric Editorial Style) -->
+<div class="space-y-6">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-Premium flex flex-col md:flex-row gap-8 items-center border border-outline-variant/10 group hover:translate-y-[-2px] transition-all">
+<div class="w-full md:w-48 h-32 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img alt="Kitchen" class="w-full h-full object-cover" data-alt="luxury modern kitchen with marble countertops and minimalist wooden cabinetry in soft natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM16oJkl3WSSRPBDKJSNrkYf1WrCWfJ39Qh01zaHHrJzIJSVUltwB2ExUbuaca1fxfv0y-_NyJlHhfbM2RDij0h_sv5LlUybWlPGGnI5oSU8Qyjm_dAqdbOD_T1YwJYbJR6KKQ_rwBgKeBSuUnnxogAreaoVTYEmMiwlSVdrMWGUz-esqtBvCRo59dcFki6-KrjBviOIlsaob2XzbeoH9bxxHB6k-9W3f8B_NVuuFdK_JuwwzqmxuGXsu_ua6GxU3NOgSqBY-Rrzs"/>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex flex-wrap items-center gap-3">
+<span class="px-3 py-1 rounded-full text-xs font-bold bg-secondary-fixed text-on-secondary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="sync" style="font-variation-settings: 'wght' 700;">sync</span>
+                                In Progress
+                            </span>
+<span class="text-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+                                Posted Oct 12, 2023
+                            </span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Kitchen Remodel</h3>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="groups">groups</span>
+<span class="text-sm font-semibold text-on-surface">8 Bids</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="payments">payments</span>
+<span class="text-sm font-bold text-primary">$1,200 - $1,500</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex gap-3">
+<button class="px-6 py-3 rounded-xl font-bold text-primary hover:bg-primary/5 transition-colors">Manage Bids</button>
+<button class="px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold shadow-md hover:scale-[1.02] transition-transform">View Details</button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-Premium flex flex-col md:flex-row gap-8 items-center border border-outline-variant/10 group hover:translate-y-[-2px] transition-all">
+<div class="w-full md:w-48 h-32 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img alt="Garden" class="w-full h-full object-cover" data-alt="meticulously landscaped modern garden with stone pathways and architectural plants under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc2PMkBJFIxWrzzRkck-LHm7EBUk5NQURBEJp8JcItxluiG4uLVpksegqOAUiQUMK6ZEpZtqXmkTdZEk3RHOXehFBMQPCI4CuX30oQhWbSr8hvEJ4wUEV0NRzhv2oyAdI6CIuNC-XPNcVRDN0DaXGh-VodR5ucgzaRpAHu5RcVBbM9jkCtJAAc9pXIKLEBxN3kgmqs3Ofv0Nxk2McFpZarX7QiYp_CQohO6vVPVj3yfNXlQ1E4FFrCGfnWuIzcwlKvubkw5TCSBcM"/>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex flex-wrap items-center gap-3">
+<span class="px-3 py-1 rounded-full text-xs font-bold bg-primary-fixed text-on-primary-fixed-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="visibility">visibility</span>
+                                Open
+                            </span>
+<span class="text-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+                                Posted Oct 15, 2023
+                            </span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Garden Landscaping</h3>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="groups">groups</span>
+<span class="text-sm font-semibold text-on-surface">5 Bids</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="payments">payments</span>
+<span class="text-sm font-bold text-primary">$800 Budget</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex gap-3">
+<button class="px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold shadow-md hover:scale-[1.02] transition-transform">Manage Bids</button>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-Premium flex flex-col md:flex-row gap-8 items-center border border-outline-variant/10 group hover:translate-y-[-2px] transition-all opacity-80 grayscale-[0.2]">
+<div class="w-full md:w-48 h-32 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img alt="Pipe Leak" class="w-full h-full object-cover" data-alt="close-up of professional plumbing tools and copper pipes in a utility room setting with warm focus lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIMhbpUJx_P7YWWE3HHXvjwDKhUmKnK1N83_iheCEPRCgk6cGHsKKwf2WdCOTGzXhyZhafH4O-2hhR7TQK6X3QN0ZU0WAMGvXLw_snIE1NPGZEoNqyBb75z-6sGCQBfjrdBDtTfwKfSerkVERbdIxAeYSjGZHnzXJ9jqnCvOBd0D84ed1xv9jB44WC6mrKgd4SJznuAyqWDeVwdy0BKHvmFiU1-RdrRbMm-mVBYn8IPERIgg8fL8WltwR0mEIrk07Ecv0BQ34yR-Q"/>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex flex-wrap items-center gap-3">
+<span class="px-3 py-1 rounded-full text-xs font-bold bg-surface-container text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span>
+                                Completed
+                            </span>
+<span class="text-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+                                Posted Sep 28, 2023
+                            </span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Pipe Leak Repair</h3>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="groups">groups</span>
+<span class="text-sm font-semibold text-on-surface">1 Bid (Winner)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="payments">payments</span>
+<span class="text-sm font-bold text-on-surface-variant">Paid $250</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex gap-3">
+<button class="px-6 py-3 rounded-xl font-bold text-on-surface-variant hover:bg-surface-container transition-colors">View Receipt</button>
+</div>
+</div>
+</div>
+<!-- Promotional / Upsell Area -->
+<div class="mt-16 p-10 rounded-2xl bg-gradient-to-r from-blue-900 to-blue-700 text-on-primary relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+<!-- Abstract background shape -->
+<div class="absolute right-0 top-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="relative z-10 max-w-lg">
+<h2 class="text-3xl font-extrabold mb-4">Want a faster quote?</h2>
+<p class="text-blue-100 text-lg">Our Premium Artisan network gives you priority access to verified professionals with a 4.9+ star rating. Get bids in under 15 minutes.</p>
+</div>
+<button class="relative z-10 px-8 py-4 bg-white text-blue-900 rounded-xl font-black shadow-2xl hover:bg-blue-50 transition-all flex items-center gap-3">
+                    Try Priority Posting
+                    <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>

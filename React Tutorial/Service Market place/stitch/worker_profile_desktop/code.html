@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb596",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#2a1700",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#ffede6",
+              "secondary-fixed-dim": "#ffb95f",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#e7e8e9",
+              "secondary-fixed": "#ffddb8",
+              "on-secondary-fixed-variant": "#653e00",
+              "secondary": "#855300",
+              "on-primary-fixed": "#00174b",
+              "inverse-primary": "#b4c5ff",
+              "on-primary-fixed-variant": "#003ea8",
+              "surface-container": "#edeeef",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "tertiary-container": "#bc4800",
+              "surface-tint": "#0053db",
+              "on-surface": "#191c1d",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary": "#ffffff",
+              "on-background": "#191c1d",
+              "on-primary": "#ffffff",
+              "outline": "#737686",
+              "on-tertiary-fixed": "#360f00",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "surface-dim": "#d9dadb",
+              "secondary-container": "#fea619",
+              "surface-bright": "#f8f9fa",
+              "primary-fixed": "#dbe1ff",
+              "primary-container": "#2563eb",
+              "outline-variant": "#c3c6d7",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-secondary-container": "#684000",
+              "inverse-on-surface": "#f0f1f2",
+              "error": "#ba1a1a",
+              "on-primary-container": "#eeefff",
+              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffdbcd",
+              "primary": "#004ac6",
+              "error-container": "#ffdad6",
+              "tertiary": "#943700",
+              "on-surface-variant": "#434655",
+              "on-error-container": "#93000a",
+              "surface": "#f8f9fa"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+              "premium": "0px 20px 40px rgba(25, 28, 29, 0.06)"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .shadow-premium {
+        box-shadow: 0px 20px 40px rgba(25, 28, 29, 0.06);
+      }
+      .tap-highlight-transparent {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-premium flex justify-between items-center px-8 h-16 w-full">
+<div class="text-2xl font-bold text-blue-700 dark:text-blue-400 font-headline tracking-tight">MasterArtisan</div>
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 font-label text-sm transition-all" href="#">Marketplace</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 font-label text-sm transition-all" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 font-label text-sm transition-all" href="#">Messages</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant cursor-pointer active:scale-95 transition-transform" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-blue-700 dark:text-blue-400 cursor-pointer active:scale-95 transition-transform" data-icon="account_circle">account_circle</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Main Content -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Profile Header -->
+<section class="bg-surface-container-lowest rounded-xl p-6 md:p-8 shadow-premium flex flex-col md:flex-row gap-8 items-start md:items-center">
+<div class="relative w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Marcus Sterling" class="w-full h-full object-cover" data-alt="Professional portrait of a mature male electrician in a clean navy uniform smiling confidently against a soft industrial background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoFYJ7EuGBY79qkORuQgqJbL-UhUCRv63KGoVE06LIZi0egklWqUEBaAHo-txfokSJaAKDJQPmIhEbH_nIfwAgg4Leiw0WMdVi1jOTzYmBgZHZUlcVYaK69Ftri_Q7o3B-nNWEs-UNZc57LRJAui8YoOiANLQ-145hkU1hVCtTdlNK7zuQkzyzCe-F_UjLzTJq-BZJ1mWEr51aJikv9uNA_i1Dx6HdHBL-S9OesxSdBmQQDHwGC56ADJb0uprDeK8hqa5BRnB1OFE"/>
+</div>
+<div class="flex-grow">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<h1 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface">Marcus Sterling</h1>
+<span class="inline-flex items-center gap-1 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                Verified Pro
+                            </span>
+</div>
+<p class="text-xl font-headline font-semibold text-primary mb-2">Master Electrician</p>
+<div class="flex items-center gap-2 text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[20px]" data-icon="location_on">location_on</span>
+                            Chicago, IL
+                        </div>
+</div>
+</section>
+<!-- Key Stats Bento Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center justify-center text-center">
+<span class="text-3xl font-extrabold font-headline text-primary mb-1">4.9/5</span>
+<div class="flex gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">124 reviews</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center justify-center text-center">
+<span class="text-3xl font-extrabold font-headline text-primary mb-1">12+</span>
+<span class="text-sm font-medium text-on-surface-variant uppercase tracking-wider">Years Exp.</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col items-center justify-center text-center">
+<span class="text-3xl font-extrabold font-headline text-primary mb-1">245</span>
+<span class="text-sm font-medium text-on-surface-variant uppercase tracking-wider">Jobs Done</span>
+</div>
+</section>
+<!-- About / Bio -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-premium">
+<h2 class="font-headline text-2xl font-bold mb-4 text-on-surface">About Marcus</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                        With over a decade of hands-on experience in the electrical trade, I specialize in delivering high-integrity solutions for both residential and commercial projects. My approach combines traditional craftsmanship with modern technology, focusing on smart home integration, energy-efficient panel upgrades, and precise fault finding. I pride myself on transparent communication and ensuring every project exceeds safety standards.
+                    </p>
+</section>
+<!-- Skills -->
+<section class="bg-surface-container-low rounded-xl p-8">
+<h2 class="font-headline text-xl font-bold mb-6 text-on-surface">Specializations</h2>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg text-on-surface font-semibold text-sm shadow-sm">Electrical Panel Upgrades</span>
+<span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg text-on-surface font-semibold text-sm shadow-sm">EV Charger Installation</span>
+<span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg text-on-surface font-semibold text-sm shadow-sm">Smart Home Systems</span>
+<span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg text-on-surface font-semibold text-sm shadow-sm">Lighting Design</span>
+<span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg text-on-surface font-semibold text-sm shadow-sm">Fault Finding</span>
+<span class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg text-on-surface font-semibold text-sm shadow-sm">Commercial Wiring</span>
+</div>
+</section>
+<!-- Experience & Certifications -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-premium">
+<h2 class="font-headline text-2xl font-bold mb-8 text-on-surface">Experience &amp; Credentials</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface">Licensed Master Electrician</h3>
+<p class="text-on-surface-variant text-sm">State of Illinois | Issued 2015</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface">OSHA 30 Certified</h3>
+<p class="text-on-surface-variant text-sm">Safety Standards &amp; Compliance</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface">Lead Electrician - Metro Power Systems</h3>
+<p class="text-on-surface-variant text-sm">2012 — 2018 | Chicago, IL</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Area Map -->
+<section class="bg-surface-container-low rounded-xl overflow-hidden h-[400px] relative">
+<div class="absolute inset-0 bg-slate-200">
+<img alt="Service Area Map" class="w-full h-full object-cover" data-alt="Minimalist urban map view of Chicago highlighting downtown and suburban coverage areas in soft blue tones" data-location="Chicago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDlvaaaEH5T-jNiVNC4xkcGGh3VT1paxN8NtNSCS201Gr9IqITBWPTIc48IzLOHPmpmrXYGY-yX-mflT8qtWFr0YyjjgjOWVGbpAbkNKLySCRD4pAg7y_y26RPwFJmnK-u-I6e5geAzgAGDqS6y23YEm_HfTTa-lQ8oUfD9kQ1anu2oWStsLQ5RWyKFnNLRBfS0zB4FEaHL_oV9MQuee-xmHWWTzQxgCN24XxmABmmXspA2hIiOig15C2n4Jtr4rnGrpm1eroSQYU"/>
+</div>
+<div class="absolute bottom-6 left-6 bg-white dark:bg-slate-900 p-4 rounded-xl shadow-premium max-w-xs">
+<h4 class="font-bold mb-1">Service Area</h4>
+<p class="text-sm text-on-surface-variant">Serving Downtown Chicago, Evanston, Oak Park, and surrounding suburbs.</p>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-premium">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-headline text-2xl font-bold text-on-surface">Recent Feedback</h2>
+<button class="text-primary font-bold text-sm hover:underline">View All 124</button>
+</div>
+<div class="space-y-8">
+<div class="border-b border-surface-variant pb-8 last:border-0 last:pb-0">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="font-bold text-on-surface">Elena Rodriguez</p>
+<p class="text-xs text-on-surface-variant">2 days ago • Smart Home Setup</p>
+</div>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant">Marcus was incredible. He rewired our entire kitchen and installed smart lighting. Clean, professional, and explain everything clearly. Highly recommend!</p>
+</div>
+<div class="border-b border-surface-variant pb-8 last:border-0 last:pb-0">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="font-bold text-on-surface">David Chen</p>
+<p class="text-xs text-on-surface-variant">1 week ago • EV Charger Installation</p>
+</div>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant">Fast response and very knowledgeable about Tesla charger requirements. The installation is very tidy. 10/10 service.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sticky CTA Sidebar -->
+<div class="lg:col-span-4">
+<div class="sticky top-24 space-y-4">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-premium">
+<div class="mb-6">
+<p class="text-on-surface-variant text-sm font-medium mb-1">Starting Rate</p>
+<div class="flex items-baseline gap-1">
+<span class="text-3xl font-extrabold font-headline text-primary">$85</span>
+<span class="text-on-surface-variant font-medium">/hr</span>
+</div>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary" data-icon="bolt">bolt</span>
+<span>Typical response: <strong>Under 2 hours</strong></span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="calendar_today">calendar_today</span>
+<span>Next available: <strong>Tomorrow, 9 AM</strong></span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl text-lg hover:scale-[1.02] transition-transform active:scale-95">
+                                Request Quote
+                            </button>
+<button class="w-full py-4 border-2 border-primary/10 text-primary font-bold rounded-xl text-lg hover:bg-primary/5 transition-colors active:scale-95">
+                                Message Marcus
+                            </button>
+</div>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl">
+<h4 class="font-bold text-blue-800 dark:text-blue-300 mb-2">ServiceHub Guarantee</h4>
+<p class="text-sm text-blue-700/80 dark:text-blue-300/80 leading-snug">All bookings are protected by our $1M property protection policy and satisfaction guarantee.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-2xl bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] flex justify-around items-center h-20 px-4 pb-safe w-full">
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-body text-xs font-medium">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="request_quote">request_quote</span>
+<span class="font-body text-xs font-medium">Quotes</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-body text-xs font-medium">Activity</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl px-4 py-1 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-body text-xs font-medium">Profile</span>
+</button>
+</nav>
+</body></html>

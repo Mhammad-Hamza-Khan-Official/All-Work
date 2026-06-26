@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Jobs | Artisan Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e1e3e4",
+              "surface": "#f8f9fa",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#ffdbcd",
+              "on-background": "#191c1d",
+              "secondary-container": "#fea619",
+              "on-secondary-fixed": "#2a1700",
+              "on-secondary-container": "#684000",
+              "on-primary-fixed": "#00174b",
+              "on-primary-container": "#eeefff",
+              "surface-tint": "#0053db",
+              "on-primary-fixed-variant": "#003ea8",
+              "surface-container-high": "#e7e8e9",
+              "on-surface-variant": "#434655",
+              "background": "#f8f9fa",
+              "tertiary": "#943700",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed": "#ffddb8",
+              "primary-fixed": "#dbe1ff",
+              "outline": "#737686",
+              "inverse-on-surface": "#f0f1f2",
+              "primary": "#004ac6",
+              "primary-container": "#2563eb",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#c3c6d7",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary-container": "#bc4800",
+              "surface-container": "#edeeef",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#b4c5ff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#b4c5ff",
+              "surface-dim": "#d9dadb",
+              "secondary": "#855300",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-tertiary-fixed": "#360f00",
+              "on-primary": "#ffffff",
+              "surface-bright": "#f8f9fa",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-tertiary-container": "#ffede6",
+              "surface-container-low": "#f3f4f5",
+              "surface-variant": "#e1e3e4",
+              "on-surface": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .sidebar-active {
+            border-right-width: 4px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 h-full w-64 z-50 flex flex-col py-8 px-4 bg-slate-50 shadow-[20px_0px_40px_rgba(25,28,29,0.04)] font-['Inter'] text-sm font-medium">
+<div class="mb-10 px-4">
+<span class="text-lg font-bold text-blue-900">Artisan Pro</span>
+</div>
+<div class="mb-8 px-4">
+<p class="text-[10px] uppercase tracking-widest text-slate-400 mb-4">Main Menu</p>
+<nav class="space-y-2">
+<a class="flex items-center gap-3 py-3 px-4 rounded-lg text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Active Tab: My Jobs -->
+<a class="flex items-center gap-3 py-3 px-4 rounded-lg text-blue-700 font-bold border-r-4 border-blue-600 bg-white shadow-sm transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span>My Jobs</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-lg text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span>Create Job</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-lg text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span>Find Workers</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-lg text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span>Messages</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-lg text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto px-4 space-y-2">
+<a class="flex items-center gap-3 py-3 px-4 rounded-lg text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Help Center</span>
+</a>
+<a class="flex items-center gap-3 py-3 px-4 rounded-lg text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- Top Bar -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-white/80 backdrop-blur-md z-40 px-8 flex justify-between items-center shadow-sm border-b border-slate-200/20">
+<div class="flex items-center bg-slate-100/50 px-4 py-2 rounded-full w-96">
+<span class="material-symbols-outlined text-slate-400 text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none text-sm focus:ring-0 w-full text-slate-600" placeholder="Search my projects..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="Profile" data-alt="professional headshot of a smiling middle-aged man in a studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLIsI0413l44QYsUffXkQIgErV0rgVbsfN9234JpAGsofVjAtl2oeYt0-yt_CU7zBH_4C-ZlTlw1teQoBskVuJHu6LeXseQKOL9VLjJTwKFktO8gM_RJYTvtp6HAh922WXTLWhinbmEszpPAWnaulo2-SY1t81rgOh1eW6QtLwDPE-HSThaGPeBzXX6gTSt9LOm4OtyeVh0SLdeBJjPJQJCkybwY21en4Gd-PzcnjSbWCsPPjZ21qH7Bh8EVuJ5KPSvGMz90ztEYI"/>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<div class="pt-24 pb-12 px-12 max-w-7xl mx-auto">
+<!-- Hero / Header Section -->
+<div class="flex justify-between items-end mb-10">
+<div class="max-w-xl">
+<h1 class="text-4xl font-extrabold font-headline text-on-surface tracking-tight mb-3">Project Hub</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed">Manage your active contracts, track service progress, and finalize completed work all in one place.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Post New Job
+                </button>
+</div>
+<!-- Stats Bar (Asymmetric Layout Hint) -->
+<div class="grid grid-cols-12 gap-6 mb-12">
+<div class="col-span-8 bg-surface-container-low rounded-xl p-8 flex justify-between items-center">
+<div class="flex items-center gap-6">
+<div class="h-14 w-14 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+</div>
+<div>
+<p class="text-sm font-medium text-on-surface-variant">Active Projects</p>
+<p class="text-3xl font-bold font-headline">12</p>
+</div>
+</div>
+<div class="h-12 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-6">
+<div class="h-14 w-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-medium text-on-surface-variant">Completed this Month</p>
+<p class="text-3xl font-bold font-headline">8</p>
+</div>
+</div>
+<div class="h-12 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-6">
+<div class="h-14 w-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div>
+<p class="text-sm font-medium text-on-surface-variant">Total Invested</p>
+<p class="text-3xl font-bold font-headline">$4.2k</p>
+</div>
+</div>
+</div>
+<div class="col-span-4 bg-primary text-white rounded-xl p-8 relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="text-xl font-bold mb-2">Artisan Shield™</h3>
+<p class="text-sm text-on-primary-container/80 mb-4">All your jobs are protected by our premium insurance coverage.</p>
+<a class="inline-flex items-center gap-1 text-sm font-bold border-b border-white/40 pb-1" href="#">Learn about protection</a>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-9xl" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+</div>
+<!-- Filters -->
+<div class="flex items-center gap-8 mb-8 border-b border-outline-variant/20 pb-1">
+<button class="pb-4 text-primary font-bold border-b-2 border-primary transition-all">All Jobs</button>
+<button class="pb-4 text-on-surface-variant font-medium hover:text-on-surface transition-all">Active</button>
+<button class="pb-4 text-on-surface-variant font-medium hover:text-on-surface transition-all">Completed</button>
+<button class="pb-4 text-on-surface-variant font-medium hover:text-on-surface transition-all">Cancelled</button>
+</div>
+<!-- Job Cards Grid -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 flex items-center gap-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] hover:translate-y-[-2px] transition-transform">
+<div class="h-24 w-32 rounded-lg bg-surface-container-highest overflow-hidden shrink-0">
+<img alt="Smart Home" class="w-full h-full object-cover" data-alt="close-up of a high-tech smart home thermostat panel mounted on a clean white wall with soft ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuJ7b7uO7Y5g26o8f4iQB886ouv0lr1Xh7fHwBLVDAjl7luMIcxmL32dsbkkVP0ah9xu8DVt1B22_96BZAsl4ct7kghJ-ttdXaEEFJ5ednumpF3yReAaNBtaT8RJDenUSJwlCKT1a87R_RaVzeKLjql2Cel76DghivhlGaLP5tUqv7bqeq_Oi62jsp8cnHFqcV0l2jIueFIkyP1PSV0seUxUwU6oD6a_SRV-J2nf7enR8AToYU9cVqvbG_Q9newuUfiyc-HN9w7Ts"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-secondary-container text-on-secondary-container">In Progress</span>
+<span class="text-xs text-on-surface-variant font-medium">Updated 2 hours ago</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-on-surface mb-2">Smart Home Panel Upgrade</h3>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_month">calendar_month</span>
+                                May 12, 2024
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                North Seattle, WA
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+                                Artisan: David K.
+                            </div>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-3 shrink-0">
+<p class="text-2xl font-bold text-primary">$850.00</p>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                            View Details
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 flex items-center gap-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] hover:translate-y-[-2px] transition-transform">
+<div class="h-24 w-32 rounded-lg bg-surface-container-highest overflow-hidden shrink-0">
+<img alt="Electrical" class="w-full h-full object-cover" data-alt="professional electrician working on a circuit breaker panel with organized wiring and tools in a bright garage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDS0TZmjjCatYM7Q6epZLW28hc9ADLXyvK557nSQKoZmnsnbOJQbuyTZxIpIZraVgTMVvsMNYtvWLmtsOTDqaFcWWMqc91lbg6j0pQ4Shw5CFz8L4aSAjIQl08ZA-bDbNRXSt2kKXYPsjzcalxopbgL2ZS1a4SLttlW5jJtXRjSsFo3eUDX42WvC6_EkKQpdrHrUQ01cYGO_GnoPA24cw3NGSEBkLHdimlUoPovYSQpea9EkV-_PurvrrQGO2qZgkxSD73Vogqgv8"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary-fixed text-primary">Open</span>
+<span class="text-xs text-on-surface-variant font-medium">Posted yesterday</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-on-surface mb-2">Kitchen Island Outlet Installation</h3>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_month">calendar_month</span>
+                                May 14, 2024
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                Capitol Hill, WA
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+                                3 Bids Received
+                            </div>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-3 shrink-0">
+<p class="text-2xl font-bold text-primary">$320.00</p>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                            View Details
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 flex items-center gap-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] hover:translate-y-[-2px] transition-transform opacity-80">
+<div class="h-24 w-32 rounded-lg bg-surface-container-highest overflow-hidden shrink-0 grayscale">
+<img alt="Flooring" class="w-full h-full object-cover" data-alt="close-up of polished hardwood flooring installation with professional tools and natural sunlight streaming across the grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHxbT-Q-bc7nEgRW9oAJtyFaGf_o09EeqA8Gb9iteckTyo1FeK7mk0Fx59z1QKyVTaZhNM8daF09s4bneDVHRgYPozSlncHpVNs6b0y8MaqSPUdVSF3otoW_c92fNwKIicTVLOe8hsY_b6JXCZEKqNDFgrGmS91KDuom9kcFK4_8pMF_N3tk0WpDXnH6H-NzIOSR7cswVpqDNmzSentX2n0MLCYbirLFQjpyRfdn3j65FlfF0BESESF51_W2enlLfSYv1oS4Or6WM"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-surface-container-highest text-on-surface-variant">Completed</span>
+<span class="text-xs text-on-surface-variant font-medium">May 01, 2024</span>
+</div>
+<h3 class="text-xl font-bold font-headline text-on-surface mb-2">Refinish Oak Flooring - Master Bed</h3>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_month">calendar_month</span>
+                                Apr 28, 2024
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                Ballard, WA
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                                Rated 5.0
+                            </div>
+</div>
+</div>
+<div class="text-right flex flex-col items-end gap-3 shrink-0">
+<p class="text-2xl font-bold text-on-surface-variant/50">$1,200.00</p>
+<button class="text-on-surface-variant font-bold text-sm flex items-center gap-1 hover:text-primary transition-all">
+                            View Details
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More (Airy Footer) -->
+<div class="mt-12 flex justify-center">
+<button class="bg-surface-container-low text-on-surface font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+                    Load 10 more projects
+                    <span class="material-symbols-outlined" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>

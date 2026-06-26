@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#003ea8",
+              "surface-container": "#edeeef",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "tertiary-container": "#bc4800",
+              "surface-tint": "#0053db",
+              "on-surface": "#191c1d",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb596",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#2a1700",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#ffede6",
+              "secondary-fixed-dim": "#ffb95f",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#e7e8e9",
+              "secondary-fixed": "#ffddb8",
+              "on-secondary-fixed-variant": "#653e00",
+              "secondary": "#855300",
+              "on-primary-fixed": "#00174b",
+              "inverse-primary": "#b4c5ff",
+              "inverse-on-surface": "#f0f1f2",
+              "error": "#ba1a1a",
+              "on-primary-container": "#eeefff",
+              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffdbcd",
+              "primary": "#004ac6",
+              "error-container": "#ffdad6",
+              "tertiary": "#943700",
+              "on-surface-variant": "#434655",
+              "on-error-container": "#93000a",
+              "surface": "#f8f9fa",
+              "on-background": "#191c1d",
+              "on-primary": "#ffffff",
+              "outline": "#737686",
+              "on-tertiary-fixed": "#360f00",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "surface-dim": "#d9dadb",
+              "secondary-container": "#fea619",
+              "surface-bright": "#f8f9fa",
+              "primary-fixed": "#dbe1ff",
+              "primary-container": "#2563eb",
+              "outline-variant": "#c3c6d7",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-secondary-container": "#684000"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+      }
+      h1, h2, h3 {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col items-center justify-between">
+<!-- Top AppBar Suppressed as per UX Goal for Onboarding/Focused Journeys -->
+<main class="flex-1 w-full max-w-md flex flex-col px-8 pt-12">
+<!-- Visual Section (Asymmetric / Editorial) -->
+<div class="relative w-full h-[397px] mb-12 flex items-center justify-center">
+<!-- Background "Ghost" Architecture -->
+<div class="absolute inset-0 bg-surface-container-low rounded-[3rem] -rotate-3 scale-105"></div>
+<!-- Main Content Card -->
+<div class="relative w-full h-full bg-surface-container-lowest rounded-[2.5rem] shadow-Premium overflow-hidden flex flex-col">
+<!-- Map Illustration Layer -->
+<div class="absolute inset-0 opacity-40 grayscale-[0.5]" data-alt="clean minimal city map with soft blue and grey streets for high-end service tracking interface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC683N-NG5o6fvusJTJ4PQMc5kmEdp6QOWaoaLfQVRkjjoMqQBu6B7Ds9n9BSa1eYB1YdPTxjlGz0-FEYNaObBJ5tPKHPQnmSqHHHlb3YTQYw2BIsIlfB1GPks-lfbUYaS3GpaWbFlyk-pco7FVhZo1A1_nNCVcUuQAg8Wmo630qYManAU2-aKT0kaHs_Pv8rCiRq9vfMIMt3BqlAV8fJTP5VDEZ8IC4tkeoFkBOB1sagEKYOpVY3OXCDHb8e2aB-mJ2W3_-uuZw70'); background-size: cover; background-position: center;">
+</div>
+<!-- Live Tracking Overlay -->
+<div class="relative z-10 p-6 flex flex-col h-full justify-between">
+<!-- Worker Badge (Asymmetric Placement) -->
+<div class="self-end bg-surface-container-lowest p-3 rounded-xl shadow-Premium flex items-center gap-3 w-fit mt-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest overflow-hidden">
+<img alt="Worker profile" class="w-full h-full object-cover" data-alt="professional service provider headshot wearing a clean uniform with a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqyQyMkmiqItMf3k2E_nCY5B51VWk3X8AzAxV2if9XmKvyYg-cHvXH6PMD7UPiD8wcM2QjQxpqifgqDRYDq6i8GsMwjAoAK7Ic2KN8AAZuef2gdtLweM1DKzGKohknCcwuh7GYhs7mDkWuRPaiZYOfKtGAZ94ba4XprjXih_lfY8_yNx0l1Evb-OPbB3Ng_QhQwWTi14xm8bgCHDlcMXtjzOylTUnbZgcLnPwBZ7SnW9gBBg1UoynXz-eIaw81WjFxSP1oRVKBKso"/>
+</div>
+<div>
+<p class="text-[10px] font-semibold text-secondary uppercase tracking-widest font-label">Coming Now</p>
+<p class="text-sm font-bold font-headline">Alex Johnson</p>
+</div>
+</div>
+<!-- Progress Timeline (Bento Style) -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-md p-5 rounded-2xl shadow-Premium space-y-4">
+<div class="flex items-center gap-4">
+<div class="relative flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="w-[2px] h-6 bg-primary"></div>
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="w-[2px] h-6 bg-surface-container-highest"></div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">radio_button_unchecked</span>
+</div>
+<div class="flex flex-col justify-between py-1 h-32">
+<div>
+<p class="text-xs font-bold font-headline text-on-surface">Job Accepted</p>
+<p class="text-[10px] text-on-surface-variant">10:30 AM</p>
+</div>
+<div>
+<p class="text-xs font-bold font-headline text-on-surface">Pro En Route</p>
+<p class="text-[10px] text-primary font-semibold">Live Tracking Active</p>
+</div>
+<div>
+<p class="text-xs font-bold font-headline text-on-surface-variant">Job Complete</p>
+<p class="text-[10px] text-on-surface-variant">Estimated 11:45 AM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Trust Badge -->
+<div class="absolute -bottom-4 -left-2 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Secure Payment</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex-1 flex flex-col justify-center mb-8">
+<h1 class="text-4xl font-extrabold font-headline text-on-surface leading-tight tracking-tight mb-4">
+                Track in <span class="text-primary bg-primary-fixed/30 px-2 rounded-lg">Real-Time</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant leading-relaxed font-body">
+                Stay updated on your job's status with live tracking, instant messaging, and secure payments.
+            </p>
+</div>
+</main>
+<!-- Footer Controls -->
+<footer class="w-full max-w-md px-8 pb-12 flex flex-col items-center">
+<!-- Pagination Dots -->
+<div class="flex gap-2 mb-10">
+<div class="h-1.5 w-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-surface-container-highest"></div>
+<div class="h-1.5 w-8 rounded-full bg-primary"></div>
+</div>
+<!-- CTA Action -->
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-5 rounded-xl font-headline font-bold text-lg shadow-Premium active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+            Get Started
+            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="mt-6 text-xs text-on-surface-variant/60 font-medium">
+            By continuing, you agree to our Terms of Service.
+        </p>
+</footer>
+<!-- BottomNavBar Suppressed as per Relevance Check for Transactional/Onboarding pages -->
+</body></html>

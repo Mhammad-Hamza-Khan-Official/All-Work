@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#003ea8",
+              "surface-container": "#edeeef",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "tertiary-container": "#bc4800",
+              "surface-tint": "#0053db",
+              "on-surface": "#191c1d",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb596",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#2a1700",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#ffede6",
+              "secondary-fixed-dim": "#ffb95f",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#e7e8e9",
+              "secondary-fixed": "#ffddb8",
+              "on-secondary-fixed-variant": "#653e00",
+              "secondary": "#855300",
+              "on-primary-fixed": "#00174b",
+              "inverse-primary": "#b4c5ff",
+              "inverse-on-surface": "#f0f1f2",
+              "error": "#ba1a1a",
+              "on-primary-container": "#eeefff",
+              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffdbcd",
+              "primary": "#004ac6",
+              "error-container": "#ffdad6",
+              "tertiary": "#943700",
+              "on-surface-variant": "#434655",
+              "on-error-container": "#93000a",
+              "surface": "#f8f9fa",
+              "on-background": "#191c1d",
+              "on-primary": "#ffffff",
+              "outline": "#737686",
+              "on-tertiary-fixed": "#360f00",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "surface-dim": "#d9dadb",
+              "secondary-container": "#fea619",
+              "surface-bright": "#f8f9fa",
+              "primary-fixed": "#dbe1ff",
+              "primary-container": "#2563eb",
+              "outline-variant": "#c3c6d7",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-secondary-container": "#684000"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .onboarding-gradient {
+            background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface antialiased min-h-screen flex flex-col">
+<!-- Header Suppression: Onboarding screens suppress standard TopAppBar for focused intent -->
+<header class="fixed top-0 left-0 w-full px-6 h-16 flex items-center justify-between z-50">
+<div class="text-xl font-extrabold text-blue-700 tracking-tighter font-headline">ServiceHub</div>
+<button class="text-on-surface-variant font-semibold text-sm hover:opacity-80 transition-opacity">Skip</button>
+</header>
+<main class="flex-1 flex flex-col pt-16 pb-32">
+<!-- Visual Section: Intentional Asymmetry -->
+<div class="relative w-full aspect-[4/5] md:aspect-[16/9] px-6 mt-4">
+<div class="w-full h-full rounded-3xl overflow-hidden relative shadow-2xl">
+<img alt="Professional electrician at work" class="w-full h-full object-cover" data-alt="A focused professional electrician in a clean uniform working on a modern electrical panel with precise tools, warm indoor lighting, high-end professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKdcnmoqOcxs4sxIPHGn__9EB6x9CyAkM_QhvHWk5ZkNNg1Fp8vSMFyRxgt3G30yloHpUZPaJoPIFfRrd6YiQMDp6G9TtSQXJE3lT88qeQuOVQkoHtadoW3lBENA1z3PHkhsego5wLActbKbNJNDlzo7apkPVe6T6FgfIsk3-KgqpHS312fVgK09jr7zMKEd4acKmgh7eidwX7sNndsby6HK0CcF0qy5pl33Kg-6kykCgC94Jk9L4POwT1tBPxnTlZvlq3warDCGY"/>
+<!-- Trust Badge Overlay -->
+<div class="absolute top-6 left-6">
+<div class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-2 shadow-lg">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        PRE-VETTED EXPERTS
+                    </div>
+</div>
+<!-- Floating Info Card (Asymmetric Layout) -->
+<div class="absolute bottom-6 right-6 left-6 md:left-auto md:w-72 bg-glass p-4 rounded-2xl shadow-xl border border-white/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">engineering</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Active Now</p>
+<p class="text-sm font-bold text-on-surface">1,240+ Pros Nearby</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Section -->
+<div class="flex-1 px-8 pt-10 flex flex-col justify-between">
+<div class="space-y-4">
+<h1 class="font-headline font-extrabold text-4xl leading-tight tracking-tight text-on-surface">
+                    Find Your <span class="text-primary italic">Expert</span>
+</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-[90%] font-medium">
+                    Connect with pre-vetted professionals for any home repair or construction project. Quality guaranteed.
+                </p>
+</div>
+<!-- Interaction & Navigation (Suppressed Standard BottomNav for Transactional Journey) -->
+<div class="flex flex-col items-center gap-10 mt-12">
+<!-- Pagination Dots -->
+<div class="flex gap-2.5">
+<div class="h-2 w-8 rounded-full bg-primary transition-all"></div>
+<div class="h-2 w-2 rounded-full bg-surface-container-highest transition-all"></div>
+<div class="h-2 w-2 rounded-full bg-surface-container-highest transition-all"></div>
+</div>
+<!-- Primary CTA -->
+<div class="w-full flex items-center justify-between gap-6">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Close-up portrait of a smiling male contractor in a blue work shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFuDzRU36TvS9RlbGxgb-W-Y7H96NNdreX8YqrSMe6VCgOEmdKihHr60gILfHJFaVsvnbyTE4lK6fKZvXpnE0j8JAmVhzwFNTqA0qAof8O8eOlPN1fyPq0jupO5n6ljn50yyEJzf99udwINgjULqar9bCxSzURk_Ge-RPBPoEJBFDLhEV8LEtLFx40p93KBdci3ZFxT9DhqNTS5aIdvfsCleTzj_xTMZ5BuQqyNmtNXpbgWa5JZYgwgdgMExsUD0m2je1wjwP1-jk"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Smiling female professional plumber holding a wrench, bright portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQpnC0kn543r2izf7c6QCZnyD4DQPC5D7qm4VsDeeG1U1UVzLm738qXKV8XE-v_p-t4DjC1vLgSUXYsGidtAGrmL9F5LrRCUQ8HGMZXBw6FyBYqHfmOUIvu-JxjXIcuy54p07ndg4NuspiTFxS7VtY9dYkR8FsFDYo-kPSBKqH9K44MnQoioQ4qy_lOMaj_ae7JS3xq5u-imdYY9zQWgM0IiIvZIyRxu2Z_rHXwnUNG16baspj0lzY1T__OncH4qUrFsgMoZYfTPo"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Portrait of a senior carpenter in a workshop, warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeAvAEDxW1vz6QuyZB_exo93WWIF13lECcQJzeoSfEwnx4Yh15bXrfnNbVZpgRGGP6wsdgSyLdfw5pyS159SXDd0LyMoXzuQvifecG1kp3q-SpnnxI87k-aaZPmBpG5nzdQJZP9Eotvmr1jKYphbQq6sq6l4IrghgciNhAJtxpSq6KcToVfZ0Ln2L49O_Iznp56FFbzEuJLBDkSAbiaMjnlm_Ozpd_HxEVJU-894tPSv8VA3dofc-509aHmMz2S8XScBC2N0unUg8"/>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-highest flex items-center justify-center text-[10px] font-bold text-on-surface-variant italic">+5k</div>
+</div>
+<button class="flex-1 onboarding-gradient text-white py-4 px-8 rounded-xl font-bold text-lg flex items-center justify-center gap-2 shadow-lg hover:opacity-95 active:scale-95 transition-all">
+                        Next
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Space for Safe Area -->
+<footer class="h-10 w-full bg-background"></footer>
+</body></html>

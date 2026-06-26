@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Details | Artisan Market</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#855300",
+              "on-primary-fixed": "#00174b",
+              "inverse-primary": "#b4c5ff",
+              "surface-container-high": "#e7e8e9",
+              "secondary-fixed": "#ffddb8",
+              "on-secondary-fixed-variant": "#653e00",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-tertiary-container": "#ffede6",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb596",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#2a1700",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary": "#ffffff",
+              "on-surface": "#191c1d",
+              "tertiary-container": "#bc4800",
+              "surface-tint": "#0053db",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "surface-container-low": "#f3f4f5",
+              "surface-container": "#edeeef",
+              "on-primary-fixed-variant": "#003ea8",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-secondary-container": "#684000",
+              "primary-container": "#2563eb",
+              "outline-variant": "#c3c6d7",
+              "surface-bright": "#f8f9fa",
+              "primary-fixed": "#dbe1ff",
+              "surface-dim": "#d9dadb",
+              "secondary-container": "#fea619",
+              "outline": "#737686",
+              "on-tertiary-fixed": "#360f00",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "on-background": "#191c1d",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface": "#f8f9fa",
+              "tertiary": "#943700",
+              "on-surface-variant": "#434655",
+              "primary": "#004ac6",
+              "error-container": "#ffdad6",
+              "tertiary-fixed": "#ffdbcd",
+              "background": "#f8f9fa",
+              "error": "#ba1a1a",
+              "on-primary-container": "#eeefff",
+              "inverse-on-surface": "#f0f1f2"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(24px);
+        background-color: rgba(248, 249, 250, 0.8);
+      }
+      .asymmetric-grid {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 2rem;
+      }
+      @media (max-width: 1024px) {
+        .asymmetric-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-3 w-full max-w-7xl mx-auto">
+<div class="text-2xl font-black text-blue-700 dark:text-blue-400 tracking-tighter font-headline">Artisan Market</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors font-headline tracking-tight font-bold" href="#">Marketplace</a>
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-600 pb-1 font-headline tracking-tight font-bold" href="#">My Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors font-headline tracking-tight font-bold" href="#">Messages</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors font-headline tracking-tight font-bold" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="bg-surface-container-highest border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/40 transition-all w-64" placeholder="Search tasks..." type="text"/>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-50 transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-50 transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-px w-full opacity-20"></div>
+</header>
+<div class="flex pt-16 min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col p-4 gap-2 h-[calc(100vh-64px)] w-64 fixed left-0 bg-slate-50 dark:bg-slate-950 sticky top-16">
+<div class="mb-6 px-2">
+<div class="text-lg font-bold text-slate-900 dark:text-slate-100 font-headline">Project Studio</div>
+<div class="text-xs text-on-surface-variant opacity-70">Premium Tier</div>
+</div>
+<nav class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-3 px-3 py-2.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 transition-transform duration-200 cursor-pointer rounded-lg font-medium text-sm">
+<span class="material-symbols-outlined text-xl" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 shadow-sm rounded-lg transition-transform duration-200 cursor-pointer font-medium text-sm">
+<span class="material-symbols-outlined text-xl" data-icon="work" style="font-variation-settings: 'FILL' 1;">work</span>
+<span>Active Jobs</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 transition-transform duration-200 cursor-pointer rounded-lg font-medium text-sm">
+<span class="material-symbols-outlined text-xl" data-icon="payments">payments</span>
+<span>Financials</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 transition-transform duration-200 cursor-pointer rounded-lg font-medium text-sm">
+<span class="material-symbols-outlined text-xl" data-icon="group">group</span>
+<span>Team</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-2.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 transition-transform duration-200 cursor-pointer rounded-lg font-medium text-sm">
+<span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+<span>Settings</span>
+</div>
+</nav>
+<button class="mt-4 bg-gradient-to-br from-primary to-primary-container text-white py-3 px-4 rounded-xl font-bold text-sm shadow-md hover:scale-[1.02] transition-transform active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span>
+                Post New Job
+            </button>
+<div class="mt-auto border-t border-slate-200 dark:border-slate-800 pt-4">
+<div class="flex items-center gap-3 px-3 py-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 rounded-lg text-sm">
+<span class="material-symbols-outlined text-xl" data-icon="help">help</span>
+<span>Help Center</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-8 lg:ml-0 overflow-y-auto">
+<div class="max-w-6xl mx-auto">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 text-xs font-medium text-on-surface-variant mb-6 uppercase tracking-wider">
+<span>Active Jobs</span>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary">Job #39402</span>
+</div>
+<div class="asymmetric-grid">
+<!-- Left Column: Details -->
+<section class="space-y-8">
+<!-- Job Overview Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] border border-outline-variant/10">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+<div class="space-y-4">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/10 text-on-secondary-container text-[10px] font-bold uppercase rounded-full tracking-widest border border-secondary-container/20">Active</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase rounded-full tracking-widest">Electrical</span>
+</div>
+<h1 class="text-4xl font-black font-headline tracking-tight text-on-surface">Smart Home Panel Upgrade</h1>
+<div class="flex flex-wrap gap-6 items-center">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant/60 leading-none mb-1">Budget</p>
+<p class="font-headline font-bold text-primary">$1,800 - $2,400</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant/60 leading-none mb-1">Timeline</p>
+<p class="font-headline font-bold text-on-surface">Start ASAP</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant/60 leading-none mb-1">Location</p>
+<p class="font-headline font-bold text-on-surface">Austin, TX</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-high hover:bg-surface-variant text-on-surface-variant px-5 py-3 rounded-xl font-bold text-sm transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">edit</span>
+                                        Edit
+                                    </button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:scale-[1.02] transition-transform active:scale-95">
+                                        Close Bidding
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Description & Map Section -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+<div class="md:col-span-3 space-y-6">
+<h3 class="text-xl font-black font-headline tracking-tight">Project Description</h3>
+<div class="prose prose-slate max-w-none text-on-surface-variant leading-relaxed">
+<p>The client is looking to upgrade an existing 100A service to a 200A smart panel (Span or equivalent). The project requires full coordination with the local utility provider for service drop upgrades.</p>
+<p class="mt-4">Scope of work includes: </p>
+<ul class="list-disc pl-5 mt-2 space-y-2">
+<li>Removal and disposal of old panel</li>
+<li>Installation of 200A smart distribution center</li>
+<li>Labeling of all circuits via the smart app</li>
+<li>Verification of grounding and bonding systems</li>
+</ul>
+</div>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h3 class="text-xl font-black font-headline tracking-tight">Job Site</h3>
+<div class="rounded-xl overflow-hidden aspect-video relative group border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="stylized map view of Austin Texas residential neighborhood with clean minimal markers and soft color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYH_UDUz86OA-sMxZLC7pc_keWQnLFkHk22qxe5CQL8O-M4v9QvhXRBITCxw0smFqg8JQFJ1rQ8_DwoemJyhS5o_bGv5YVRxzFm64DUa3ji1R6lLp-HRjgp-ezqC_5u1dCTkVMRUoS6IxaZjNugEFvCD1AbBti3oGh5EvO1lAb6hUxvnu9Rd3VFqrWN04tCcMhkx8JV9vbBfRZ-3h2GX12lrsZxY6hxKNpEQHh0uqtcRxUh9r1h9lUjAv_B0oL8Fciz_et7Z1woVY"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur px-3 py-1 rounded-lg shadow-sm">
+<p class="text-[10px] font-bold text-primary">AUSTIN, TX 78704</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Applicants Section -->
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-2xl font-black font-headline tracking-tight">Qualified Applicants <span class="text-primary/40 ml-2">08</span></h3>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                                    See all applicants
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Applicant Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow">
+<div class="flex gap-4">
+<div class="relative">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="professional headshot of a contractor in clean attire smiling warm friendly neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwYYeWKNTObRlNFHZrsWPSLyZN0zqVvLZp8jk1ijcn9CQB_-5kodrZZJWoLxRqqniXGmbyUOLykdrBzuPX-9CKuwTGKz-9gkFDfLTQys7rjFpKCtqL7R0kT2pK3Kn0fnDFjgPtIgsXsNoICre1wGUoYIUndvWOwXJHoaNfoZ6sphHceFPHQsL4n9vqQukYDPgO3SU51agr3f9a8DJvImUX2xdOIhVWvrhft_te6GDxcUyvsEMbyFV9Z7ttRVA59NSnqUsUQ7UhGQw"/>
+<div class="absolute -bottom-1 -right-1 bg-secondary-container p-1 rounded-full border-2 border-white">
+<span class="material-symbols-outlined text-[12px] text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-on-surface">David K.</h4>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.9</span>
+<span class="text-on-surface-variant/40 text-[10px]">• 124 jobs completed</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-on-surface-variant/60 uppercase">Quote</p>
+<p class="font-headline font-bold text-primary">$2,150</p>
+</div>
+</div>
+<div class="flex gap-2 mt-4">
+<button class="flex-1 bg-surface-container-high text-on-surface-variant py-2 rounded-lg text-xs font-bold hover:bg-surface-variant transition-colors">View Profile</button>
+<button class="flex-1 bg-primary text-white py-2 rounded-lg text-xs font-bold hover:bg-primary-container transition-colors">Hire Now</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Applicant Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/10 hover:shadow-md transition-shadow">
+<div class="flex gap-4">
+<div class="relative">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="portrait of a female electrical engineer with safety goggles on her head professional workshop lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdx9Q1Dh5T7eEubX6UK5QNQIObiPKlIsqbb1CgPYcYtN8YYrzJRVsQrkcBLPcmHNeBFYtYPbTc8lgcHViSMG9WPMelLqWM5n1Mmk_espL5_iw61x57dilxAMQdH-LaUM_DglpxQkxBcQxy8IK2PiaoKe6SodEDcDaUfnQzrH17pyUn34rfeWqwfduLT5i76agfBbI2H6OC9hjWRxQq6DKkW9yXUvlrjKjpZhtEzUb60HHCDwirJxnsxSCO8PmGa5vQ0odwhe2rWsQ"/>
+<div class="absolute -bottom-1 -right-1 bg-secondary-container p-1 rounded-full border-2 border-white">
+<span class="material-symbols-outlined text-[12px] text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-on-surface">Sarah M.</h4>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">5.0</span>
+<span class="text-on-surface-variant/40 text-[10px]">• 89 jobs completed</span>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-on-surface-variant/60 uppercase">Quote</p>
+<p class="font-headline font-bold text-primary">$1,980</p>
+</div>
+</div>
+<div class="flex gap-2 mt-4">
+<button class="flex-1 bg-surface-container-high text-on-surface-variant py-2 rounded-lg text-xs font-bold hover:bg-surface-variant transition-colors">View Profile</button>
+<button class="flex-1 bg-primary text-white py-2 rounded-lg text-xs font-bold hover:bg-primary-container transition-colors">Hire Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Sidebar Tracker -->
+<aside class="space-y-6">
+<div class="bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 sticky top-24">
+<h3 class="text-sm font-black font-headline uppercase tracking-widest text-on-surface-variant/60 mb-8">Project Timeline</h3>
+<div class="space-y-0">
+<!-- Step 1 -->
+<div class="flex gap-4 pb-8 border-l-2 border-primary relative ml-2">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<div class="pl-4">
+<h4 class="text-sm font-bold text-on-surface">Job Posted</h4>
+<p class="text-xs text-on-surface-variant/70 mt-1">March 12, 2024</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-4 pb-8 border-l-2 border-primary relative ml-2">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<div class="pl-4">
+<h4 class="text-sm font-bold text-on-surface">Bidding Active</h4>
+<p class="text-xs text-on-surface-variant/70 mt-1">8 proposals received</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-4 pb-8 border-l-2 border-slate-200 dark:border-slate-800 relative ml-2">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-container-high border-2 border-slate-300"></div>
+<div class="pl-4">
+<h4 class="text-sm font-bold text-on-surface-variant/40">Worker Hired</h4>
+<p class="text-xs text-on-surface-variant/40 mt-1">Awaiting selection</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-4 pb-8 border-l-2 border-slate-200 dark:border-slate-800 relative ml-2">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-container-high border-2 border-slate-300"></div>
+<div class="pl-4">
+<h4 class="text-sm font-bold text-on-surface-variant/40">In Progress</h4>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex gap-4 relative ml-2">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-container-high border-2 border-slate-300"></div>
+<div class="pl-4">
+<h4 class="text-sm font-bold text-on-surface-variant/40">Completed</h4>
+</div>
+</div>
+</div>
+<div class="mt-10 p-4 bg-tertiary-container/5 rounded-xl border border-tertiary-container/10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-xs font-bold text-tertiary uppercase tracking-tighter">Payment Protected</span>
+</div>
+<p class="text-[11px] leading-relaxed text-on-surface-variant">Funds are held in escrow and released only after you approve the completed work.</p>
+</div>
+</div>
+<!-- Trust Badge Mini Card -->
+<div class="p-6 rounded-xl bg-white border border-outline-variant/10 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div>
+<h4 class="text-xs font-bold">Artisan Guarantee</h4>
+<p class="text-[10px] text-on-surface-variant">Full coverage on all projects up to $5,000.</p>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</div>
+</body></html>

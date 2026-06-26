@@ -1,0 +1,21 @@
+"React Developer Tool" Chrome extention 
+VS code Extentions
+
+Thunder client
+ES7 React/Redux/GraphQL/React Native snippets
+bracket pair colorizer
+
+
+
+Quick Start
+command
+npx create-react-app <folder>
+npx create-react-app my-app
+or
+npx create-react-app .
+cd my-app
+npm start
+
+npm install -g create-react-app
+
+https://create-react-app.dev/docs/getting-started/

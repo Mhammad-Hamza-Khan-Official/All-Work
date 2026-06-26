@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServiceHub | My Work</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#2563eb",
+              "on-secondary-fixed": "#2a1700",
+              "on-primary-container": "#eeefff",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#f8f9fa",
+              "on-primary-fixed-variant": "#003ea8",
+              "outline-variant": "#c3c6d7",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-container": "#ffede6",
+              "inverse-surface": "#2e3132",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#e7e8e9",
+              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffdbcd",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#191c1d",
+              "primary": "#004ac6",
+              "surface-variant": "#e1e3e4",
+              "on-background": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f3f4f5",
+              "outline": "#737686",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "inverse-primary": "#b4c5ff",
+              "on-error-container": "#93000a",
+              "surface-container": "#edeeef",
+              "on-tertiary-fixed": "#360f00",
+              "error": "#ba1a1a",
+              "secondary-container": "#fea619",
+              "secondary-fixed": "#ffddb8",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-surface-variant": "#434655",
+              "surface-dim": "#d9dadb",
+              "tertiary-container": "#bc4800",
+              "tertiary": "#943700",
+              "surface-tint": "#0053db",
+              "tertiary-fixed-dim": "#ffb596",
+              "secondary": "#855300",
+              "on-secondary-fixed-variant": "#653e00",
+              "inverse-on-surface": "#f0f1f2",
+              "surface": "#f8f9fa",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-primary-fixed": "#00174b",
+              "on-secondary-container": "#684000",
+              "primary-fixed": "#dbe1ff",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md bg-surface-container-low shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/10 transition-all active:scale-95">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Professional headshot of a service technician with a friendly expression, outdoor natural lighting, soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkbZJm0an0pwJpPo-29lfUY8mQfvM_Nw4J6egjOlNfcLs1Np8GEL6Wm5b75xDaVY6JTTye5Um3Dfxsy0QlL5pcAMwWopmWnOx2K34hmVN9twbvxzXf_JHz4RNYIE5-0Nyzz9J4zWe_o8bZDDmqhizwJLoTwwNmlb4j1xOTh2F0zbgvSmmzWEKnQXi5cwqoqLROEhULUhKTJ-jS_525Ehxx_XCnCWVz92LJR7mOjNPBkLXZ8tZdaJQbgEAQ-ySDA1KjUY1OFOCyMHQ"/>
+</div>
+<span class="font-manrope font-black text-2xl text-blue-800 dark:text-blue-400 tracking-tighter">ServiceHub</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:scale-[1.02] transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto">
+<!-- Dashboard Header -->
+<div class="mb-10">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface mb-2">My Tasks</h1>
+<p class="text-on-surface-variant font-medium">You have 4 tasks remaining for today.</p>
+</div>
+<!-- Layout Strategy: 60/40 Asymmetric Split for Modern Feel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Active & Upcoming (60%) -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Active Task Card: "The Master Artisan" High Intensity Style -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xs font-bold uppercase tracking-widest text-primary">In Progress</h2>
+<span class="h-[1px] flex-grow ml-4 bg-primary/10"></span>
+</div>
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0px_20px_40px_rgba(25,28,29,0.06)] hover:scale-[1.01] transition-all duration-300">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary"></div>
+<div class="p-6 md:p-8">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold uppercase tracking-wider rounded-full">Primary Job</span>
+<span class="text-on-surface-variant text-sm font-medium">Started 45m ago</span>
+</div>
+<h3 class="text-2xl font-extrabold tracking-tight">Kitchen Lighting Install</h3>
+<p class="text-on-surface-variant font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+                                        Jonathan Henderson
+                                    </p>
+</div>
+<div class="text-right">
+<div class="text-primary font-bold text-xl tracking-tight">10:30 AM</div>
+<div class="text-on-surface-variant text-sm">Today, Oct 24</div>
+</div>
+</div>
+<div class="mt-8 flex flex-wrap items-center gap-3">
+<button class="flex items-center gap-2 px-6 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl hover:scale-[1.02] transition-all active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl" data-icon="check_circle">check_circle</span>
+                                    Update Status
+                                </button>
+<button class="flex items-center gap-2 px-6 py-3 bg-surface-container-low text-primary font-bold rounded-xl hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined text-xl" data-icon="chat_bubble">chat_bubble</span>
+                                    Message
+                                </button>
+<button class="p-3 text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming List: Ghost Boundaries Strategy -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Upcoming Schedule</h2>
+<span class="h-[1px] flex-grow ml-4 bg-outline-variant/20"></span>
+</div>
+<div class="space-y-4">
+<!-- Task Item 1 -->
+<div class="flex flex-col md:flex-row items-center gap-6 p-6 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container hover:shadow-sm">
+<div class="w-full md:w-32 flex flex-col items-center justify-center border-r-0 md:border-r border-outline-variant/30 pr-0 md:pr-6">
+<span class="text-2xl font-black text-on-surface">02:00</span>
+<span class="text-xs font-bold uppercase text-on-surface-variant tracking-tighter">PM Today</span>
+</div>
+<div class="flex-grow space-y-1 w-full text-center md:text-left">
+<h4 class="text-lg font-bold tracking-tight">HVAC System Maintenance</h4>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> West Side Towers</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="person">person</span> Sarah Miller</span>
+</div>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<span class="px-4 py-2 bg-secondary-container/10 text-on-secondary-container text-xs font-bold rounded-full uppercase tracking-widest w-full text-center md:w-auto">Scheduled</span>
+</div>
+</div>
+<!-- Task Item 2 -->
+<div class="flex flex-col md:flex-row items-center gap-6 p-6 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container hover:shadow-sm">
+<div class="w-full md:w-32 flex flex-col items-center justify-center border-r-0 md:border-r border-outline-variant/30 pr-0 md:pr-6">
+<span class="text-2xl font-black text-on-surface">04:30</span>
+<span class="text-xs font-bold uppercase text-on-surface-variant tracking-tighter">PM Today</span>
+</div>
+<div class="flex-grow space-y-1 w-full text-center md:text-left">
+<h4 class="text-lg font-bold tracking-tight">Smart Lock Configuration</h4>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm text-on-surface-variant font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> 422 Oak Ln.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="person">person</span> Robert Chen</span>
+</div>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<span class="px-4 py-2 bg-slate-200 text-slate-700 text-xs font-bold rounded-full uppercase tracking-widest w-full text-center md:w-auto">Awaiting Confirmation</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Contextual Quick Stats & Tools (40%) -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Performance Card -->
+<div class="bg-surface-container-highest/30 p-8 rounded-2xl space-y-6">
+<h3 class="text-lg font-bold tracking-tight">Today's Progress</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-sm font-semibold text-on-surface-variant">Efficiency Goal</span>
+<span class="text-xl font-black text-primary">75%</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[75%]"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-white p-4 rounded-xl shadow-sm">
+<div class="text-[10px] font-bold uppercase text-on-surface-variant mb-1">Earned</div>
+<div class="text-xl font-bold text-on-surface">$340.50</div>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-sm">
+<div class="text-[10px] font-bold uppercase text-on-surface-variant mb-1">Hours</div>
+<div class="text-xl font-bold text-on-surface">6.5</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity/Notes -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<h3 class="text-lg font-bold tracking-tight mb-6">Service Area Map</h3>
+<div class="w-full h-48 bg-slate-200 rounded-xl overflow-hidden relative grayscale">
+<img alt="Map view" class="w-full h-full object-cover opacity-50" data-alt="Top-down abstract map view of urban city streets with stylized blue markers and clean architectural lines" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK4_kzb5QYUfNoFFEq9b1G9oZTZLy9_AfwsxlEFzpaJzVZxWgfGBoO236ayVOy0KkYEzuEeMJ8SqlBA7x3rGfc8jNPfvZ5q7CjNiSND0LlHFOSKLYWjjx5qtHJuReZapdBKPRqqQMVQDp3aFNAlUDJfocCjbpTqvutBMZnfOMz02l-CfxV3Y-6VW0D3mzPO8N91ZgpZFGJbBOcsgVM871AGxof-AOgTbGmgdvbHIgYZt3yUT5zPZai1Tjvz18hduBvGHp_RXrq8ko"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">
+<div class="w-4 h-4 bg-primary rounded-full ring-4 ring-white"></div>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-3 bg-surface-container-low text-primary text-sm font-bold rounded-xl hover:bg-surface-container-high transition-all">
+                        Open Navigation
+                    </button>
+</div>
+<!-- Quick Help Chip -->
+<div class="bg-tertiary-container/10 p-6 rounded-2xl flex items-start gap-4 border border-tertiary-container/20">
+<span class="material-symbols-outlined text-tertiary" data-icon="help_outline">help_outline</span>
+<div>
+<p class="text-sm font-bold text-on-tertiary-fixed-variant">Need help with a task?</p>
+<p class="text-xs text-on-tertiary-fixed-variant/70 mt-1">Our support team is online and ready to assist you with equipment or client issues.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-950 rounded-t-[2rem] shadow-[0px_-10px_30px_rgba(25,28,29,0.04)] md:hidden">
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-2xl px-5 py-2 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Jobs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button: Contextual for adding a custom note/task -->
+<button class="fixed right-6 bottom-24 md:bottom-10 bg-gradient-to-br from-primary to-primary-container text-white p-4 rounded-2xl shadow-2xl hover:scale-105 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

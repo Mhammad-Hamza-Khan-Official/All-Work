@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - ServiceHub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed": "#360f00",
+                        "tertiary-container": "#bc4800",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed": "#2a1700",
+                        "secondary-fixed": "#ffddb8",
+                        "primary-container": "#2563eb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-background": "#191c1d",
+                        "inverse-primary": "#b4c5ff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "on-secondary-container": "#684000",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed": "#00174b",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#434655",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-container": "#ffede6",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "surface-container": "#edeeef",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#737686",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "secondary": "#855300",
+                        "outline-variant": "#c3c6d7",
+                        "background": "#f8f9fa",
+                        "primary": "#004ac6",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary-container": "#fea619",
+                        "tertiary": "#943700",
+                        "surface-tint": "#0053db",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-variant": "#e1e3e4",
+                        "surface": "#f8f9fa"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+        .shadow-premium {
+            box-shadow: 0px 20px 40px rgba(25, 28, 29, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- Suppressing Navigation Shell for Login - Focus Mode -->
+<main class="flex-grow flex items-center justify-center p-6 md:p-12">
+<div class="w-full max-w-md">
+<!-- Branding Header -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-primary-container mb-6 shadow-premium">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="construction">construction</span>
+</div>
+<h1 class="text-3xl font-extrabold tracking-tighter text-primary mb-2">ServiceHub</h1>
+<p class="text-on-surface-variant font-body">Welcome back. Let's get to work.</p>
+</div>
+<!-- Login Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-premium">
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1" for="email">Email Address</label>
+<div class="relative">
+<input class="w-full h-12 px-4 bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-primary/40 transition-all outline-none text-on-surface placeholder:text-outline" id="email" placeholder="alex@studio.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="text-sm font-semibold text-on-surface-variant" for="password">Password</label>
+<a class="text-sm font-medium text-primary hover:text-primary-container transition-colors" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-4 bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-primary/40 transition-all outline-none text-on-surface placeholder:text-outline" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center px-1">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/40 bg-surface-container-highest" id="remember" type="checkbox"/>
+<label class="ml-3 text-sm font-medium text-on-surface-variant" for="remember">Keep me logged in</label>
+</div>
+<!-- Login Button -->
+<button class="w-full h-14 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl shadow-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 group" type="submit">
+<span>Login to Dashboard</span>
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-surface-container-highest"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-4 bg-surface-container-lowest text-outline font-medium">Or continue with</span>
+</div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 h-12 border border-outline-variant/20 rounded-lg hover:bg-surface-container-low transition-colors group">
+<img alt="Google" class="w-5 h-5 grayscale group-hover:grayscale-0 transition-all" data-alt="Official Google G icon with vibrant colors on a white background for social login button" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEBQs-W427_IcwTm8BZtypJG9QwX5NJzub9oj3Nj6V3IU47-2ZBHxMQxbxfbC-5NSjfFxvEcuEr9OwQhnMzYHukMX8wcB-QfSVRSAhl-YuDT89o3xUrdn-eVKAEYfAzj08hmQv46QV47QVvZR5UkCI6xktmgqIK1fP7IUnfmV40lbuvVVgk5qoY4jqnhGNh6ziPxHy670dMIbaMvpugsvjHXiNtzAAUm5twywmGqJBxSOgCC7xZQSm79-99pYi8O70qkpqSTba1lw"/>
+<span class="text-sm font-semibold text-on-surface">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 h-12 border border-outline-variant/20 rounded-lg hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-xl text-on-surface" data-icon="apple" style="font-variation-settings: 'FILL' 1;">ios</span>
+<span class="text-sm font-semibold text-on-surface">Apple</span>
+</button>
+</div>
+</div>
+<!-- Footer Link -->
+<p class="mt-8 text-center text-on-surface-variant font-medium">
+                Don't have an account? 
+                <a class="text-primary font-bold hover:underline ml-1" href="#">Register Now</a>
+</p>
+</div>
+</main>
+<!-- Side Visual (Asymmetric Layout for larger screens) -->
+<div class="hidden lg:flex fixed top-0 right-0 w-[40%] h-full overflow-hidden">
+<div class="absolute inset-0 bg-primary/10 backdrop-blur-3xl z-10"></div>
+<img alt="Architecture" class="object-cover w-full h-full grayscale brightness-50" data-alt="Modern architectural construction site with steel beams and blueprints under soft morning sunlight, professional and industrial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR81pYNp-7dmfBH4DZXio6DBmjpdCVzx4UReUTZMy_5JK_NL5Qua20iVm_1Pkox24LmFeJjAm9TyOIomg5corasRdHeLy_UViG304_xhbBrVskbKtSFj8bnTlSDvJiytuuHNjUciqLK9XJixQT2vo3eytMnfeGmJYd_p6mYuiNb8GUSikw2KaIxclTqUrUI-FQetv6CB7UUVDU19ZlcwOMuf0HsIi3vzP_Hj7uIv0znzB55dCbhud3WjMDDHZZehYB3J5FeT_7_Ow"/>
+<div class="absolute bottom-12 left-12 right-12 z-20 text-white">
+<div class="mb-4 flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-wider uppercase">Verified Professionals</span>
+</div>
+<h2 class="text-4xl font-extrabold tracking-tight mb-4">Precision in every service. Reliability in every task.</h2>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+<img alt="User" data-alt="Portrait of a smiling professional male architect wearing a hard hat and spectacles in a clean studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDymorOK-WzN103qRWicVH78bXSRclsdvsMEaN1PNA-tXhw0Qc4ZB6D54d-whK28oMiiIIr5RUwRp_x3JskIhyKe6jpRKHm38uqzyodPz6rzi9YfH522fgzbGyLUZiGdwg_RXQDdTy_-kJEfPhihV3aYd473vdMfNGnxDodBhK9L9IHyasNLuHM01Um_qBDcn8a5jL0W86368QP2XHTDHl7M8Pep-4N2jNO1cyd4hdymeyNVXfTQChUcQr_k7oHnCeyBidtUAHnQU"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-slate-300 overflow-hidden">
+<img alt="User" data-alt="Confident female civil engineer with a warm smile, professional headshot with blurred construction background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6tTJ5b9yxtN-87Utacsbv5LruEBHm5_O9wJ2g3CxEky6zMp4t7xxb6pZwL7SbpGTRjcqa_ShHTMW89MNr5kdvvala-uT3kOW8M_rYHy9SOyZuySogOaqfUNv59Q0y6LNixhYr6QjBEWiXUt_0PLjg1UgH6wtb_29Gdkx2y3AraIxkiJ30T1AaW3z5KhNtafWwAAxSbrlpXY11YT57SmvZVB9lmNmRZeUISxkzIJ-Qgj5DTNQutqT07ofdiU9kMtKUA-6WkO3k4YE"/>
+</div>
+</div>
+<p class="text-sm font-medium text-white/80">+10k Pros joined this week</p>
+</div>
+</div>
+</div>
+</body></html>

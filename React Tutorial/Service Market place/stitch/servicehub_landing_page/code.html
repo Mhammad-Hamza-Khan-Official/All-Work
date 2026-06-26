@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#855300",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary-fixed": "#ffdbcd",
+              "on-secondary-fixed": "#2a1700",
+              "inverse-surface": "#2e3132",
+              "on-primary": "#ffffff",
+              "primary-container": "#2563eb",
+              "error-container": "#ffdad6",
+              "primary-fixed-dim": "#b4c5ff",
+              "tertiary-container": "#bc4800",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#b4c5ff",
+              "on-surface": "#191c1d",
+              "surface-container": "#edeeef",
+              "surface-bright": "#f8f9fa",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "on-primary-fixed": "#00174b",
+              "on-tertiary-container": "#ffede6",
+              "primary-fixed": "#dbe1ff",
+              "surface": "#f8f9fa",
+              "tertiary-fixed-dim": "#ffb596",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-primary-fixed-variant": "#003ea8",
+              "secondary-container": "#fea619",
+              "primary": "#004ac6",
+              "outline-variant": "#c3c6d7",
+              "on-surface-variant": "#434655",
+              "outline": "#737686",
+              "background": "#f8f9fa",
+              "surface-tint": "#0053db",
+              "surface-variant": "#e1e3e4",
+              "inverse-on-surface": "#f0f1f2",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-primary-container": "#eeefff",
+              "surface-container-high": "#e7e8e9",
+              "on-secondary-container": "#684000",
+              "tertiary": "#943700",
+              "error": "#ba1a1a",
+              "surface-dim": "#d9dadb",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed": "#360f00",
+              "on-background": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#ffddb8",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .text-shadow-premium {
+            text-shadow: 0px 4px 12px rgba(25, 28, 29, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<nav class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="menu">menu</span>
+<span class="text-xl font-extrabold text-blue-700 dark:text-blue-400 tracking-tighter font-headline">ServiceHub</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 dark:text-blue-400 font-bold font-label" href="#">Explore</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg font-label" href="#">Bookings</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg font-label" href="#">Messages</a>
+<a class="text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg font-label" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-500 hover:text-primary transition-colors" data-icon="notifications">notifications</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-xl font-bold text-sm active:scale-95 duration-200">Join Now</button>
+</div>
+</nav>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full"></div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[751px] flex items-center overflow-hidden bg-surface-container-low px-6">
+<div class="max-w-7xl mx-auto w-full grid md:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+<div class="z-10 py-12">
+<h1 class="font-headline font-extrabold text-6xl md:text-7xl text-on-surface tracking-tight leading-[1.05] mb-6">
+                        Find the Best <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Workers</span> for <br/>
+                        Every Project.
+                    </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed opacity-80">
+                        Connect with top-tier professionals in minutes. From structural architecture to precision plumbing, we bring craftsmanship to your doorstep.
+                    </p>
+<!-- Search Bar -->
+<div class="bg-surface-container-lowest p-2 rounded-2xl shadow-premium flex flex-col md:flex-row gap-2 max-w-2xl border border-outline-variant/10">
+<div class="flex-1 flex items-center px-4 gap-3 bg-surface-container-highest/30 rounded-xl">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full py-4 text-on-surface font-medium placeholder:text-outline" placeholder="What service do you need?" type="text"/>
+</div>
+<div class="flex-1 flex items-center px-4 gap-3 bg-surface-container-highest/30 rounded-xl">
+<span class="material-symbols-outlined text-outline" data-icon="location_on">location_on</span>
+<input class="bg-transparent border-none focus:ring-0 w-full py-4 text-on-surface font-medium placeholder:text-outline" placeholder="Location" type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20">
+                            Search
+                        </button>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="professional contractor portrait in a workshop setting with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPyiHLmlXBxDXfsUXocFFKNhx3UFjJaFIpt1YzvVAloUcj3-oLWbKmzYocC9hqvHKKYQcCyEBykzzSEWrNHbALcoO6wPDjuJUSfT3b2Ky1mUfg5KL39xFEghp6zHc7gSVOmLI10UF8Q3uGRTQD03XL4STMgjzD4cCcIyUIJfRhtnC40apziGpLChTvONb1v6VhoqcDVXFuanY081tbLMNaU84hMcsdJMHfFaSugRq8t74-YpWQLhItVX5K7KXUyWtbo6qihTGh71A"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="portrait of a female interior designer in a bright modern studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ4j6Ttzk6fzFcEUc-VQN-S2Y0mAFK0KhbhPq81U0CB78BJSwOGV4BBAHohCK8vGSjMrkimzzl-cNdEKh43g4qVsYEPxrezn__gXqEV58B0LzmHBEoDQIwmrIsnvnnP_iTUXsIv6GxHNkZBK-Ri9uNfQIUZ4As38X8sYKmeRFYGnycGk0ZYo9PG9bxADEd1dINW4tKCV7TrMA7e_bZRHHSw_xdrA5hxugNMsNaIPyFyk0rdVQnAbHtrdxNDfGLXKq0lK3-qQmh71E"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="smiling carpenter holding tools in a sunlit carpentry shop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHbIqPQkXRMOVZtf0Xi9NfXBxQwpTBB0lm0VjLN1gFHCOUsTDznQtOt18onPe3sbw2cxgOJJrSRiLf9pvRqSctS3tw-dUdX174zEPVwlXQhiftOfA66rUTmMasoiA0zNRGlhoyopXBbjNYc1he6jyymq_M_ps6s8dsFsx5zRBhtslQ4C1NVP3SGNIcXHR7Vzr_V1hh9KE6duUH1FXyKLhGnA1Gg66ayeIFTFzsk_rzi48n1YNYYCf_McFPo9gILBHdw0QTHxBKWjQ"/>
+</div>
+<p class="text-sm font-semibold text-on-surface-variant">
+<span class="text-secondary font-bold">50k+</span> Trusted Pros Nearby
+                        </p>
+</div>
+</div>
+<!-- Floating Asset Side -->
+<div class="hidden md:block relative h-full min-h-[600px]">
+<div class="absolute inset-0 bg-primary/5 rounded-[40px] rotate-3 translate-x-12 translate-y-12"></div>
+<div class="absolute inset-0 overflow-hidden rounded-[40px] shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="high-quality interior of a modern apartment under renovation with professional lighting and clean aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALAQ_iGHvIyQWCap36TBr1v5sInKy0uC4iGs7SFDGidO2MRalGPL4QiPnnKWjEwmiyLRaub2o0q1hWoSFuiRVa80Xw4oTLP880hajvEbgI5a0nYQy7KBuXkosVuLcSigpIXTrzpgT-yI5qMowKxmo0fsnkIIWF63WIkPO7tyCTtFIj7BOWbjqtfpSPiFR1eO00P-u9aRKPc01JxeVBu_QBlh6wNZXMxn2itrQIAhkxv1jV6VhepwJqUHl2hvoXUzjGxyB9tlSWs84"/>
+</div>
+<!-- Floating Cards -->
+<div class="absolute -left-12 top-1/4 bg-surface-container-lowest p-4 rounded-2xl shadow-premium border border-outline-variant/10 flex items-center gap-4 max-w-[240px]">
+<div class="bg-secondary-container/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Verified Pro</p>
+<p class="text-[10px] text-on-surface-variant">Background Checked</p>
+</div>
+</div>
+<div class="absolute -right-8 bottom-1/4 bg-surface-container-lowest p-6 rounded-2xl shadow-premium border border-outline-variant/10 flex flex-col gap-3 max-w-[200px]">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm font-bold text-on-surface">Expert Painter</p>
+<p class="text-xs text-on-surface-variant">"Alex did an amazing job on our studio loft."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Bento Grid -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-secondary font-bold tracking-widest uppercase text-xs">Categories</span>
+<h2 class="font-headline font-bold text-4xl mt-2">Explore Expert Services</h2>
+</div>
+<p class="text-on-surface-variant max-w-md opacity-70">
+                    From emergency repairs to planned renovations, find the right professional for any task.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Large Card -->
+<div class="col-span-2 row-span-2 group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-square md:aspect-auto">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="professional electrician working on a complex circuit breaker panel in a modern residential setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw_no9WJJ3ynm0bR-BrDtTjMOvjQbxXHWvPQkAPnRWztxl7_wC7IiZuhHMrygV74zwn9fvD6fIuiOhSCWYmXEn3XN9wfsxnEuJt4dsq0CM4Ku0uzLm_yM5a3zODy-IgwoNV7vKIPrqJJl4pImiu-vzyXR83kLprRyBjN5JbMO3C60C04GoeBMAChVlAuKBDK0X9CKVV3zPznoVK-YJ7PF9ihD4I7s6gUPolOB6Am0US_0lurSGyyxGW4JsWQ0OwhUnJiQPm_XxwL8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<h3 class="text-on-primary font-headline font-bold text-2xl mb-2">Electrical</h3>
+<p class="text-on-primary/80 text-sm mb-4">Installation, repairs, and full wiring systems.</p>
+<span class="material-symbols-outlined text-on-primary" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Small Cards -->
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-square">
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="plumbing">plumbing</span>
+<div>
+<h3 class="font-bold text-lg">Plumbing</h3>
+<p class="text-on-surface-variant text-xs mt-1">120+ Pros</p>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-square">
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="format_paint">format_paint</span>
+<div>
+<h3 class="font-bold text-lg">Painting</h3>
+<p class="text-on-surface-variant text-xs mt-1">85+ Pros</p>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-square">
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="carpenter">carpenter</span>
+<div>
+<h3 class="font-bold text-lg">Carpentry</h3>
+<p class="text-on-surface-variant text-xs mt-1">64+ Pros</p>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-square">
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="architecture">architecture</span>
+<div>
+<h3 class="font-bold text-lg">Design</h3>
+<p class="text-on-surface-variant text-xs mt-1">42+ Pros</p>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</section>
+<!-- How It Works (Asymmetric Split) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16">
+<!-- Customers -->
+<div class="space-y-12">
+<div>
+<h2 class="font-headline font-bold text-4xl mb-4">For Customers</h2>
+<p class="text-on-surface-variant opacity-80">Getting things done has never been this simple.</p>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold text-xl shrink-0">1</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Post your requirement</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Describe your project, timeline, and budget. It only takes 2 minutes.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold text-xl shrink-0">2</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Compare Quotes</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Receive custom quotes from verified local pros and compare their portfolios.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold text-xl shrink-0">3</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Hire &amp; Pay Safely</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Message pros directly and pay only when the work is completed to your satisfaction.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Workers -->
+<div class="bg-surface-container-lowest p-10 rounded-[40px] shadow-premium border border-outline-variant/10">
+<div class="mb-10">
+<h2 class="font-headline font-bold text-4xl mb-4">For Workers</h2>
+<p class="text-on-surface-variant opacity-80">Grow your business with premium leads.</p>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xl shrink-0">1</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Build your Profile</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Showcase your best work and certifications to stand out from the crowd.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xl shrink-0">2</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Get Real Leads</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Receive notifications for projects that match your expertise and location.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xl shrink-0">3</div>
+<div>
+<h4 class="font-bold text-lg mb-2">Get Paid Fast</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Seamless invoicing and secure payments directly to your bank account.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto bg-gradient-to-br from-primary to-primary-container rounded-[48px] p-12 md:p-24 relative overflow-hidden text-center shadow-2xl">
+<!-- Abstract background patterns -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl"></div>
+<div class="relative z-10">
+<h2 class="font-headline font-extrabold text-4xl md:text-6xl text-on-primary mb-8 tracking-tight">
+                        Ready to start your <br class="hidden md:block"/> next project?
+                    </h2>
+<p class="text-on-primary/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Join thousands of homeowners and professionals who trust ServiceHub for quality work and reliable service.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:bg-surface-bright transition-colors shadow-xl">
+                            Join as a Customer
+                        </button>
+<button class="bg-transparent border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-colors">
+                            Join as a Professional
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container px-6 py-16">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 border-b border-outline-variant/30 pb-16">
+<div class="col-span-2 md:col-span-1">
+<span class="text-2xl font-black text-blue-700 font-headline tracking-tighter">ServiceHub</span>
+<p class="mt-6 text-on-surface-variant text-sm leading-relaxed">
+                    The modern marketplace for service professionals and homeowners. Building trust through quality craftsmanship.
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest text-on-surface mb-6">Explore</h4>
+<ul class="space-y-4 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Find a Pro</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Browse Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Project Gallery</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cost Guides</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest text-on-surface mb-6">Company</h4>
+<ul class="space-y-4 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Success Stories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest text-on-surface mb-6">Legal</h4>
+<ul class="space-y-4 text-on-surface-variant text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Trust &amp; Safety</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 flex flex-col md:row justify-between items-center gap-6">
+<p class="text-on-surface-variant text-xs">© 2024 ServiceHub Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="public">public</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="alternate_email">alternate_email</span>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full glass-nav flex justify-around items-center px-4 pb-4 pt-2 z-50 rounded-t-2xl shadow-[0_-4px_12px_rgba(0,0,0,0.03)] border-t border-slate-100 dark:border-slate-800">
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl px-3 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-inter text-[11px] font-semibold">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="font-inter text-[11px] font-semibold">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-inter text-[11px] font-semibold">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-semibold">Profile</span>
+</a>
+</nav>
+</body></html>

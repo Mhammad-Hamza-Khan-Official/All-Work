@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#004ac6",
+              "error": "#ba1a1a",
+              "background": "#f8f9fa",
+              "inverse-surface": "#2e3132",
+              "inverse-primary": "#b4c5ff",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-secondary-container": "#684000",
+              "surface-tint": "#0053db",
+              "outline": "#737686",
+              "surface-variant": "#e1e3e4",
+              "surface": "#f8f9fa",
+              "surface-dim": "#d9dadb",
+              "on-error-container": "#93000a",
+              "tertiary-fixed-dim": "#ffb596",
+              "on-tertiary-fixed": "#360f00",
+              "error-container": "#ffdad6",
+              "tertiary": "#943700",
+              "surface-bright": "#f8f9fa",
+              "on-primary-fixed": "#00174b",
+              "tertiary-fixed": "#ffdbcd",
+              "on-primary-fixed-variant": "#003ea8",
+              "on-secondary-fixed-variant": "#653e00",
+              "surface-container": "#edeeef",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "secondary": "#855300",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "on-surface-variant": "#434655",
+              "primary-container": "#2563eb",
+              "on-error": "#ffffff",
+              "secondary-container": "#fea619",
+              "on-background": "#191c1d",
+              "primary-fixed-dim": "#b4c5ff",
+              "primary-fixed": "#dbe1ff",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-fixed": "#2a1700",
+              "surface-container-highest": "#e1e3e4",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-container-high": "#e7e8e9",
+              "secondary-fixed": "#ffddb8",
+              "outline-variant": "#c3c6d7",
+              "on-primary-container": "#eeefff",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#bc4800",
+              "on-tertiary-container": "#ffede6",
+              "on-surface": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center px-4 h-16 w-full">
+<button class="p-2 active:scale-95 duration-200 text-blue-700 dark:text-blue-400">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-manrope font-bold text-xl tracking-tight text-on-surface ml-2">Notifications</h1>
+<div class="ml-auto">
+<button class="p-2 active:scale-95 duration-200 text-slate-500">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full"></div>
+</header>
+<main class="pt-20 px-4">
+<!-- Category Tabs -->
+<div class="flex gap-2 overflow-x-auto pb-4 scrollbar-hide no-scrollbar">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-label text-sm font-semibold whitespace-nowrap active:scale-95 transition-transform">
+                All
+            </button>
+<button class="bg-surface-container-high text-on-surface-variant px-5 py-2 rounded-full font-label text-sm font-semibold whitespace-nowrap hover:bg-surface-container-highest transition-colors">
+                Jobs
+            </button>
+<button class="bg-surface-container-high text-on-surface-variant px-5 py-2 rounded-full font-label text-sm font-semibold whitespace-nowrap hover:bg-surface-container-highest transition-colors">
+                Messages
+            </button>
+<button class="bg-surface-container-high text-on-surface-variant px-5 py-2 rounded-full font-label text-sm font-semibold whitespace-nowrap hover:bg-surface-container-highest transition-colors">
+                Payments
+            </button>
+</div>
+<!-- Section: Today -->
+<section class="mt-4">
+<div class="flex items-center justify-between mb-3 px-1">
+<h2 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant opacity-60">Today</h2>
+<span class="text-[10px] font-bold text-primary px-2 py-0.5 bg-primary/10 rounded-full">3 NEW</span>
+</div>
+<div class="space-y-3">
+<!-- Job Notification Card -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.04)] relative">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="construction">construction</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-on-surface text-[15px] leading-tight">New Project Proposal</h3>
+<div class="w-2 h-2 bg-primary rounded-full mt-1.5"></div>
+</div>
+<p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Studio Archi-V has submitted a proposal for "Kitchen Renovation Phase 1".</p>
+<span class="text-[11px] font-medium text-outline mt-2 block">2 mins ago</span>
+<div class="mt-4 flex gap-2">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary text-xs font-bold px-4 py-2 rounded-lg active:scale-[0.98] transition-all">
+                                    View Proposal
+                                </button>
+<button class="text-primary text-xs font-bold px-4 py-2 rounded-lg border border-primary/10 hover:bg-primary/5 transition-colors">
+                                    Dismiss
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Message Notification Card -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.04)] relative">
+<div class="flex gap-4">
+<div class="relative flex-shrink-0">
+<img class="w-12 h-12 rounded-xl object-cover" data-alt="portrait of a professional male architect in a bright studio setting looking at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChU9Pwb0C3_J8OdllN0uDftbhc4y5HVT1SK2KXMxQaRb8kyuB1_1G8HEGD7v9MfhV3VX5oWi9ndCbuXdNNXvdedbEnsXJKlkt5NpfGD3eGf_UqluuwgUfGhnag-hErrUG8UBjjJa4vdlO1WjwnpsVS-LUMzhmqj46jBkcJ7H7btATepbY_WGjc0QmqJbObnrIRyYrsQwATkssU8wSi0Bx3v9Y8N3WVM0XPgHHc7hjF3tHkXBv_IeMEDZt3pQLVpy5id05Xe9wLCBQ"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-lg bg-secondary-container flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-on-surface text-[15px] leading-tight">Message from David Miller</h3>
+<div class="w-2 h-2 bg-primary rounded-full mt-1.5"></div>
+</div>
+<p class="text-sm text-on-surface-variant mt-1 leading-relaxed italic">"Can we finalize the material selection for the flooring by tomorrow morning?"</p>
+<span class="text-[11px] font-medium text-outline mt-2 block">45 mins ago</span>
+<div class="mt-4">
+<button class="bg-surface-container-high text-on-surface text-xs font-bold px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="reply">reply</span>
+                                    Reply Now
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment Notification Card -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.04)] relative">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-green-600" data-icon="credit_card">credit_card</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-on-surface text-[15px] leading-tight">Payment Received</h3>
+<div class="w-2 h-2 bg-primary rounded-full mt-1.5"></div>
+</div>
+<p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Deposit of <span class="text-primary font-bold">$1,250.00</span> for "Backyard Decking" has been secured in escrow.</p>
+<span class="text-[11px] font-medium text-outline mt-2 block">2 hours ago</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Yesterday -->
+<section class="mt-8">
+<div class="flex items-center justify-between mb-3 px-1">
+<h2 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant opacity-60">Yesterday</h2>
+</div>
+<div class="space-y-3 opacity-80">
+<!-- Standard Notification Card (Read) -->
+<div class="bg-surface-container-low/50 p-4 rounded-xl border border-outline-variant/10">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-slate-500" data-icon="verified">verified</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline font-bold text-on-surface text-[15px] leading-tight">Profile Verified</h3>
+<p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Your professional credentials have been successfully verified by our team.</p>
+<span class="text-[11px] font-medium text-outline mt-2 block">1 day ago</span>
+</div>
+</div>
+</div>
+<!-- Alert/Urgent Card -->
+<div class="bg-tertiary-fixed/10 p-4 rounded-xl border border-tertiary-container/10">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary" data-icon="priority_high">priority_high</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline font-bold text-tertiary text-[15px] leading-tight">Contract Update Required</h3>
+<p class="text-sm text-on-tertiary-fixed-variant mt-1 leading-relaxed">The liability waiver for "Plumbing Overhaul" needs your electronic signature.</p>
+<span class="text-[11px] font-medium text-tertiary/60 mt-2 block">1 day ago</span>
+<div class="mt-3">
+<button class="bg-tertiary-container text-on-tertiary-container text-xs font-bold px-4 py-2 rounded-lg">
+                                    Sign Now
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Asymmetric Promotional Bento Card -->
+<section class="mt-10 mb-6">
+<div class="bg-primary overflow-hidden rounded-2xl relative p-6 flex flex-col justify-end min-h-[180px]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-40" data-alt="architectural drafting tools and blueprints spread across a wooden table with soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGdN5uKnu72enel5SnOyZgturfd1ipCN6RcmbrvqCYEk6TV23UPrjnn5ftiMnCV0zNe-dScacSHRDfJXRePjD5yE5KdzaM4QqGO4UtR7mCyl0On1p5RMxnGtxXOiG95diR4pTVzCMg4TkepmJrH0wIcGmyjrAoI_ZLN3kZRdb_CNhaVCz1QUr7PNSM-uKQ9vsCAJ-AuWZyKO_nQ81F3z-PkI5uH3Pxo1aHoQaTtXthKOL5DhwXAY9nKzEtVcjL852Ia3dpkc20eXU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-black tracking-widest uppercase px-2 py-1 rounded mb-2 inline-block">Pro Tip</span>
+<h3 class="font-headline font-bold text-white text-xl leading-snug max-w-[80%]">Boost your visibility in search results</h3>
+<p class="text-white/80 text-xs mt-2 font-medium">Add 3 more high-quality photos to your portfolio.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="fixed bottom-0 w-full rounded-t-2xl z-50 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-center h-20 px-6 pb-2">
+<!-- Explore Tab -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Explore</span>
+</a>
+<!-- Jobs Tab -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Jobs</span>
+</a>
+<!-- Inbox/Notifications Tab (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-xl px-3 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Inbox</span>
+</a>
+<!-- Profile Tab -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-blue-600 dark:hover:text-blue-300 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

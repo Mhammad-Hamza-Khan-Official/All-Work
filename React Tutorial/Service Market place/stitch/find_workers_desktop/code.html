@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Find Workers | Artisan Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e1e3e4",
+              "surface": "#f8f9fa",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#ffdbcd",
+              "on-background": "#191c1d",
+              "secondary-container": "#fea619",
+              "on-secondary-fixed": "#2a1700",
+              "on-secondary-container": "#684000",
+              "on-primary-fixed": "#00174b",
+              "on-primary-container": "#eeefff",
+              "surface-tint": "#0053db",
+              "on-primary-fixed-variant": "#003ea8",
+              "surface-container-high": "#e7e8e9",
+              "on-surface-variant": "#434655",
+              "background": "#f8f9fa",
+              "tertiary": "#943700",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed": "#ffddb8",
+              "primary-fixed": "#dbe1ff",
+              "outline": "#737686",
+              "inverse-on-surface": "#f0f1f2",
+              "primary": "#004ac6",
+              "primary-container": "#2563eb",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#c3c6d7",
+              "tertiary-fixed-dim": "#ffb596",
+              "tertiary-container": "#bc4800",
+              "surface-container": "#edeeef",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#b4c5ff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#b4c5ff",
+              "surface-dim": "#d9dadb",
+              "secondary": "#855300",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-tertiary-fixed": "#360f00",
+              "on-primary": "#ffffff",
+              "surface-bright": "#f8f9fa",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-tertiary-container": "#ffede6",
+              "surface-container-low": "#f3f4f5",
+              "surface-variant": "#e1e3e4",
+              "on-surface": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+        color: #191c1d;
+      }
+      .no-line { border: none !important; }
+      .tonal-shift { background-color: #f3f4f5; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md shadow-sm flex justify-between items-center px-8 h-16 border-b border-slate-200/20">
+<div class="flex items-center gap-8 flex-1">
+<span class="text-xl font-extrabold text-blue-800 font-headline">Artisan Pro</span>
+<div class="hidden md:flex flex-1 max-w-xl">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-2 pl-10 pr-4 focus:ring-2 focus:ring-primary/40 placeholder:text-on-surface-variant/60 font-body transition-all" placeholder="Search for plumbers, electricians..." type="text"/>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">mail</span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<div class="flex pt-16 min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 z-30 bg-slate-50 flex flex-col py-8 px-4 shadow-[20px_0px_40px_rgba(25,28,29,0.04)]">
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-medium">My Jobs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-medium">Create Job</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-blue-700 font-bold border-r-4 border-blue-600 bg-white transition-all rounded-l-lg group shadow-sm" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-medium">Find Workers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-medium">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-blue-50/50 hover:text-blue-600 transition-all rounded-lg group" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1 pt-6 border-t border-slate-200/50">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-blue-50/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-medium">Help Center</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-red-50 hover:text-red-600 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-medium">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 p-8 bg-surface">
+<!-- Header Section -->
+<div class="mb-10 max-w-7xl mx-auto">
+<h1 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface mb-2">Find Your Master Artisan</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl opacity-80">Connect with pre-vetted professionals for your construction, repair, and renovation projects.</p>
+</div>
+<div class="max-w-7xl mx-auto flex gap-10">
+<!-- Filters Sidebar (Task Focused) -->
+<aside class="w-72 flex-shrink-0 space-y-8">
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-4">Service Rating</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary transition-all" type="checkbox"/>
+<span class="text-on-surface font-medium group-hover:text-primary transition-colors">4.5+ Stars</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary transition-all" type="checkbox"/>
+<span class="text-on-surface font-medium group-hover:text-primary transition-colors">4.0+ Stars</span>
+</label>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-4">Price Range</h3>
+<div class="space-y-4">
+<input class="w-full accent-primary" max="200" min="20" type="range" value="120"/>
+<div class="flex justify-between text-sm font-medium text-on-surface-variant">
+<span>$20/hr</span>
+<span class="text-primary font-bold">$120/hr</span>
+<span>$200+</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-4">Availability</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-semibold">Today</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-highest text-on-surface text-sm font-medium hover:bg-primary-container hover:text-white transition-colors">This Week</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-highest text-on-surface text-sm font-medium hover:bg-primary-container hover:text-white transition-colors">Available Now</button>
+</div>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface mb-4">Expertise</h3>
+<div class="space-y-2">
+<label class="flex items-center justify-between group cursor-pointer">
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">Plumbing</span>
+<span class="text-xs bg-surface-container-high px-2 py-1 rounded-full">124</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer">
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">Electrical</span>
+<span class="text-xs bg-surface-container-high px-2 py-1 rounded-full">89</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer">
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">HVAC Specialist</span>
+<span class="text-xs bg-surface-container-high px-2 py-1 rounded-full">56</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer">
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">Carpentry</span>
+<span class="text-xs bg-surface-container-high px-2 py-1 rounded-full">34</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Worker Grid -->
+<section class="flex-1">
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] hover:scale-[1.01] transition-transform flex flex-col group">
+<div class="flex gap-4 items-start mb-6">
+<div class="relative">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="portrait of a professional female worker in a clean grey work uniform with a friendly smile, studio lighting, professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1F1FQ6S5rLw6n5FXynWakILZ6v_8Pt1KG-M5o6mqGzZdb710bIz52CY7LUbETpS2xIZdRD8XuydphMtLqm4aHrrEVvVYGeR-rFvGlhON5WoaUpLgfaNoMmd8E9H5tCEsTFJR2qFnbGC2qUlcryBDkVIJpjaHo9ctNO9L9gdkAiUkHPYOGD-42aJD2F16QfxzZ8lqgyBTH5eqi9j4aKkevK2YJQ-XrE9fw7JVOjFvATgNCopyVJDEB_5ga4tlUmuMhjDOBFBd6Ffk"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container p-1 rounded-full shadow-md" title="Verified Professional">
+<span class="material-symbols-outlined text-sm block" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline font-bold text-xl text-on-surface">Elena Rossi</h2>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-secondary-container text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.9</span>
+<span class="text-on-surface-variant text-sm">(142 reviews)</span>
+</div>
+</div>
+<span class="text-primary font-headline font-extrabold text-lg">$85/hr</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm mt-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>1.2 miles away • Milan, Italy</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">HVAC Expert</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Pipe Fitting</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Smart Thermostats</span>
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs font-bold rounded-full">Master Level</span>
+</div>
+<div class="mt-auto grid grid-cols-2 gap-4">
+<button class="py-3 px-4 border border-outline-variant rounded-xl text-primary font-bold hover:bg-primary/5 transition-colors">View Profile</button>
+<button class="py-3 px-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all active:scale-95">Request Quote</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] hover:scale-[1.01] transition-transform flex flex-col group">
+<div class="flex gap-4 items-start mb-6">
+<div class="relative">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="professional male contractor in a dark blue polo shirt, confident expression, industrial loft background with warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo6qz6_gRzZJ_V8Iv7PQg7-hu6myrlcu62B-herZ8eJS1NZLbRrSBqPiguuIohQ-MHvG1Y74pdt8F3_WX_H-2f661vx0-Alyn8bLBHRW0xuSUCJ-wAzrJYSTp9eSKkIXYq4lFCzgFy_1zCawPTvlAwX3UOCbYMITj5oU6nsagaEbPJwz8aEShDnIa2aI1BDIsyRyqK1b_5J1q0avVi3-g00GL7iChn3t25Qe5gnt1rzHvNXn030QX4Khx2a1vkwiE39L_5vAT0ZxI"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container p-1 rounded-full shadow-md">
+<span class="material-symbols-outlined text-sm block" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline font-bold text-xl text-on-surface">Marco Vieri</h2>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-secondary-container text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.8</span>
+<span class="text-on-surface-variant text-sm">(218 reviews)</span>
+</div>
+</div>
+<span class="text-primary font-headline font-extrabold text-lg">$95/hr</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm mt-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>2.5 miles away • Rome, Italy</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Certified Electrician</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Solar Installation</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Panel Upgrades</span>
+</div>
+<div class="mt-auto grid grid-cols-2 gap-4">
+<button class="py-3 px-4 border border-outline-variant rounded-xl text-primary font-bold hover:bg-primary/5 transition-colors">View Profile</button>
+<button class="py-3 px-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all active:scale-95">Request Quote</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] hover:scale-[1.01] transition-transform flex flex-col group">
+<div class="flex gap-4 items-start mb-6">
+<div class="relative">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="professional female architect or interior designer holding a tablet, modern minimalist office setting, bright natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnj88-vbeGzt2IF8sHObDoRmSiIA5Ep4QCgWfKgQd_ijnK1PKZBXJBU2HWdj6DQFJkh_b_RcLcrug6Mj4ptvdOvmib--zUuczgzvMswZObrlrP-_IuWV-RDAG6nuCoKo__TnCk0LYTypdRo8hRvOomi73RJG-_vyE4qUEsuR2ZK8jtaYrEYGY6nIfTCMgeBmrXPNyv64zYi0U9i3SA4wSbpWSZ6UbpzE25U1gjRpfNgAnRhofboX57t9eXNunhKkSWZqcPeqny3tQ"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container p-1 rounded-full shadow-md">
+<span class="material-symbols-outlined text-sm block" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline font-bold text-xl text-on-surface">Lucia Bianchi</h2>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-secondary-container text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">5.0</span>
+<span class="text-on-surface-variant text-sm">(89 reviews)</span>
+</div>
+</div>
+<span class="text-primary font-headline font-extrabold text-lg">$110/hr</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm mt-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>0.8 miles away • Florence, Italy</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Interior Design</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">3D Modeling</span>
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs font-bold rounded-full">Top Rated Plus</span>
+</div>
+<div class="mt-auto grid grid-cols-2 gap-4">
+<button class="py-3 px-4 border border-outline-variant rounded-xl text-primary font-bold hover:bg-primary/5 transition-colors">View Profile</button>
+<button class="py-3 px-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all active:scale-95">Request Quote</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] hover:scale-[1.01] transition-transform flex flex-col group">
+<div class="flex gap-4 items-start mb-6">
+<div class="relative">
+<img class="w-20 h-20 rounded-lg object-cover" data-alt="professional male woodworker in a workshop, sawdust in the air, focused expression, cinematic warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmssBwVXOata9kXARyvUGKEck533U3MG1harZyc1zm8iP77c5vrt6s8cf-MtBQqdui32AF0q1f45868YHd09Hfg4kyZ145i3lBLQZPBmKF39xq4_zK2p_e1mUo6yOMfKHEHpGHJ5q3NScfKkdNduFlEklPpZylPwxUxuJU4iq-B1zCa120ia8PPPiAHDn_cXB_NZDjXVWIj6QNkNOa0QXSgH7RgRjrbCCFKimNpGorjUl9J3mcZpj3SBEA8p6_LtMFGO8V4YxOXqU"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container p-1 rounded-full shadow-md">
+<span class="material-symbols-outlined text-sm block" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<div>
+<h2 class="font-headline font-bold text-xl text-on-surface">Antonio Greco</h2>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-secondary-container text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.7</span>
+<span class="text-on-surface-variant text-sm">(56 reviews)</span>
+</div>
+</div>
+<span class="text-primary font-headline font-extrabold text-lg">$70/hr</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant text-sm mt-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>3.1 miles away • Venice, Italy</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Custom Carpentry</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Cabinetry</span>
+<span class="px-3 py-1 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full">Wood Finishing</span>
+</div>
+<div class="mt-auto grid grid-cols-2 gap-4">
+<button class="py-3 px-4 border border-outline-variant rounded-xl text-primary font-bold hover:bg-primary/5 transition-colors">View Profile</button>
+<button class="py-3 px-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-all active:scale-95">Request Quote</button>
+</div>
+</div>
+</div>
+<!-- Map/Location Shortcut Bento Element -->
+<div class="mt-12 bg-white rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
+<div class="flex-1">
+<h3 class="font-headline text-2xl font-bold mb-3">View Pros on the Map</h3>
+<p class="text-on-surface-variant mb-6">Visualise workers in your exact neighborhood to save on travel fees and support local talent.</p>
+<button class="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                                Open Interactive Map
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-1/3 aspect-video rounded-lg overflow-hidden bg-surface-container-highest relative">
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="stylized map showing local city streets with blue dots representing available workers, modern clean cartography style" data-location="Milan, Italy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGPks3Nj_fr7dJR_knALP7czVyus4io5UpPANwQ2H6x2hAzi4z4p0Ikxi1mXUyOtFUiSw5hJ_04m8oPGr_59IK7gSJeTUYlsKDSUjFy4vIlEj9cubIf3j6OI5XOvr8l9_OiPlKr-g_A612FjTwtHO1IFCrD_75J_ZFYcSefejTH1BhDdIyKRg20n65gAsdjCpSxfA_fhz61diOMeTf8g1hdeFBWq2kwOyMehjB1o4eJPVjVvVJsezSg5kQ14NyGuTmdQIg1tj_mwU"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">map</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Floating Action Button (FAB) - Suppression logic: Primary action on dashboard/listing -->
+<button class="fixed bottom-8 right-8 bg-gradient-to-br from-primary to-primary-container text-white p-4 rounded-xl shadow-xl hover:scale-105 active:scale-95 transition-all z-50 flex items-center gap-2 group">
+<span class="material-symbols-outlined">post_add</span>
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap font-bold">Post a New Job</span>
+</button>
+</body></html>

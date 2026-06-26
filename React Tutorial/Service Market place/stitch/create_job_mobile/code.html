@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#f0f1f2",
+              "on-tertiary-fixed": "#360f00",
+              "tertiary-container": "#bc4800",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#191c1d",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary-fixed": "#2a1700",
+              "secondary-fixed": "#ffddb8",
+              "primary-container": "#2563eb",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "on-background": "#191c1d",
+              "inverse-primary": "#b4c5ff",
+              "tertiary-fixed-dim": "#ffb596",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-secondary-container": "#684000",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#2e3132",
+              "on-primary-fixed-variant": "#003ea8",
+              "primary-fixed": "#dbe1ff",
+              "on-primary-fixed": "#00174b",
+              "error": "#ba1a1a",
+              "on-surface-variant": "#434655",
+              "on-primary-container": "#eeefff",
+              "on-tertiary-container": "#ffede6",
+              "tertiary-fixed": "#ffdbcd",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-fixed-variant": "#653e00",
+              "surface-container": "#edeeef",
+              "on-tertiary": "#ffffff",
+              "outline": "#737686",
+              "on-error": "#ffffff",
+              "surface-dim": "#d9dadb",
+              "secondary": "#855300",
+              "outline-variant": "#c3c6d7",
+              "background": "#f8f9fa",
+              "primary": "#004ac6",
+              "surface-container-high": "#e7e8e9",
+              "secondary-container": "#fea619",
+              "tertiary": "#943700",
+              "surface-tint": "#0053db",
+              "primary-fixed-dim": "#b4c5ff",
+              "surface-variant": "#e1e3e4",
+              "surface": "#f8f9fa"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+              "premium": "0px 20px 40px rgba(25, 28, 29, 0.06)"
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-premium flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-on-surface active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<h1 class="font-manrope font-bold text-lg tracking-tight">Create Job</h1>
+</div>
+<button class="text-blue-700 dark:text-blue-400 font-manrope font-bold text-lg tracking-tight hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg">
+            Post
+        </button>
+</header>
+<main class="mt-20 px-6 max-w-md mx-auto space-y-8">
+<!-- Progress Indicator -->
+<div class="flex items-center justify-between gap-2 mb-8">
+<div class="h-1.5 w-full bg-primary rounded-full"></div>
+<div class="h-1.5 w-full bg-primary/20 rounded-full"></div>
+<div class="h-1.5 w-full bg-primary/20 rounded-full"></div>
+</div>
+<!-- Section 1: Title & Category -->
+<section class="space-y-6">
+<div class="group">
+<label class="block text-sm font-semibold text-on-surface-variant mb-2 ml-1">Job Title</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/50 focus:ring-2 focus:ring-primary/40 transition-all outline-none" placeholder="e.g., Modern Kitchen Cabinetry" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-on-surface-variant mb-3 ml-1">Category</label>
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+<button class="flex-shrink-0 px-4 py-2 bg-primary text-on-primary rounded-full text-sm font-medium transition-transform active:scale-95">Renovation</button>
+<button class="flex-shrink-0 px-4 py-2 bg-surface-container-low text-on-surface-variant rounded-full text-sm font-medium border border-outline-variant/20 hover:bg-surface-container-high transition-all">Carpentry</button>
+<button class="flex-shrink-0 px-4 py-2 bg-surface-container-low text-on-surface-variant rounded-full text-sm font-medium border border-outline-variant/20 hover:bg-surface-container-high transition-all">Electrical</button>
+<button class="flex-shrink-0 px-4 py-2 bg-surface-container-low text-on-surface-variant rounded-full text-sm font-medium border border-outline-variant/20 hover:bg-surface-container-high transition-all">Plumbing</button>
+</div>
+</div>
+</section>
+<!-- Section 2: Description -->
+<section class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Project Description</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg p-4 text-on-surface placeholder:text-on-surface-variant/50 focus:ring-2 focus:ring-primary/40 transition-all outline-none resize-none" placeholder="Describe the scope of work, materials required, and any specific preferences..." rows="4"></textarea>
+</section>
+<!-- Section 3: Budget Range -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Budget Range</label>
+<span class="text-primary font-bold text-lg">$2,500 - $5,000</span>
+</div>
+<div class="relative h-12 flex items-center">
+<div class="absolute w-full h-1.5 bg-surface-container-highest rounded-full"></div>
+<div class="absolute left-1/4 w-1/2 h-1.5 bg-primary rounded-full"></div>
+<div class="absolute left-1/4 w-5 h-5 bg-white border-2 border-primary rounded-full shadow-md -translate-x-1/2"></div>
+<div class="absolute left-3/4 w-5 h-5 bg-white border-2 border-primary rounded-full shadow-md -translate-x-1/2"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant/10">
+<span class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Minimum</span>
+<div class="text-on-surface font-semibold">$2,500</div>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant/10">
+<span class="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold">Maximum</span>
+<div class="text-on-surface font-semibold">$5,000</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Location -->
+<section class="space-y-3">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Project Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="location_on">location_on</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg pl-12 pr-4 py-4 text-on-surface placeholder:text-on-surface-variant/50 focus:ring-2 focus:ring-primary/40 transition-all outline-none" placeholder="Enter address or city" type="text"/>
+</div>
+<div class="w-full h-44 rounded-xl overflow-hidden shadow-premium relative group">
+<img alt="A clean minimalist map interface showing a suburban neighborhood with a blue location pin in the center" class="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]" data-location="Chicago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF3WZx6dvCqF6P7mxLXQhK9pQV9ocfEhQrz916q--SCihCd8gr0GUXCKAiLso7aBqrlIqDH990o0HWp6CUu-XINUviudcpwXMAaI4rHy6C_mLp_vDCfBrTMLQYzHlRJ3eqifaCrgLiYNybqVVVAoAs45ZtUFirOh8j2DArSnlNy8kMyJ0xsIAgBbdCynV3qoaaKvMdGLbYtJexFDJYITMy9DeN5w-VaQY_uLWqMrLw3FaHIEa93qT9kzRG4AgXuRAmNTPotRJH2xQ"/>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg" data-icon="push_pin" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+</div>
+</div>
+</section>
+<!-- Section 5: Photo Upload -->
+<section class="space-y-3">
+<div class="flex justify-between items-center px-1">
+<label class="block text-sm font-semibold text-on-surface-variant">Inspiration &amp; Site Photos</label>
+<span class="text-[11px] font-medium text-on-surface-variant/60">Optional</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="aspect-square rounded-lg bg-surface-container-highest border-2 border-dashed border-outline-variant/30 flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-primary" data-icon="add_a_photo">add_a_photo</span>
+<span class="text-[10px] font-bold text-primary uppercase">Add</span>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden relative group">
+<img alt="modern minimalist kitchen with wood cabinetry and marble countertops in bright natural daylight" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ-bpw7p6CWZYs0Xufj1JM-lhnDRg2lj8zhyn8wDKFaghK00nTfJ3T2jS5kT_usHvBnXdBZiQME0ak1zaMyXwz3VMnsK8XVUd1Wbbqq1GqjkhN5K-o0XfccU_VXM1qXDFDv2K5yGLrKjyAJ9XUZdjs0HBEOyRPAx0_teYzm53JYH6i7xJRNOWo-qF5cwXEH0YUGtFBSf1EqGDYubYckMB9mgYxa8UEPesBMOgpGPp8gcQyarqVJoCskjz89aWKruQtQbBaIBkSPg0"/>
+<button class="absolute top-1 right-1 bg-black/50 text-white rounded-full p-1 scale-75">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden relative group">
+<img alt="architectural sketch of custom cabinetry layout on a desk with drafting tools and warm interior lighting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARySLkvxPEeKrkisch-apRx8p3yTGmDIuIOdpgWUwg9w14lluDqTTp3kiPkzbtDLQd5qArJpeH3RDNcckJQxmc1JdvhN9GaHreKOmClFyiYeql28L1qaQ599nbOtbD-v3u86lunuVU1z_7_c-O4BNWOa4Xr1PXvhhY1XF4fVPGojrfseBiS8B0QMlACasoNZDi9sH_hpFue7E2uVv4yw8Amv0YbRbMRdmR43kCsIkYtjRvVNCCDXIG9VNfKJYgK_tBiuvJK8NuKQ8"/>
+<button class="absolute top-1 right-1 bg-black/50 text-white rounded-full p-1 scale-75">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Trust Badge -->
+<div class="bg-blue-50/50 dark:bg-blue-900/10 rounded-2xl p-4 flex gap-4 items-start">
+<div class="bg-primary/10 p-2 rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">ServiceHub Prime Guarantee</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed mt-0.5">Your project details are only visible to verified contractors. No spam, just professional quotes.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 w-full bg-white dark:bg-slate-900 shadow-[0_-8px_30px_rgba(0,0,0,0.08)] px-6 py-6 pb-8 z-50">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-manrope font-bold py-4 rounded-xl shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span>Post Job Request</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Hidden BottomNavBar logic for shell consistency (suppressed per task focus but layout space reserved) -->
+</body></html>

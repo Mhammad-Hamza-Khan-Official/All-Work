@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServiceHub Worker Dashboard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#855300",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary-fixed": "#ffdbcd",
+              "on-secondary-fixed": "#2a1700",
+              "inverse-surface": "#2e3132",
+              "on-primary": "#ffffff",
+              "primary-container": "#2563eb",
+              "error-container": "#ffdad6",
+              "primary-fixed-dim": "#b4c5ff",
+              "tertiary-container": "#bc4800",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#b4c5ff",
+              "on-surface": "#191c1d",
+              "surface-container": "#edeeef",
+              "surface-bright": "#f8f9fa",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "on-primary-fixed": "#00174b",
+              "on-tertiary-container": "#ffede6",
+              "primary-fixed": "#dbe1ff",
+              "surface": "#f8f9fa",
+              "tertiary-fixed-dim": "#ffb596",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-primary-fixed-variant": "#003ea8",
+              "secondary-container": "#fea619",
+              "primary": "#004ac6",
+              "outline-variant": "#c3c6d7",
+              "on-surface-variant": "#434655",
+              "outline": "#737686",
+              "background": "#f8f9fa",
+              "surface-tint": "#0053db",
+              "surface-variant": "#e1e3e4",
+              "inverse-on-surface": "#f0f1f2",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-primary-container": "#eeefff",
+              "surface-container-high": "#e7e8e9",
+              "on-secondary-container": "#684000",
+              "tertiary": "#943700",
+              "error": "#ba1a1a",
+              "surface-dim": "#d9dadb",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed": "#360f00",
+              "on-background": "#191c1d",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#ffddb8",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:scale-95 duration-200">menu</span>
+<span class="text-xl font-extrabold text-blue-700 dark:text-blue-400 tracking-tighter font-manrope">ServiceHub</span>
+</div>
+<div class="flex items-center gap-4">
+<!-- Status Toggle -->
+<div class="flex items-center gap-3 bg-surface-container-low px-3 py-1.5 rounded-full border border-outline-variant/20">
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Go Online</span>
+<div class="w-10 h-5 bg-primary rounded-full relative cursor-pointer shadow-sm">
+<div class="absolute right-0.5 top-0.5 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:scale-95 duration-200">notifications</span>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[1px] w-full"></div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-24 space-y-8">
+<!-- Hero Section: Earnings Overview (Asymmetric) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+<div class="md:col-span-7">
+<p class="text-primary font-bold tracking-widest uppercase text-xs mb-2">Worker Dashboard</p>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-4">Hello, Alex. <br/><span class="text-on-surface-variant font-medium">Your workshop is busy today.</span></h1>
+</div>
+<!-- Earnings Card -->
+<div class="md:col-span-5 bg-gradient-to-br from-primary to-primary-container p-8 rounded-xl shadow-2xl text-on-primary">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-sm font-medium opacity-80">This Week's Earnings</p>
+<p class="text-4xl font-bold tracking-tighter mt-1">$2,840.00</p>
+</div>
+<div class="bg-white/20 p-2 rounded-lg">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-sm font-semibold text-secondary-container">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>12% more than last week</span>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Notifications & Quick Stats -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Nearby Jobs (Bento Large) -->
+<div class="md:col-span-2 bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold">Nearby Jobs Notifications</h3>
+<span class="text-xs font-bold text-primary px-2 py-1 bg-primary/10 rounded-full">3 New</span>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-low rounded-lg flex items-center gap-4 hover:translate-x-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="modern home interior with plumbing repair needed near kitchen sink soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFjad3JvJqEpwo-zHmptj5V7ShSSR0BwERPEBY1NvyOxLmrpR3tliIWl1juAeo5wsmbDPT8YXz9Ce0ii_aEa0aXupSR7--JB-L0Kldqp5r73y4vY6-7ev4NwBt7ky6wBN3Np9h6YVnx1tm5TBS7AFkDbXxV2moG7PbhftkCpaBgPvJr5cCoJqGi1eickZWDWv7FOD6FGMzmA7rvBnxEhQOJvNy5-_xe_opiMFotL1L21lVNugkGfiDgSBojWQecYNUZ8JNwhUZa6M"/>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-sm">Emergency Plumbing</p>
+<p class="text-xs text-on-surface-variant">0.8 miles away • $120 Est.</p>
+</div>
+<span class="material-symbols-outlined text-primary">arrow_forward_ios</span>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg flex items-center gap-4 hover:translate-x-1 transition-transform cursor-pointer">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="professional electrician tools on a wooden surface with electrical panel background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCys0TjEv648r6s1kfOWQlL5Om0sQVrmaLv_l6QqeLuWrlGUNuGo3_hedIxIk4oLYCf2uG5FZHpJVqnuuCLe1P0gssqZ4GylFrvIBNtGbPEMpmJND4jKgP1OU-mI44qiW7K740h764AnvPCcyfaZ02CpepUMOuLC9t7C2NpEVty-XkA-0AJC654hK13bOqU96mDwvH7fTwS2u215-T1eacoB0TI-T0iBDyi2Y9bejyQU6TqMpkSDw_gkltSPYAmhebxgOEXyVsPCow"/>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-sm">Electrical Inspection</p>
+<p class="text-xs text-on-surface-variant">2.1 miles away • $85 Est.</p>
+</div>
+<span class="material-symbols-outlined text-primary">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- Stats (Bento Small) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)] flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">star</span>
+<h4 class="text-3xl font-extrabold tracking-tight">4.9</h4>
+<p class="text-sm font-medium text-on-surface-variant">Customer Rating</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<p class="text-xs font-bold text-secondary">Top 5% in Chicago</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)] flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-3xl mb-4">task_alt</span>
+<h4 class="text-3xl font-extrabold tracking-tight">142</h4>
+<p class="text-sm font-medium text-on-surface-variant">Jobs Completed</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<p class="text-xs font-bold text-primary">12 more than last month</p>
+</div>
+</div>
+</section>
+<!-- Active Jobs Section: Horizontal Scroller / Detailed Cards -->
+<section>
+<div class="flex justify-between items-end mb-6">
+<div>
+<h2 class="text-2xl font-bold tracking-tight">Active Jobs</h2>
+<p class="text-on-surface-variant text-sm">Current progress of your ongoing tasks</p>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">View History</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Active Job Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)] group">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-tertiary-fixed rounded-lg flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div>
+<h3 class="font-bold">Structural Consultation</h3>
+<p class="text-xs text-on-surface-variant">Client: Morgan Residence</p>
+</div>
+</div>
+<span class="bg-secondary-container/20 text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">In Progress</span>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-xs mb-1.5 font-semibold">
+<span>Timeline Progress</span>
+<span>65%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-[65%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Ends in 2h</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Highland Park</span>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full py-3 bg-surface-container-low text-on-surface font-bold text-sm rounded-xl group-hover:bg-primary group-hover:text-white transition-all">Update Milestone</button>
+</div>
+<!-- Active Job Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)] group">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary-fixed rounded-lg flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined">construction</span>
+</div>
+<div>
+<h3 class="font-bold">Kitchen Backsplash Tile</h3>
+<p class="text-xs text-on-surface-variant">Client: Urban Lofts LLC</p>
+</div>
+</div>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Arriving Soon</span>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-xs mb-1.5 font-semibold">
+<span>Travel Progress</span>
+<span>90%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[90%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-xs font-medium text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">directions_car</span>
+<span>5 mins away</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>Downtown Loft B</span>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full py-3 bg-surface-container-low text-on-surface font-bold text-sm rounded-xl group-hover:bg-primary group-hover:text-white transition-all">I Have Arrived</button>
+</div>
+</div>
+</section>
+<!-- Earnings Visualization / Graph Placeholder (Glassmorphism card) -->
+<section class="bg-white/40 border border-white/50 backdrop-blur-md p-8 rounded-2xl shadow-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-2xl font-bold tracking-tight">Earnings Analytics</h2>
+<p class="text-on-surface-variant text-sm">Visual breakdown of your service revenue</p>
+</div>
+<div class="flex bg-surface-container-low p-1 rounded-lg self-start">
+<button class="px-4 py-1.5 text-xs font-bold bg-white shadow-sm rounded-md">Weekly</button>
+<button class="px-4 py-1.5 text-xs font-bold text-on-surface-variant">Monthly</button>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-4 px-2">
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/10 rounded-t-lg h-[40%]"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">Mon</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/20 rounded-t-lg h-[65%]"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">Tue</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/30 rounded-t-lg h-[50%]"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">Wed</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/40 rounded-t-lg h-[85%]"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">Thu</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary/80 rounded-t-lg h-[95%]"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">Fri</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-secondary h-[30%] rounded-t-lg"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">Sat</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-secondary h-[20%] rounded-t-lg"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">Sun</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_12px_rgba(0,0,0,0.03)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-600 dark:hover:text-blue-400 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="font-inter text-[11px] font-semibold">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-600 dark:hover:text-blue-400 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">event_note</span>
+<span class="font-inter text-[11px] font-semibold">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-600 dark:hover:text-blue-400 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">chat_bubble</span>
+<span class="font-inter text-[11px] font-semibold">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl px-3 py-1.5 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1 fill">person</span>
+<span class="font-inter text-[11px] font-semibold">Profile</span>
+</a>
+</nav>
+<!-- FAB (Suppressed on Dashboard as per Rules, but included if user specifically needed a focused action like 'Create Quote' - but I will suppress to follow instructions) -->
+</body></html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Available Jobs - ServiceHub Worker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-container": "#ffede6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "outline-variant": "#c3c6d7",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#eeefff",
+                        "on-secondary-container": "#684000",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-primary-fixed": "#00174b",
+                        "secondary-container": "#fea619",
+                        "primary": "#004ac6",
+                        "on-background": "#191c1d",
+                        "outline": "#737686",
+                        "on-surface": "#191c1d",
+                        "primary-container": "#2563eb",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed": "#ffddb8",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#0053db",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "tertiary": "#943700",
+                        "tertiary-container": "#bc4800",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary": "#855300",
+                        "surface-container": "#edeeef",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#434655",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-fixed-variant": "#7d2d00"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface flex min-h-screen">
+<!-- SideNavBar Anchor -->
+<aside class="hidden md:flex flex-col h-screen w-64 border-r border-slate-200/20 bg-slate-50 sticky left-0 top-0 pt-4 pb-8 z-40">
+<div class="px-6 mb-8">
+<h1 class="text-xl font-extrabold text-blue-700 font-headline">ServiceHub</h1>
+<p class="text-xs text-slate-500 font-medium">Worker Dashboard</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Dashboard -->
+<a class="flex items-center px-6 py-3 text-slate-600 hover:text-blue-600 hover:bg-slate-100 transition-colors duration-200 font-medium text-sm group" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<!-- Available Jobs (ACTIVE) -->
+<a class="flex items-center px-6 py-3 text-blue-700 border-r-4 border-blue-700 bg-blue-50/50 font-medium text-sm group" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="work" data-weight="fill" style="font-variation-settings: 'FILL' 1;">work</span>
+                Available Jobs
+            </a>
+<!-- My Work -->
+<a class="flex items-center px-6 py-3 text-slate-600 hover:text-blue-600 hover:bg-slate-100 transition-colors duration-200 font-medium text-sm group" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="handyman">handyman</span>
+                My Work
+            </a>
+<!-- Messages -->
+<a class="flex items-center px-6 py-3 text-slate-600 hover:text-blue-600 hover:bg-slate-100 transition-colors duration-200 font-medium text-sm group" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="chat_bubble">chat_bubble</span>
+                Messages
+            </a>
+<!-- Settings -->
+<a class="flex items-center px-6 py-3 text-slate-600 hover:text-blue-600 hover:bg-slate-100 transition-colors duration-200 font-medium text-sm group" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="px-6 mt-auto pt-4 space-y-1">
+<button class="w-full py-2.5 px-4 bg-primary text-white rounded-xl text-sm font-semibold mb-6 hover:brightness-110 transition-all active:scale-95 shadow-lg shadow-primary/20">
+                Switch to Client
+            </button>
+<a class="flex items-center py-2 text-slate-600 hover:text-blue-600 text-sm font-medium" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="contact_support">contact_support</span>
+                Support
+            </a>
+<a class="flex items-center py-2 text-slate-600 hover:text-blue-600 text-sm font-medium" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="logout">logout</span>
+                Log Out
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col min-w-0">
+<!-- TopAppBar Anchor -->
+<header class="sticky top-0 z-50 w-full flex justify-between items-center px-6 py-3 bg-white/80 backdrop-blur-xl border-b border-slate-200/20 shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative max-w-md w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" data-icon="search">search</span>
+<input class="w-full bg-slate-100 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/40 placeholder:text-slate-500" placeholder="Search tasks or keywords..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-50 text-slate-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-50 text-slate-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-slate-200 ml-2">
+<img alt="Worker Profile Avatar" class="h-full w-full object-cover" data-alt="professional portrait of a skilled worker in a blue shirt smiling with a clean architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3u7CZvH1Q-T97_sjTHbeuoDR-IfuQjAPQ5OX8nzO_Sk0KAbswynjdv9fQ0QWcpG4UKK70Sxzc453T_MAnkDm8KjjnsIbe4tU3eWsaGqsj8LepBAHg2x1N2sQzU9Jiv2599nmoGCnoPX3NGya0nwxuQHHr3kr12t0eTJyG2z1yOiCAp8ob-Vg3I8dQgs9gyBgZiUpCyQJiJaS2bKuC4V4irhaLMJP5Hl728CDqJ3ZUriGavLPeg1cuWkkTv0N9xKGr6dFcGkrwXaI"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-6 md:p-8 space-y-8 max-w-7xl mx-auto w-full">
+<!-- Header Section with Location Filter -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<h2 class="text-3xl font-extrabold font-headline tracking-tight text-on-surface">Available Jobs</h2>
+<div class="flex items-center text-on-surface-variant text-sm bg-surface-container-low px-3 py-1.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-sm mr-1.5 text-primary" data-icon="location_on">location_on</span>
+                        Within <span class="font-bold text-on-surface px-1">10 miles</span> of <span class="font-bold text-on-surface px-1">123 Artisan Way, Austin TX</span>
+<button class="ml-2 text-primary font-semibold hover:underline">Change</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white text-on-surface border border-outline-variant/20 rounded-xl font-medium text-sm hover:bg-slate-50 transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="sort">sort</span>
+                        Newest First
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-xl font-medium text-sm hover:brightness-110 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-lg" data-icon="map">map</span>
+                        Map View
+                    </button>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Sidebar Filters -->
+<aside class="lg:col-span-3 space-y-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-Premium space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-lg font-headline">Filters</h3>
+<button class="text-xs text-primary font-semibold">Clear All</button>
+</div>
+<!-- Filter Category -->
+<div class="space-y-3">
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Category</p>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-on-surface group-hover:text-primary transition-colors">Electrical</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-on-surface group-hover:text-primary transition-colors">Plumbing</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-on-surface group-hover:text-primary transition-colors">Carpentry</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-on-surface group-hover:text-primary transition-colors">Landscaping</span>
+</label>
+</div>
+</div>
+<!-- Minimum Pay -->
+<div class="space-y-3">
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Min. Pay Range</p>
+<div class="relative px-2">
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" max="1000" min="0" step="50" type="range"/>
+<div class="flex justify-between mt-2 text-xs font-medium text-on-surface-variant">
+<span>$0</span>
+<span>$500+</span>
+</div>
+</div>
+</div>
+<!-- Max Distance -->
+<div class="space-y-3">
+<p class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Max Distance</p>
+<select class="w-full bg-surface-container-low border-none rounded-lg text-sm py-2 px-3 focus:ring-2 focus:ring-primary/40">
+<option>5 miles</option>
+<option selected="">10 miles</option>
+<option>25 miles</option>
+<option>50 miles</option>
+</select>
+</div>
+</div>
+<!-- Small Map Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-Premium overflow-hidden">
+<div class="h-48 relative">
+<div class="absolute inset-0 bg-slate-200">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="simplified stylistic city street map with modern UI aesthetic and small blue location markers" data-location="Austin, TX" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClytcRMTlA391R0eOUiYVHXOx_RIejfWH_S5epr2D6AhgBhaVMmj-kNhbshDrAhO7Z98ug1eP20cmr3R6Ewe2X6Yhwx-hkB_kC9FtTYvBJ5L76oGx-5Skdi2qzFeIHlSC6b18rAtXoaShgm3PKyyfhi0ToiK2NwNdzOvHDnoCKzxel3Y3JAcjg-g0LN3ThvTeo3hXVBpmpp_SxTDX3TkBudOglWHPMOGf5igYJuHO6Itibd5-_jNSscAfs6-wlPcX2p0iI9zyWPKo"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-lg text-xs font-bold text-primary flex items-center gap-2 hover:bg-white transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="fullscreen">fullscreen</span>
+                                    Expand Map
+                                </button>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low">
+<p class="text-xs font-medium text-on-surface-variant text-center">12 jobs found in your area</p>
+</div>
+</div>
+</aside>
+<!-- Main Feed -->
+<section class="lg:col-span-9 space-y-6">
+<!-- Job Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-Premium overflow-hidden group hover:scale-[1.01] transition-transform duration-300">
+<div class="p-6 md:p-8 flex flex-col md:flex-row gap-6">
+<div class="flex-shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="bolt">bolt</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest">Emergency</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Electrical</span>
+<span class="ml-auto text-sm font-medium text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="near_me">near_me</span>
+                                        2.4 miles away
+                                    </span>
+</div>
+<div>
+<h3 class="text-xl font-bold font-headline text-on-surface group-hover:text-primary transition-colors">Fix Flickering Lights in Kitchen &amp; Pantry</h3>
+<p class="text-on-surface-variant text-sm mt-1 line-clamp-2">Main kitchen light fixture and three recessed lights in the pantry are flickering intermittently. Might be a loose connection or ballast issue. Requires immediate inspection.</p>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between pt-4 gap-4">
+<div class="space-y-0.5">
+<p class="text-xs text-on-surface-variant font-medium">Estimated Budget</p>
+<p class="text-2xl font-bold text-primary">$150 — $200</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 rounded-xl text-primary font-bold text-sm hover:bg-primary/5 transition-all">View Details</button>
+<button class="px-8 py-2.5 rounded-xl bg-gradient-to-br from-primary to-primary-container text-white font-bold text-sm shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 transition-all">Apply Now</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Job Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-Premium overflow-hidden group hover:scale-[1.01] transition-transform duration-300">
+<div class="p-6 md:p-8 flex flex-col md:flex-row gap-6">
+<div class="flex-shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="water_drop">water_drop</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest">Flexible</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Plumbing</span>
+<span class="ml-auto text-sm font-medium text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="near_me">near_me</span>
+                                        4.1 miles away
+                                    </span>
+</div>
+<div>
+<h3 class="text-xl font-bold font-headline text-on-surface group-hover:text-primary transition-colors">Install New Master Bath Faucet Set</h3>
+<p class="text-on-surface-variant text-sm mt-1 line-clamp-2">Looking to replace an old dual-handle faucet with a new brass waterfall fixture. Hardware is already purchased. Need someone to install and ensure leak-free seal.</p>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between pt-4 gap-4">
+<div class="space-y-0.5">
+<p class="text-xs text-on-surface-variant font-medium">Estimated Budget</p>
+<p class="text-2xl font-bold text-primary">$85 — $120</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 rounded-xl text-primary font-bold text-sm hover:bg-primary/5 transition-all">View Details</button>
+<button class="px-8 py-2.5 rounded-xl bg-gradient-to-br from-primary to-primary-container text-white font-bold text-sm shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 transition-all">Apply Now</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Job Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-Premium overflow-hidden group hover:scale-[1.01] transition-transform duration-300">
+<div class="p-6 md:p-8 flex flex-col md:flex-row gap-6">
+<div class="flex-shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="architecture">architecture</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest">Schedule Basis</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-widest">Carpentry</span>
+<span class="ml-auto text-sm font-medium text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="near_me">near_me</span>
+                                        7.8 miles away
+                                    </span>
+</div>
+<div>
+<h3 class="text-xl font-bold font-headline text-on-surface group-hover:text-primary transition-colors">Custom Built-in Bookshelf Assembly</h3>
+<p class="text-on-surface-variant text-sm mt-1 line-clamp-2">Professional carpenter needed to assemble and anchor a floor-to-ceiling shelving unit. Unit is pre-cut oak. Leveling and trim work required for a seamless finish.</p>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between pt-4 gap-4">
+<div class="space-y-0.5">
+<p class="text-xs text-on-surface-variant font-medium">Estimated Budget</p>
+<p class="text-2xl font-bold text-primary">$450 — $600</p>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 rounded-xl text-primary font-bold text-sm hover:bg-primary/5 transition-all">View Details</button>
+<button class="px-8 py-2.5 rounded-xl bg-gradient-to-br from-primary to-primary-container text-white font-bold text-sm shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 transition-all">Apply Now</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Pagination / Load More -->
+<div class="flex justify-center py-8">
+<button class="flex items-center gap-2 px-8 py-3 bg-surface-container-low text-on-surface font-bold rounded-xl hover:bg-surface-container-high transition-all">
+                            Load more jobs
+                            <span class="material-symbols-outlined text-xl" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- BottomNavBar for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-100 px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-blue-700" href="#">
+<span class="material-symbols-outlined" data-icon="work" data-weight="fill" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="text-[10px] font-bold uppercase">Jobs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+<span class="text-[10px] font-bold uppercase">My Work</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-[10px] font-bold uppercase">Chat</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</a>
+</nav>
+</body></html>

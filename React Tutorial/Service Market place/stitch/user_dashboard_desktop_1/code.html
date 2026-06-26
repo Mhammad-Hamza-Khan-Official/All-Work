@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServiceHub - Master Artisan Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#bc4800",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-fixed": "#00174b",
+                        "surface-variant": "#e1e3e4",
+                        "outline-variant": "#c3c6d7",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container": "#edeeef",
+                        "primary": "#004ac6",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#eeefff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-container": "#2563eb",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-surface-variant": "#434655",
+                        "tertiary": "#943700",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#684000",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "on-secondary-fixed": "#2a1700",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#855300",
+                        "secondary-container": "#fea619",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "on-tertiary-container": "#ffede6",
+                        "on-surface": "#191c1d",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-tint": "#0053db",
+                        "secondary-fixed": "#ffddb8",
+                        "outline": "#737686",
+                        "surface-container-low": "#f3f4f5"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar (from JSON) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-4 gap-2 bg-slate-50 dark:bg-slate-950 h-screen w-64 border-r border-slate-200 dark:border-slate-800 z-50">
+<div class="flex items-center gap-3 px-2 mb-8 mt-2">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">handyman</span>
+</div>
+<div>
+<h1 class="font-manrope font-black text-blue-700 text-xl leading-none">ServiceHub</h1>
+<p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1">Master Artisan Mode</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 shadow-sm rounded-lg font-inter text-sm font-medium hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 font-inter text-sm font-medium hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined">work</span>
+<span>My Jobs</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 font-inter text-sm font-medium hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Create Job</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 font-inter text-sm font-medium hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Find Workers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 font-inter text-sm font-medium hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span>Messages</span>
+<span class="ml-auto bg-primary text-white text-[10px] px-1.5 py-0.5 rounded-full">3</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 font-inter text-sm font-medium hover:translate-x-1 duration-200 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto p-4 bg-primary-container rounded-xl text-on-primary-container overflow-hidden relative group cursor-pointer shadow-md">
+<div class="relative z-10">
+<h4 class="font-manrope font-bold text-sm">ServiceHub Premium</h4>
+<p class="text-[11px] mt-1 opacity-90">Unlock Priority Booking &amp; 15% Off All Services</p>
+<button class="mt-3 bg-white text-primary text-[11px] font-bold px-3 py-1.5 rounded-lg w-full">Upgrade Now</button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 scale-150 rotate-12">
+<span class="material-symbols-outlined text-6xl">verified</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 min-h-screen">
+<!-- TopAppBar (from JSON) -->
+<header class="sticky top-0 w-full flex items-center justify-between px-8 py-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl z-40 shadow-sm dark:shadow-none">
+<div class="flex items-center bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-full w-96 gap-3 group focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<span class="material-symbols-outlined text-slate-400">search</span>
+<input class="bg-transparent border-none text-sm w-full focus:ring-0 text-on-background" placeholder="Search for professionals..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 items-center">
+<button class="p-2 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-sm font-bold font-manrope">Sarah Jenkins</p>
+<p class="text-[10px] text-slate-500 font-medium">Homeowner Tier</p>
+</div>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full border-2 border-primary-container shadow-sm object-cover" data-alt="Close-up portrait of a smiling woman with glasses in a professional studio setting with soft lighting and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl2LvLXzsQER5sxl6UweHJ16lam4v_TrHsQP416EfKVqY8NcQnZ2BkZZdQOSNsGiGB3tnEhzrMg_XKEVP2OoKMwKoNYsBPhQvDcw06D74xUyXYX1yYiF14Jh4ZvtJdMqTZ6s6Q1cqEUCcUKpccEZNRAD_tK9kcrdp29-BdBw1OBksVl_pg4vWds3J4OY3vLtiZuQPomhgFWqzoMGGAs3DzAJy3l2fDi7-8u2mvR6861IXzWDWqKsyKt4kRfwL5aJnIa0OQRkhX1X8"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="p-8 max-w-7xl mx-auto space-y-8">
+<!-- Welcome Header & Quick Action -->
+<div class="flex items-end justify-between">
+<div>
+<h2 class="text-4xl font-manrope font-extrabold tracking-tight text-on-background">Hello, Sarah!</h2>
+<p class="text-on-surface-variant text-lg mt-1 font-body">Your home maintenance is running smoothly.</p>
+</div>
+<button class="flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3.5 rounded-xl font-bold font-manrope shadow-lg hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+                    Post New Job
+                </button>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/10 transition-all flex flex-col justify-between group">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-blue-50 text-blue-600 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<span class="text-[11px] font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full">+3 this month</span>
+</div>
+<div class="mt-6">
+<p class="text-4xl font-manrope font-extrabold">24</p>
+<p class="text-slate-500 font-medium text-sm mt-1">Jobs Completed</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/10 transition-all flex flex-col justify-between group">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-amber-50 text-secondary rounded-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<span class="text-[11px] font-bold text-secondary bg-secondary-fixed px-2 py-1 rounded-full">In Progress</span>
+</div>
+<div class="mt-6">
+<p class="text-4xl font-manrope font-extrabold">1</p>
+<p class="text-slate-500 font-medium text-sm mt-1">Active Jobs</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-transparent hover:border-primary/10 transition-all flex flex-col justify-between group">
+<div class="flex justify-between items-start">
+<div class="p-3 bg-green-50 text-green-700 rounded-lg group-hover:bg-green-700 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">savings</span>
+</div>
+<span class="text-[11px] font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded-full">Lifetime</span>
+</div>
+<div class="mt-6">
+<p class="text-4xl font-manrope font-extrabold text-primary">$1,240</p>
+<p class="text-slate-500 font-medium text-sm mt-1">Total Savings</p>
+</div>
+</div>
+</div>
+<!-- Dashboard Main Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Active Tracking (Left/Center Column) -->
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-primary/5">
+<div class="p-6 border-b border-slate-50 flex justify-between items-center">
+<h3 class="font-manrope font-bold text-xl flex items-center gap-2">
+<span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+                                Live Tracking
+                            </h3>
+<span class="text-primary font-bold text-sm bg-primary/5 px-3 py-1 rounded-full">ETA: 12 mins</span>
+</div>
+<div class="flex flex-col md:flex-row">
+<div class="p-6 md:w-1/2 space-y-6">
+<div class="flex items-center gap-4">
+<img alt="Marcus Chen Profile" class="w-16 h-16 rounded-xl object-cover border border-slate-100 shadow-sm" data-alt="Professional electrician wearing a blue polo shirt, holding a digital tablet, smiling in front of a modern workshop background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvgNjxiv_hyLpLOqPzcixXOQ4IPGy35jQxnL55bnDQU6nU1yqXGQHBWbqvMvZnk6IDNJq9YYopbooWKQIXFhyb0b3WUDlR-MV-4H53F0eSsSRHY42sri5x5mvA3bp-W9Amp0409A1P6MremsuN7lqGWvLfoBqCMyxEQ8UqPNpVo0aIziDH4fGmC4luqp5YmKvWju73WqOH13ItNNbRWpBxjdP53J42PO6qjzNH_kOKIU4s-xdg4h2bC0QVrthwwYLy-MgM8z_TrM"/>
+<div>
+<h4 class="font-manrope font-extrabold text-lg">Marcus Chen</h4>
+<p class="text-slate-500 text-sm">Certified Master Electrician</p>
+<div class="flex items-center gap-1 text-amber-500 mt-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-slate-700">4.9 (124 reviews)</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold text-slate-400 uppercase tracking-wider">
+<span>Status: En Route</span>
+<span>75%</span>
+</div>
+<div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 rounded-full"></div>
+</div>
+<p class="text-sm text-on-surface-variant italic">"Just left the hardware store, arriving shortly with the replacement panel."</p>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-slate-100 hover:bg-slate-200 text-on-background py-2.5 rounded-lg font-bold text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">message</span> Message
+                                    </button>
+<button class="flex-1 bg-slate-100 hover:bg-slate-200 text-on-background py-2.5 rounded-lg font-bold text-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span> Call
+                                    </button>
+</div>
+</div>
+<div class="md:w-1/2 relative min-h-[300px] bg-slate-200">
+<div class="absolute inset-0 grayscale opacity-40 hover:grayscale-0 transition-all duration-700 cursor-crosshair overflow-hidden">
+<div class="w-full h-full bg-[url('https://api.placeholder.com/600/400?text=Map+View')]" data-location="San Francisco" style="background-size: cover; background-position: center;"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<!-- Decorative Map Mock -->
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-24 h-24 bg-primary/10 rounded-full animate-ping"></div>
+<div class="w-8 h-8 bg-primary rounded-full border-4 border-white shadow-xl flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined text-white text-xs">electric_bolt</span>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 bg-white p-2 rounded-lg shadow-lg flex gap-2">
+<button class="p-1 hover:bg-slate-50 rounded"><span class="material-symbols-outlined text-sm">add</span></button>
+<button class="p-1 hover:bg-slate-50 rounded"><span class="material-symbols-outlined text-sm">remove</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommended Services Section -->
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-primary/5 hover:shadow-md transition-all group cursor-pointer">
+<h4 class="font-manrope font-bold mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+                                Seasonal Tip
+                            </h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4">Winter is coming! Have your HVAC system checked to save up to 20% on energy bills.</p>
+<span class="text-primary text-sm font-bold group-hover:underline flex items-center gap-1">
+                                Book HVAC Check <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-primary/5 hover:shadow-md transition-all group cursor-pointer">
+<h4 class="font-manrope font-bold mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">security</span>
+                                Home Safety
+                            </h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4">It's been 6 months since your last smoke detector test. We can schedule a pro for $49.</p>
+<span class="text-primary text-sm font-bold group-hover:underline flex items-center gap-1">
+                                Schedule Test <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Recent Activity (Right Column) -->
+<div class="space-y-6">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-primary/5 p-6 h-full">
+<h3 class="font-manrope font-bold text-xl mb-6 flex items-center justify-between">
+                            Recent Activity
+                            <button class="text-xs font-bold text-primary hover:underline">View All</button>
+</h3>
+<div class="space-y-8 relative">
+<!-- Vertical Line Decoration -->
+<div class="absolute left-[19px] top-2 bottom-2 w-px bg-slate-100"></div>
+<!-- History Item 1 -->
+<div class="relative flex gap-4">
+<div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center z-10 text-primary border-4 border-white shadow-sm">
+<span class="material-symbols-outlined text-lg">ac_unit</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold font-manrope">HVAC Maintenance</h4>
+<span class="text-[10px] font-medium text-slate-400">YESTERDAY</span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">Completed by Elena Rossi</p>
+<div class="mt-2 flex items-center gap-2 text-[10px] text-green-600 bg-green-50 w-fit px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-xs">verified</span> Certified Service
+                                    </div>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="relative flex gap-4">
+<div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center z-10 text-green-600 border-4 border-white shadow-sm">
+<span class="material-symbols-outlined text-lg">payments</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold font-manrope">Payment processed</h4>
+<span class="text-[10px] font-medium text-slate-400">OCT 14</span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">Kitchen Plumbing - $340.00</p>
+<button class="mt-2 text-[10px] font-bold text-primary flex items-center gap-1 hover:bg-primary/5 px-2 py-1 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-xs">download</span> View Receipt
+                                    </button>
+</div>
+</div>
+<!-- History Item 3 -->
+<div class="relative flex gap-4">
+<div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center z-10 text-secondary border-4 border-white shadow-sm">
+<span class="material-symbols-outlined text-lg">rate_review</span>
+</div>
+<div class="flex-1 bg-amber-50/50 p-3 rounded-xl border border-amber-100">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold font-manrope">Leave a review</h4>
+<span class="text-[10px] font-medium text-slate-400">OCT 12</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">How was the Carpentry job by Thomas Build?</p>
+<div class="flex gap-1 mt-3">
+<button class="p-1 hover:text-amber-500 transition-colors"><span class="material-symbols-outlined text-lg">star</span></button>
+<button class="p-1 hover:text-amber-500 transition-colors"><span class="material-symbols-outlined text-lg">star</span></button>
+<button class="p-1 hover:text-amber-500 transition-colors"><span class="material-symbols-outlined text-lg">star</span></button>
+<button class="p-1 hover:text-amber-500 transition-colors"><span class="material-symbols-outlined text-lg">star</span></button>
+<button class="p-1 hover:text-amber-500 transition-colors"><span class="material-symbols-outlined text-lg">star</span></button>
+</div>
+</div>
+</div>
+<!-- History Item 4 (Decorative placeholder) -->
+<div class="relative flex gap-4 opacity-50">
+<div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center z-10 text-slate-400 border-4 border-white shadow-sm">
+<span class="material-symbols-outlined text-lg">cleaning_services</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="text-sm font-bold font-manrope">Deep Cleaning</h4>
+<span class="text-[10px] font-medium text-slate-400">OCT 05</span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">Completed by Sparkle Cleaners</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Bottom Right) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 group">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-90 transition-transform">add</span>
+<div class="absolute right-20 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl">
+            New Request
+        </div>
+</button>
+</body></html>

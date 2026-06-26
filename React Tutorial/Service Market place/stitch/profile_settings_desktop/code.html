@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Settings - ServiceHub</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "inverse-primary": "#b4c5ff",
+              "outline": "#737686",
+              "on-error-container": "#93000a",
+              "on-surface-variant": "#434655",
+              "surface-dim": "#d9dadb",
+              "tertiary-container": "#bc4800",
+              "tertiary": "#943700",
+              "surface-tint": "#0053db",
+              "surface-container": "#edeeef",
+              "on-tertiary-fixed": "#360f00",
+              "error": "#ba1a1a",
+              "secondary-container": "#fea619",
+              "secondary-fixed": "#ffddb8",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-primary-fixed": "#00174b",
+              "on-secondary-container": "#684000",
+              "primary-fixed": "#dbe1ff",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb596",
+              "secondary": "#855300",
+              "on-secondary-fixed-variant": "#653e00",
+              "inverse-on-surface": "#f0f1f2",
+              "surface": "#f8f9fa",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#f8f9fa",
+              "on-primary-fixed-variant": "#003ea8",
+              "outline-variant": "#c3c6d7",
+              "primary-container": "#2563eb",
+              "on-secondary-fixed": "#2a1700",
+              "on-primary-container": "#eeefff",
+              "surface-container-high": "#e7e8e9",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-container": "#ffede6",
+              "inverse-surface": "#2e3132",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#191c1d",
+              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffdbcd",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f3f4f5",
+              "primary": "#004ac6",
+              "surface-variant": "#e1e3e4",
+              "on-background": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/20">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-blue-700 dark:text-blue-400 font-['Manrope'] tracking-tight">ServiceHub</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors font-['Manrope'] tracking-tight" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors font-['Manrope'] tracking-tight" href="#">Services</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors font-['Manrope'] tracking-tight" href="#">Schedule</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors font-['Manrope'] tracking-tight" href="#">Messages</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<button class="p-2 rounded-full text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 dark:border-blue-400 pb-1">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a professional man in a clean white studio setting, smiling warmly with soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTMm5sZwgwKAmuS6oY1S1-Zy4AaSaf40rzzFmvCZ0e3714ETj8cqCwimWPXR1zGA9z_dkCu7UkfiyMmnOZGmQomAOe5SgpWPgzDX4sQ9nEuqr9qV8zgFtL5o9LR7iZ7uf2xE682PSus39MTOrbwe2sISGjENvWSMY3c_6uSUL_Fj0uURfizNFitsXOoEYx0WwHZuPGpNTIAauRG2zG8o2HADg7BdUO_CSDkW5pDl2q1jV4WBcJ1UjO5XMWXkfnvT7YzpyyHpvWYxo"/>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex min-h-screen pt-20">
+<!-- Side Navigation Bar -->
+<aside class="hidden md:flex h-screen w-64 border-r border-slate-200/20 dark:border-slate-800/20 bg-slate-50 dark:bg-slate-950 flex-col gap-2 p-4 fixed left-0">
+<div class="flex flex-col items-center gap-3 py-6 border-b border-outline-variant/20 mb-4">
+<div class="relative">
+<img alt="User avatar" class="w-20 h-20 rounded-2xl object-cover shadow-sm" data-alt="Portrait of a smiling professional male worker in a modern workspace environment with soft ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkB1JHYc9mX0MQjzqVjtBUHzXRLu3QDZvK61c3Iv_qNhpBAIZQSqwFMM0SuhU1_iuchnlM8ruwoaNk76LGs_Wq2tfRY_Bt6DaEQlXauKX_ks3voBSsUeSy0OjtONxg8olU1fIHXY58nwuFNM_Ad3-2-96ryGl2UCISCJfpcp6sVNis0ZOfHcLdl5foIinyo3PdOHuN-njEn0T8lobjOsuxDLr2dzpYegDYChvZihBVfoO3emj_AY9TfhQaVF8bh9zgQDoOYzl8t1Q"/>
+<span class="absolute -bottom-1 -right-1 bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">Premium</span>
+</div>
+<div class="text-center">
+<h3 class="font-headline font-bold text-on-surface">Alex Johnson</h3>
+<p class="text-xs text-on-surface-variant font-medium">Premium Worker</p>
+</div>
+<button class="mt-2 text-[10px] font-bold text-primary hover:underline transition-all">View Public Profile</button>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 shadow-sm rounded-lg font-['Inter'] text-sm font-medium transition-transform duration-200 hover:translate-x-1" href="#profile-details">
+<span class="material-symbols-outlined text-[20px]">person</span>
+                    Profile Details
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 font-['Inter'] text-sm font-medium transition-transform duration-200 hover:translate-x-1" href="#security">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+                    Security
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 font-['Inter'] text-sm font-medium transition-transform duration-200 hover:translate-x-1" href="#notifications">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+                    Notifications
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 font-['Inter'] text-sm font-medium transition-transform duration-200 hover:translate-x-1" href="#payments">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+                    Payments
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 font-['Inter'] text-sm font-medium transition-transform duration-200 hover:translate-x-1" href="#account-status">
+<span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+                    Account Status
+                </a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-6 md:p-12 bg-surface-container-low max-w-5xl">
+<header class="mb-10">
+<h1 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface">Account Settings</h1>
+<p class="text-on-surface-variant mt-2 text-lg">Manage your personal information, security preferences, and billing details.</p>
+</header>
+<div class="grid grid-cols-1 gap-10">
+<!-- Section: Profile Details -->
+<section class="scroll-mt-24" id="profile-details">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-headline font-bold">Profile Details</h2>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-xl font-bold transition-transform hover:scale-[1.02] active:scale-[0.98]">Save Changes</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Avatar Column -->
+<div class="flex flex-col items-center gap-4">
+<div class="relative w-32 h-32 group">
+<img alt="Profile photo" class="w-full h-full rounded-2xl object-cover border-4 border-surface-container" data-alt="Professional profile headshot of a man with friendly expression, set against a neutral high-end studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZIF_45it5r2EbyU793LIof6Gonm_hqFQp1_f4ldS5drONe26UXXfKkfoABFo5_q--voQWTrOUW4ayEpgs4zXuo1-2VahB7C4A_ifmMUNjeoHGqS-zocZ1Ets1R29o6akpbZeJQy1TRhxr2U_I_dbF8k2g6j6W9gJD84_PG3k2qG79FIcxtTnXE4o9jBtZ-qIqhmX_YzUkZIG4d3GdgnipIZhkF2ErPhepYvUc9fqoBB_7Pru9FMl5akS0H82sVf1o0GhXWAS557g"/>
+<button class="absolute bottom-2 right-2 p-2 bg-primary text-on-primary rounded-lg shadow-lg hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<div class="text-center">
+<p class="text-xs font-semibold text-on-surface-variant">JPG, GIF or PNG. 1MB Max.</p>
+</div>
+</div>
+<!-- Form Column -->
+<div class="md:col-span-2 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-on-surface/80 px-1">Full Name</label>
+<input class="bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/40 transition-all font-medium" type="text" value="Alex Johnson"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-on-surface/80 px-1">Email Address</label>
+<input class="bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/40 transition-all font-medium" type="email" value="alex.j@servicehub.com"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-on-surface/80 px-1">Phone Number</label>
+<input class="bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/40 transition-all font-medium" type="tel" value="+1 (555) 000-1234"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-on-surface/80 px-1">Location</label>
+<input class="bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/40 transition-all font-medium" type="text" value="San Francisco, CA"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-on-surface/80 px-1">Bio / Description</label>
+<textarea class="bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/40 transition-all font-medium resize-none" rows="4">Licensed electrical contractor with 10+ years of experience in residential and commercial projects. Dedicated to safety and structural integrity.</textarea>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Security -->
+<section class="scroll-mt-24" id="security">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">lock</span>
+<h2 class="text-2xl font-headline font-bold">Security &amp; Authentication</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Change Password -->
+<div class="space-y-6">
+<h3 class="font-bold text-lg border-b border-outline-variant/20 pb-2">Update Password</h3>
+<div class="space-y-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-on-surface-variant px-1">Current Password</label>
+<input class="bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-on-surface-variant px-1">New Password</label>
+<input class="bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-bold text-on-surface-variant px-1">Confirm New Password</label>
+<input class="bg-surface-container-highest border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/40 transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<button class="text-primary font-bold text-sm hover:underline">Change Password</button>
+</div>
+<!-- Two-Factor Auth -->
+<div class="flex flex-col justify-between">
+<div class="space-y-6">
+<h3 class="font-bold text-lg border-b border-outline-variant/20 pb-2">Security Measures</h3>
+<div class="flex items-start justify-between p-4 bg-surface-container rounded-xl border-l-4 border-secondary-container">
+<div class="flex flex-col gap-1">
+<span class="font-bold">Two-Factor Authentication</span>
+<span class="text-xs text-on-surface-variant">Adds an extra layer of security to your account.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                        Keep your account secure by requiring a code from your mobile device when logging in from a new browser or computer.
+                                    </p>
+</div>
+<div class="mt-8 flex gap-2 items-center text-secondary font-bold text-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                                    Account currently verified
+                                </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Notifications -->
+<section class="scroll-mt-24" id="notifications">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">notifications_active</span>
+<h2 class="text-2xl font-headline font-bold">Notification Preferences</h2>
+</div>
+<div class="overflow-x-auto no-scrollbar">
+<table class="w-full">
+<thead>
+<tr class="text-left border-b border-outline-variant/20">
+<th class="py-4 font-headline text-on-surface-variant uppercase text-xs tracking-widest">Notification Type</th>
+<th class="py-4 text-center font-headline text-on-surface-variant uppercase text-xs tracking-widest px-4">Email</th>
+<th class="py-4 text-center font-headline text-on-surface-variant uppercase text-xs tracking-widest px-4">SMS</th>
+<th class="py-4 text-center font-headline text-on-surface-variant uppercase text-xs tracking-widest px-4">Push</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr>
+<td class="py-6">
+<div class="flex flex-col">
+<span class="font-bold">New Job Requests</span>
+<span class="text-xs text-on-surface-variant">When a customer requests your service</span>
+</div>
+</td>
+<td class="py-6 text-center">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="py-6 text-center">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="py-6 text-center">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+</tr>
+<tr>
+<td class="py-6">
+<div class="flex flex-col">
+<span class="font-bold">Messages</span>
+<span class="text-xs text-on-surface-variant">Direct messages from clients or providers</span>
+</div>
+</td>
+<td class="py-6 text-center">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="py-6 text-center">
+<input class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="py-6 text-center">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+</tr>
+<tr>
+<td class="py-6">
+<div class="flex flex-col">
+<span class="font-bold">Account Updates</span>
+<span class="text-xs text-on-surface-variant">Changes to policy, verification, and features</span>
+</div>
+</td>
+<td class="py-6 text-center">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="py-6 text-center">
+<input class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+<td class="py-6 text-center">
+<input class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Section: Payments -->
+<section class="scroll-mt-24" id="payments">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<h2 class="text-2xl font-headline font-bold">Payments &amp; Payouts</h2>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold hover:bg-primary/5 px-4 py-2 rounded-lg transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                                Add New
+                            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Saved Card -->
+<div class="p-6 bg-slate-900 text-white rounded-2xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<div class="relative z-10 flex flex-col h-full justify-between gap-10">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Primary Method</span>
+<span class="text-lg font-bold">Business Visa</span>
+</div>
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div class="space-y-1">
+<p class="font-headline font-bold tracking-[0.2em]">•••• •••• •••• 4492</p>
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase opacity-60">Expiry</span>
+<span class="text-sm font-medium">12 / 26</span>
+</div>
+<img alt="Visa" class="h-4 brightness-0 invert opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2jPptIoOOPqBwrtOCc__WgN89R4MaIDm_jh1k66wlyShJXS_JUMD8DjUNNwUuRRBN_hlKOpsTyXQY6WQfJUbf3DPJWhXLOipVTWIUSkPamyuauRRS7Ypk6b9PBgD-ohuHLR78eYQ7d9_N916q0-EwkxgK2LHPDtUKSuY52qhY4wtmPzjEKQZsTsTJTpOyCwCoyuwC93sI0-XXhLDQPOZAhMQh7OJZRGnOA907cknt443FL-0_0zcSUJ2F2mEyrSl2ncuQJitEHEQ"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Payout Settings -->
+<div class="p-6 bg-surface-container rounded-2xl border border-outline-variant/10 flex flex-col justify-between">
+<div class="space-y-2">
+<h4 class="font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">account_balance</span>
+                                        Bank Payouts
+                                    </h4>
+<p class="text-xs text-on-surface-variant">Your earnings are deposited here every Wednesday.</p>
+<div class="mt-4 flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl">
+<div class="w-10 h-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Chase Bank •••• 9901</span>
+<span class="text-[10px] text-green-600 font-bold uppercase">Active &amp; Verified</span>
+</div>
+</div>
+</div>
+<button class="mt-6 text-sm text-primary font-bold hover:underline self-start">Edit Payout Schedule</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Account Status -->
+<section class="scroll-mt-24 mb-12" id="account-status">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] border border-error/5">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-error text-3xl">dangerous</span>
+<h2 class="text-2xl font-headline font-bold">Danger Zone</h2>
+</div>
+<div class="space-y-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 bg-error-container/30 rounded-xl">
+<div class="flex flex-col gap-1">
+<span class="font-bold text-on-error-container">Deactivate Account</span>
+<span class="text-sm text-on-error-container/80">Temporarily disable your profile. You can come back at any time.</span>
+</div>
+<button class="px-6 py-2 bg-white border border-error text-error font-bold rounded-lg hover:bg-error/5 transition-colors">Deactivate</button>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 p-6 border border-outline-variant/20 rounded-xl">
+<div class="flex flex-col gap-1">
+<span class="font-bold">Delete Account</span>
+<span class="text-sm text-on-surface-variant">Permanently remove all your data, job history, and payout information. This action is irreversible.</span>
+</div>
+<button class="px-6 py-2 text-on-surface-variant font-bold hover:text-error transition-colors">Request Deletion</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 z-50 rounded-t-3xl border-t border-slate-100 dark:border-slate-800 shadow-[0_-10px_30px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-500 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-['Inter'] font-semibold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-500 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-['Inter'] font-semibold uppercase tracking-wider">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-500 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-['Inter'] font-semibold uppercase tracking-wider">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-2xl px-5 py-2 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-['Inter'] font-semibold uppercase tracking-wider">Account</span>
+</a>
+</nav>
+</body></html>

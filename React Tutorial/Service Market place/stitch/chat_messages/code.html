@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServiceHub | Messages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e1e3e4;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#ffddb8",
+                        "primary-fixed": "#dbe1ff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-surface": "#191c1d",
+                        "surface-variant": "#e1e3e4",
+                        "outline-variant": "#c3c6d7",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fea619",
+                        "on-background": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "outline": "#737686",
+                        "on-primary-container": "#eeefff",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-surface": "#2e3132",
+                        "on-primary-fixed": "#00174b",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-tint": "#0053db",
+                        "on-secondary-container": "#684000",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#434655",
+                        "primary-container": "#2563eb",
+                        "inverse-primary": "#b4c5ff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#bc4800",
+                        "surface": "#f8f9fa",
+                        "background": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-container": "#edeeef",
+                        "secondary": "#855300",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary": "#943700",
+                        "primary": "#004ac6",
+                        "surface-dim": "#d9dadb",
+                        "on-tertiary-container": "#ffede6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body text-on-surface flex flex-col h-screen overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-sm h-16 flex items-center justify-between px-8 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold text-blue-800 dark:text-blue-300 font-headline tracking-tight">ServiceHub</span>
+<nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Marketplace</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Projects</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">Messages</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full relative">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+</button>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover" data-alt="Professional headshot of a smiling man with short hair in a modern workspace setting with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaa5-D7chbzN4v5GcQoMhMrYQEGFcVMOERNqaxiln3YPjHquueFrf3disGo_hTD9Hfx4yb9dPiUQYjxiyc5HVcBOsp4bZM7iHaXjKrBMxuJPRwjmOJJ16vqZIUAFe3Jt7zQl-ijhuVWGGSbC7r-kidTQ9zdpUCZfagQVe2rI0wSP_1c3kSyrGEOAkyajY2yspGstrYaUI-4yCsXRt_phkJn7WvFtRLmv8sVckJnuRQFdQNNScHGQ_FsaHpIS1FSIbQQ8K77f6zjOE"/>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="flex flex-1 pt-16 h-full">
+<!-- Left Sidebar: Conversations -->
+<aside class="w-80 flex flex-col bg-slate-50 dark:bg-slate-950 border-r border-slate-100 dark:border-slate-800 py-6 px-4 space-y-2">
+<div class="px-2 mb-4">
+<h1 class="text-lg font-black text-slate-900 dark:text-white font-headline">Messages</h1>
+<p class="text-xs text-slate-500 font-medium">Direct Workspace</p>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-lg font-bold text-sm mb-4 active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+                New Message
+            </button>
+<div class="flex-1 overflow-y-auto custom-scrollbar space-y-1">
+<!-- Active Chat -->
+<div class="bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 shadow-sm rounded-lg p-3 flex gap-3 cursor-pointer">
+<div class="relative flex-shrink-0">
+<img alt="Marcus Henderson" class="w-12 h-12 rounded-lg object-cover" data-alt="Experienced male contractor in a clean white shirt standing in a well-lit modern home interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf3xv6lGsUZijPT4GHAc5nDPt_5WUikzPMIPeWM1XbOryow2BRW9xPvv0icDxCuG-CrgsqDVf3bR2wZoTSS8jzVA3eNPws0jHwdT1LhPWS70XWoqsGUT_nVje1G3tFIxUcRlHcxbhGx9Q5gLGqDTNbuwi76ZYL6mrf0hxIpNWtUZZLIkKNjmf_gkIkftK7UD3WjOUKbrzdg6I4Lp-TMUjKAj525xUjGK4RBdr7hBddFYYh-4pFElrfgTbckDZAAk6gg3ZzmL65cV4"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-sm truncate">Marcus Henderson</h3>
+<span class="text-[10px] text-slate-400 uppercase">12:45 PM</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400 truncate font-medium">I've picked up the new faucet components...</p>
+</div>
+</div>
+<!-- Inactive Chats -->
+<div class="hover:bg-white/50 dark:hover:bg-slate-900/50 rounded-lg p-3 flex gap-3 cursor-pointer transition-colors group">
+<img alt="Sarah Jenkins" class="w-12 h-12 rounded-lg object-cover" data-alt="Professional female architect holding blueprints in a bright studio with large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ap898uz_7XoSUGfIuU3Scmj7I0hT9pq00zTZmACbRV3fhsIlCtwQixMx_XMsc38aPinyEbN4gkpqfj7aKF44Eij-EmuLuvFuvwKKRJRDdBf6C8VW3dB_nmPjhKwm7OCB3RphymphewtC_M9T1-zqtq5iZNde7Cbf-_QcG-fbB47Gw1d2gOxaSUjuEQSatiOWG22JbAV86Ch3lJZvTmLJIghmHYuyck5Gtudt7y-IM98OA-BEJIE_T77WnTuCY1iMG0-GAZOs1eg"/>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 truncate">Sarah Jenkins</h3>
+<span class="text-[10px] text-slate-400 uppercase">Yesterday</span>
+</div>
+<p class="text-xs text-slate-500 truncate">The blueprints have been approved for the...</p>
+</div>
+<div class="flex-shrink-0 flex items-center">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+</div>
+</div>
+<div class="hover:bg-white/50 dark:hover:bg-slate-900/50 rounded-lg p-3 flex gap-3 cursor-pointer transition-colors">
+<img alt="Elena Rodriguez" class="w-12 h-12 rounded-lg object-cover" data-alt="Young female designer with glasses working on a tablet in a minimalist cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYF9B443txT_Iw4Qdek6T4C_rj_xl-1jMbG1hsEKTvgrgczTyO7d9OrgxRxXIk_IhEw5SiVszjBGb4fOhK9fH84hriuwenqw-miIe0YwxZ2oY1hasNRbnO4ZMg3yjIB8AeudDcZkuqohga5dUTN6k9UvA5HNHtzGeMgMZ508L6KG0OpirQac-H_tYWwcfBIH7mVQ1HxdQuj7mN3uHz29bhvbbDU17n6ogXMCYOu3krpbdl_K3LQK-jY2tZp3lcdQ3oKIKfq-fburQ"/>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-sm text-slate-900 dark:text-slate-100 truncate">Elena Rodriguez</h3>
+<span class="text-[10px] text-slate-400 uppercase">Monday</span>
+</div>
+<p class="text-xs text-slate-500 truncate">Looking forward to the consultation on...</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Chat Area -->
+<section class="flex-1 flex flex-col bg-surface-container-low relative">
+<!-- Chat Header -->
+<header class="h-16 flex items-center justify-between px-6 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 z-10">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Marcus Henderson" class="w-10 h-10 rounded-full object-cover" data-alt="Close up portrait of Marcus Henderson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF3-zSqWXhuy2sHuMgK-JIZxD8QVh3rhtdAqRNX_jW4Df4cfxKCw1nGBU89H9iI_X7-ooZBruWGAXAo7FYw_S32aTK-F-7qvl4DlR1jwiMMsgym7Lm_fQxYDSuiDDG-qmthnCmQHbJFdKZW0N9aYVODfkPmU8E7pMnW3yLouWywSLMKF--kHiPDb-84e2G5Qwcj_M4PvG7Hq-IqFaDXotcCai-7djzjk_wTWA2AxNtC1FobXljfaoJcOLZKfjXy8E0OrILxxys2C0"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-white rounded-full"></span>
+</div>
+<div>
+<h2 class="font-bold text-on-surface font-headline leading-none">Marcus Henderson</h2>
+<span class="text-xs text-emerald-600 font-medium">Online</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors text-slate-500">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+</button>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors text-slate-500">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+<button class="p-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors text-slate-500">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Message History -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
+<div class="flex justify-center">
+<span class="text-[10px] font-bold text-slate-400 bg-slate-200/50 dark:bg-slate-800 px-3 py-1 rounded-full uppercase tracking-widest">Today</span>
+</div>
+<!-- Received Message -->
+<div class="flex gap-3 max-w-[80%]">
+<div class="flex-shrink-0 mt-auto">
+<img alt="Marcus" class="w-8 h-8 rounded-lg object-cover" data-alt="Marcus portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiM6_lU2bQw-Xs_dkXOPNKzhjpQPUhNqhRCl-t2zc_zumCDBYXF6SQd8X4BGaDNY5R9qwwxAp4mmer6RDrPpi4xoCS8jtnfLUci7Xn4gmK9TN8pes3pWQ6hRnFF05-tkjxMC8n0x7iWr8rwJsprme8mdohxdILseUiRK-MtIZckwNheD19mDcEb8W817xRwWJ7-KWXR5EHoiEU1s-UaSLqB4rqx2OnPnk0GK-CmZPbwpkeeyWv5qk_5ycCKz8OzCk8uDpQPAIvyv0"/>
+</div>
+<div class="flex flex-col gap-1">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl rounded-bl-none shadow-sm text-sm leading-relaxed text-on-surface">
+                            Hi! I've arrived at the hardware store. They have the brushed nickel finish we discussed for the sink repair. Should I proceed with that or check for the chrome option?
+                        </div>
+<span class="text-[10px] text-slate-400 ml-1">12:42 PM</span>
+</div>
+</div>
+<!-- Sent Message -->
+<div class="flex flex-row-reverse gap-3 max-w-[80%] ml-auto">
+<div class="flex flex-col items-end gap-1">
+<div class="bg-primary-container text-on-primary-container p-4 rounded-xl rounded-br-none shadow-sm text-sm leading-relaxed">
+                            Brushed nickel sounds perfect. It matches the rest of the kitchen fixtures much better. Go ahead with that one!
+                        </div>
+<span class="text-[10px] text-slate-400 mr-1 flex items-center gap-1">
+                            12:44 PM
+                            <span class="material-symbols-outlined text-[12px] text-blue-500" data-icon="done_all">done_all</span>
+</span>
+</div>
+</div>
+<!-- Received Message -->
+<div class="flex gap-3 max-w-[80%]">
+<div class="flex-shrink-0 mt-auto">
+<img alt="Marcus" class="w-8 h-8 rounded-lg object-cover" data-alt="Marcus portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmNJOnsOzQ5S2kKqHYuL9lj6zJSytHvlBbKx8jrjEFDPa4smUPDuF0vyqlMyg_8Uv7xG-Qdp8zTPPRoXK_NM5C6tUboIe9Z7HWcdOpKICJLWKNj1f03KF3pSdOCtY55bK2EtkYSlzvSLCF4rQZBxpqv1gByZSLWI5RF_XbdDz5MUOjjjBu8aw0kZnkLJU3kxV4hS1bCxNOvipPcWI0tWvSShcQl7QzbSGuCUsfNgSRd89SiPRGTOVWLhJ9opUWGonAJkodb6zmiXA"/>
+</div>
+<div class="flex flex-col gap-1">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl rounded-bl-none shadow-sm text-sm leading-relaxed text-on-surface">
+                            Great, just picked it up. I've also picked up the new faucet components. I'll be at your place in about 20 minutes.
+                        </div>
+<span class="text-[10px] text-slate-400 ml-1">12:45 PM</span>
+</div>
+</div>
+</div>
+<!-- Message Input Area -->
+<footer class="p-4 bg-white dark:bg-slate-900">
+<div class="max-w-4xl mx-auto bg-surface-container-low dark:bg-slate-800 rounded-xl p-2 flex items-end gap-2 focus-within:ring-2 ring-primary/40 transition-all">
+<div class="flex gap-1 p-1">
+<button class="p-2 hover:bg-white dark:hover:bg-slate-700 rounded-lg transition-colors text-slate-500">
+<span class="material-symbols-outlined" data-icon="image">image</span>
+</button>
+<button class="p-2 hover:bg-white dark:hover:bg-slate-700 rounded-lg transition-colors text-slate-500">
+<span class="material-symbols-outlined" data-icon="attach_file">attach_file</span>
+</button>
+</div>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-3 px-2 resize-none placeholder:text-slate-400 text-on-surface" placeholder="Type your message here..." rows="1"></textarea>
+<button class="bg-primary hover:bg-primary-container text-white p-3 rounded-lg shadow-lg active:scale-95 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</footer>
+</section>
+<!-- Right Sidebar: Job Summary -->
+<aside class="w-80 bg-white dark:bg-slate-900 border-l border-slate-100 dark:border-slate-800 p-6 flex flex-col gap-6">
+<h2 class="font-bold text-lg font-headline text-on-surface">Job Summary</h2>
+<div class="bg-surface-container-low dark:bg-slate-800 rounded-xl p-5 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-wider mb-1 block">Current Project</span>
+<h3 class="font-bold text-on-surface leading-tight">Kitchen Sink Repair &amp; Upgrade</h3>
+</div>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-2 py-0.5 rounded-full font-bold">In Progress</span>
+</div>
+<div class="space-y-3 pt-2">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500">Agreed Price</span>
+<span class="font-bold text-primary">$185.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500">Scheduled Date</span>
+<span class="text-on-surface font-medium">Oct 24, 2024</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-500">Material Costs</span>
+<span class="text-on-surface font-medium">Included</span>
+</div>
+</div>
+<div class="pt-2 border-t border-slate-200 dark:border-slate-700">
+<a class="text-primary text-xs font-bold flex items-center gap-1 hover:underline" href="#">
+                        View Full Job Details
+                        <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Service Provider Stats -->
+<div class="space-y-4">
+<h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">About Professional</h4>
+<div class="flex items-center gap-3">
+<img alt="Marcus" class="w-10 h-10 rounded-lg object-cover" data-alt="Marcus portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMsU4sPSrsvyOK48pBz2mLh9DmYUNKFUhjmKtNXR0cSsBrqPwiuMXgMWgE-LIJtOcqqUropE6plCDrpotOC7ia3ezutUPDkaPD63vTHt4WV0DNWVZMiDTHD6GVTEYYUsgxFBzMc_kp5kev10GwineKtwTqijWxOQE-en6XGJZ2tQ0Ta4s8NdVVOsaaGVAshz_nlcRWYD8HmyDRiSOuO8vk6FAv5D5QfftXVrG1JnGNVd99L9GaFeftcu-7ydlZFhlT_krKZ6VJCQU"/>
+<div>
+<p class="font-bold text-sm text-on-surface leading-none">Marcus Henderson</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-yellow-500 text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.9</span>
+<span class="text-[10px] text-slate-400">(124 reviews)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-2 py-1 rounded-full">Licensed Plumber</span>
+<span class="text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-2 py-1 rounded-full">5+ Years Exp</span>
+</div>
+</div>
+<!-- Upcoming Milestone -->
+<div class="mt-auto bg-primary-container/10 dark:bg-blue-900/20 p-4 rounded-xl border border-primary/10">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="event_available">event_available</span>
+<div>
+<p class="text-xs font-bold text-primary">Next Step</p>
+<p class="text-xs text-on-surface-variant font-medium">Awaiting component installation. Target completion: 3:00 PM today.</p>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer Area (Suppressed per navigation rules as we are in a focused chat interface) -->
+</body></html>

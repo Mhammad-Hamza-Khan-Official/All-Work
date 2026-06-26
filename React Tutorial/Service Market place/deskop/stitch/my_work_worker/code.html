@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Work | MasterArtisan Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#f8f9fa",
+                        "primary": "#004ac6",
+                        "primary-fixed": "#dbe1ff",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-tint": "#0053db",
+                        "surface": "#f8f9fa",
+                        "tertiary-container": "#bc4800",
+                        "surface-dim": "#d9dadb",
+                        "inverse-primary": "#b4c5ff",
+                        "surface-container": "#edeeef",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "background": "#f8f9fa",
+                        "on-tertiary-container": "#ffede6",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "on-background": "#191c1d",
+                        "secondary-container": "#fea619",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "on-secondary-fixed": "#2a1700",
+                        "secondary-fixed": "#ffddb8",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-primary-container": "#eeefff",
+                        "outline": "#737686",
+                        "on-surface": "#191c1d",
+                        "on-secondary-container": "#684000",
+                        "outline-variant": "#c3c6d7",
+                        "on-surface-variant": "#434655",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-variant": "#e1e3e4",
+                        "secondary": "#855300",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-primary-fixed": "#00174b"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    boxShadow: {
+                        'premium': '0px 20px 40px rgba(25, 28, 29, 0.06)'
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-premium">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-headline font-bold text-xl tracking-tighter text-slate-900">MasterArtisan</span>
+<div class="hidden md:flex items-center bg-surface-container-highest px-4 py-2 rounded-lg w-96 group focus-within:ring-2 ring-primary/40 transition-all">
+<span class="material-symbols-outlined text-outline mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-outline" placeholder="Search jobs, customers, or messages..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-slate-100/50 transition-all duration-300 relative">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-100/50 transition-all duration-300">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+<div class="flex items-center gap-3 ml-2 pl-4 border-l border-outline-variant/30">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-on-surface">Alex Mercer</p>
+<p class="text-[10px] text-outline">Master Carpenter</p>
+</div>
+<img alt="Worker profile avatar" class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="portrait of a confident middle-aged craftsman with a short beard and professional work attire in a bright workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe7BZHieFrzd9od6wtLR3Aab_elBVL1qxRsLZqjOZxHvWP_8NmJkIOLHXSJWIjJtWJ3EJqWN0vFPY5kyYI99WTmJ1d8ngfKsVOszWyoF6MUafPZlOmSsCeWH3BgymyU9c89ovvEM0a0oLXeoCHUzlLa5oJfFboeKO0r2_cy8mQ4ODrauhf53-T7pNK5Q11tV5iEflEnIYgwo5E8-tcBPylrRnFMG5oK8cODAhCbdiz-aMtd92FWb-TbkOMXEACCsaWnRfntraKdIo"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Layout Container -->
+<div class="flex pt-20">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full w-64 p-6 pt-24 space-y-8 bg-slate-50 border-r-0">
+<div class="px-4">
+<h2 class="font-headline font-extrabold text-lg text-blue-700">Artisan Studio</h2>
+<p class="text-[11px] uppercase tracking-widest text-outline font-bold mt-1">Verified Professional</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 font-medium hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-headline tracking-tight text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-blue-600 font-bold shadow-premium rounded-lg transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-headline tracking-tight text-sm">My Jobs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 font-medium hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-headline tracking-tight text-sm">Schedule</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 font-medium hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-headline tracking-tight text-sm">Earnings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 font-medium hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-headline tracking-tight text-sm">Messages</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/20">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-white py-3 rounded-xl font-bold text-sm shadow-premium hover:scale-[1.02] active:scale-98 transition-all mb-8">
+                    New Quote
+                </button>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-slate-900 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">help</span>
+<span class="font-headline tracking-tight text-sm">Help Center</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span class="font-headline tracking-tight text-sm">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 p-6 lg:p-10 max-w-6xl mx-auto w-full">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<h1 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface mb-2">My Work</h1>
+<p class="text-on-surface-variant text-lg opacity-70">Manage your active projects and client milestones.</p>
+</div>
+<div class="flex p-1 bg-surface-container-low rounded-xl">
+<button class="px-5 py-2 text-sm font-bold bg-white shadow-sm rounded-lg text-primary">All</button>
+<button class="px-5 py-2 text-sm font-medium text-on-surface-variant hover:text-on-surface">In Progress</button>
+<button class="px-5 py-2 text-sm font-medium text-on-surface-variant hover:text-on-surface">Completed</button>
+<button class="px-5 py-2 text-sm font-medium text-on-surface-variant hover:text-on-surface">Drafts</button>
+</div>
+</div>
+<!-- Dashboard Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Job Card 1 -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl shadow-premium border border-transparent hover:border-primary/10 transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase tracking-widest rounded-full">In Progress</span>
+<button class="text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<h3 class="text-xl font-headline font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">Kitchen Cabinet Repair</h3>
+<div class="flex items-center gap-2 mb-4">
+<img alt="Customer avatar" class="w-6 h-6 rounded-full object-cover" data-alt="headshot of a friendly smiling woman in her 30s with professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrgVqnS0a3tNCCG6LMO-B3urfpgPbMrV8f5iZjWlAElel2hOI8cFF6WIgnTy46r3F2lbB_jgqk0gc44_he4RPrElAcjy7J-VDLDAsr7C2RkCOnDjf1GNqLL-vacmNQHz5_beIhyTv1l0Gd3Zh6_Y855Po5CvExYO1N1qv676wvG6pCnJ_jCsl9qJSmRVISPsFL98u2gA_GxI8QKD7SUA22RR5k4v9csjbU0F88fAcNNKy4i8hlW4DUkhzBrd_Clf30cx0WvLNEAao"/>
+<span class="text-sm font-medium text-on-surface-variant">Sarah Jenkins</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-sm text-outline">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Started Oct 12, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-outline">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Oak Ridge Estates, Suite 402</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-outline-variant/10">
+<button class="flex-1 bg-surface-container-highest text-on-surface py-2.5 rounded-lg font-bold text-xs hover:bg-surface-dim transition-colors">Update Milestone</button>
+<button class="p-2.5 rounded-lg bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">chat</span>
+</button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl shadow-premium border border-transparent hover:border-primary/10 transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold uppercase tracking-widest rounded-full">Upcoming</span>
+<button class="text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<h3 class="text-xl font-headline font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">Garden Irrigation Install</h3>
+<div class="flex items-center gap-2 mb-4">
+<img alt="Customer avatar" class="w-6 h-6 rounded-full object-cover" data-alt="headshot of a middle-aged man with glasses smiling gently" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm1WjC_o6pEKQ-PC5u5XwFXMhD7O9AKeaNFhGzMtlBNvHZpnqdk77SeoCR0UhudbRO-x1q1zGreIYRovDi3Xw3KDZHeVUH_rOKufdC1mAjEBh_0Ys9zX83nz1JGr-_empWwqH8-GL26GtEn6g2k1uRrLkkFJrn7k8QuQc_S8N8TOzixIvqncL22VvvCycfN3DpYwpEtGoDuY6Lp36fUoayI5XQhdAnXBygGWgUV3P1Mb5woB-oXRuQqrCZwqQqUHmEOcQfpQwGgrw"/>
+<span class="text-sm font-medium text-on-surface-variant">David Chen</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-sm text-outline">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Scheduled for Oct 24, 2023</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-outline">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Northwood Drive, 882</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-outline-variant/10">
+<button class="flex-1 bg-surface-container-highest text-on-surface py-2.5 rounded-lg font-bold text-xs hover:bg-surface-dim transition-colors">Confirm Arrival</button>
+<button class="p-2.5 rounded-lg bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">chat</span>
+</button>
+</div>
+</div>
+<!-- Job Card 3 (Bento-style variation) -->
+<div class="group bg-surface-container-lowest p-6 rounded-xl shadow-premium border border-transparent hover:border-primary/10 transition-all md:col-span-2 flex flex-col md:flex-row gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase tracking-widest rounded-full">Draft Quote</span>
+<span class="text-[11px] font-bold text-outline uppercase tracking-wider">Awaiting Artisan</span>
+</div>
+<h3 class="text-2xl font-headline font-extrabold text-on-surface mb-2 group-hover:text-primary transition-colors">Master Suite Flooring (Hardwood)</h3>
+<p class="text-on-surface-variant text-sm mb-6 max-w-xl">Estimate for 450 sq ft of premium oak flooring including sub-floor preparation and soundproofing layer installation.</p>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-2">
+<div class="p-3 bg-surface rounded-lg border border-outline-variant/20">
+<p class="text-[10px] text-outline font-bold uppercase">Estimated Value</p>
+<p class="text-lg font-headline font-bold text-primary">$4,850.00</p>
+</div>
+<div class="p-3 bg-surface rounded-lg border border-outline-variant/20">
+<p class="text-[10px] text-outline font-bold uppercase">Duration</p>
+<p class="text-lg font-headline font-bold text-on-surface">3-4 Days</p>
+</div>
+<div class="p-3 bg-surface rounded-lg border border-outline-variant/20">
+<p class="text-[10px] text-outline font-bold uppercase">Customer</p>
+<p class="text-lg font-headline font-bold text-on-surface">Robert King</p>
+</div>
+</div>
+</div>
+<div class="flex md:flex-col justify-end gap-3 md:w-48">
+<button class="flex-1 bg-primary text-white py-3 rounded-lg font-bold text-xs shadow-sm hover:brightness-110 active:scale-95 transition-all">Submit Quote</button>
+<button class="flex-1 bg-surface-container-high text-on-surface py-3 rounded-lg font-bold text-xs hover:bg-surface-dim transition-all">Edit Draft</button>
+</div>
+</div>
+<!-- Job Card 4 -->
+<div class="group bg-surface-container-low/40 p-6 rounded-xl shadow-sm border border-outline-variant/10 opacity-80 hover:opacity-100 transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-widest rounded-full">Completed</span>
+<span class="material-symbols-outlined text-green-600">verified</span>
+</div>
+<h3 class="text-xl font-headline font-bold text-on-surface mb-1">Custom Bookshelf Install</h3>
+<div class="flex items-center gap-2 mb-4">
+<img alt="Customer avatar" class="w-6 h-6 rounded-full object-cover grayscale" data-alt="softly lit studio portrait of a woman with curly hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArraUBxQgiukUnz0McJ24bZ5osdMunnvjmqUIK_1nf4acjWtvikrJqhvWwtb7ViM7Zr3rtaLs1meD_Qx_kA-HjLAyYE2c92kal7lRSilj7-DwIt4IvuV3DlgXLYyhDvbZnLz5iTNS88SnpsJmo5p_Kp_RlINvWdUV9gxeFc3yB78sc3IeYK_2_DjItf2NJE5VuzSN26wGVRoII8GfcTmA29-f3wEmXW8d9oFG7MHEu7Mu0XvvrzfYOLvSuehnvIbMHBkvm2_ZyhhY"/>
+<span class="text-sm font-medium text-on-surface-variant">Linda Morales</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-outline-variant/10">
+<button class="flex-1 border border-outline-variant text-on-surface-variant py-2.5 rounded-lg font-bold text-xs hover:bg-surface transition-colors">View Receipt</button>
+<button class="p-2.5 rounded-lg border border-primary/20 text-primary hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-xl">star</span>
+</button>
+</div>
+</div>
+<!-- Stats Summary Bento -->
+<div class="bg-gradient-to-br from-slate-900 to-slate-800 p-6 rounded-xl shadow-premium text-white flex flex-col justify-between overflow-hidden relative">
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+<div>
+<p class="text-xs font-bold uppercase tracking-[0.2em] text-primary-fixed/60 mb-1">Earnings Pulse</p>
+<h3 class="text-3xl font-headline font-extrabold mb-4">$12,480.00</h3>
+<p class="text-xs text-slate-400 max-w-[180px]">Total project value for 14 active and upcoming works.</p>
+</div>
+<div class="flex items-center gap-4 mt-6">
+<div class="flex -space-x-2">
+<img alt="Avatar 1" class="w-8 h-8 rounded-full border-2 border-slate-900" data-alt="close up headshot of person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsswdsOUEk4_PirVqWi6npSJQ41AHcHY5OwaXhXbR9jGejubK3JD6U9v8uFLprsK-qcQDc1iZsOCNXsYEW355r2PXH_pcK9C4voO_5S1uxEG5uj_382BrbSOSiiN2m1jDbaxyanNRGMs1qC9r9gC6SlpeVSGLNebEEyExStZXWX4ZA96BWk7iLQG61MGBNw9q7myhJksndwFxmRtno9ECc8jJ5SMUvFuq68w_pS-4vBzdYSyFKmXZkU2IDOiVwJ73jIF7gk4LA-sc"/>
+<img alt="Avatar 2" class="w-8 h-8 rounded-full border-2 border-slate-900" data-alt="close up headshot of person" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCVL7l78aJBSsBJhEIoM7Ym4U04jZGm890MS7j9K4BqgClWuC-L3oUAkB9PwsX5U26spQYMKCVQqpQ5Sz9a0LZzrHdY18t_8BPaHGAgUIGjIH40jQd2hqLtJdCsUfn4ycdaYf9aqL6NIOcrL7IAoHcJHdxpTVZNAE6fFMF2V2XMM1kLfxm46aYncBKf0fvI3dmK2jWBxdOzxL0UdJbnb4jA25KPvTniLz0HqKfo2xmt6Ni-DKP3Ns4r93gPvXOVCJnzZmtAWWiks8"/>
+<div class="w-8 h-8 rounded-full border-2 border-slate-900 bg-primary flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+<span class="text-[10px] font-bold text-primary-fixed uppercase tracking-widest">Active Clients</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

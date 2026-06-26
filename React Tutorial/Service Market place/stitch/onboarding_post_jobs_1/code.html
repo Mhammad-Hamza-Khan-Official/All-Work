@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServiceHub Onboarding - Post Your Project</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-container": "#edeeef",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary-container": "#bc4800",
+                        "surface-tint": "#0053db",
+                        "on-surface": "#191c1d",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#2a1700",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#ffede6",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary-fixed": "#ffddb8",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "secondary": "#855300",
+                        "on-primary-fixed": "#00174b",
+                        "inverse-primary": "#b4c5ff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#eeefff",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed": "#ffdbcd",
+                        "primary": "#004ac6",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#943700",
+                        "on-surface-variant": "#434655",
+                        "on-error-container": "#93000a",
+                        "surface": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "outline": "#737686",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "surface-dim": "#d9dadb",
+                        "secondary-container": "#fea619",
+                        "surface-bright": "#f8f9fa",
+                        "primary-fixed": "#dbe1ff",
+                        "primary-container": "#2563eb",
+                        "outline-variant": "#c3c6d7",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary-container": "#684000"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-effect {
+            backdrop-filter: blur(24px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+        }
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col items-center justify-center p-0 m-0 overflow-hidden">
+<!-- Main Canvas -->
+<main class="relative w-full max-w-[430px] h-[932px] bg-surface flex flex-col shadow-2xl overflow-hidden md:rounded-[3rem] md:border-[8px] md:border-on-surface">
+<!-- Header Space (Reserved for status bar feel) -->
+<div class="h-12 w-full"></div>
+<!-- Illustration/Form Area (Bento-style Mockup) -->
+<section class="flex-1 px-8 pt-6 flex flex-col items-center justify-center">
+<div class="relative w-full aspect-[4/5] bg-surface-container-low rounded-[2rem] p-6 flex flex-col gap-4 shadow-sm overflow-hidden border border-outline-variant/10">
+<!-- Abstract Design Elements for Depth -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 bg-secondary-container/10 rounded-full blur-3xl"></div>
+<!-- Job Post Card UI Mockup -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-Premium space-y-4 relative z-10 border border-outline-variant/5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment_add</span>
+</div>
+<div class="h-4 w-32 bg-surface-container-highest rounded-full"></div>
+</div>
+<div class="space-y-2 pt-2">
+<div class="h-3 w-full bg-surface-container-low rounded-full"></div>
+<div class="h-3 w-[85%] bg-surface-container-low rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-2">
+<div class="h-10 bg-surface-container-low rounded-lg flex items-center px-3">
+<div class="h-2 w-12 bg-outline-variant/40 rounded-full"></div>
+</div>
+<div class="h-10 bg-surface-container-low rounded-lg flex items-center px-3 border border-primary/20 bg-primary/5">
+<div class="h-2 w-16 bg-primary/40 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Floating Success Badge -->
+<div class="absolute bottom-16 right-4 bg-surface-container-lowest p-3 rounded-xl shadow-Premium flex items-center gap-3 animate-bounce-subtle z-20 border border-outline-variant/10">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-on-surface leading-none">Quote Received</div>
+<div class="text-[8px] text-on-surface-variant">2 mins ago</div>
+</div>
+</div>
+<!-- Decorative Asset -->
+<img alt="Professional workspace with architectural blueprints and a digital tablet" class="absolute top-0 left-0 w-full h-full object-cover opacity-10 pointer-events-none" data-alt="Close-up of a high-end designer workspace with a tablet showing a project brief, warm morning sunlight, and minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6jYPfqOlHUeaAu3H-i_GExrT3qn70BN2PEGCdqqqF8UZ7V4wqsEiz-ieQt2i5RvGcqFcfOuBqeVy_Pg4w-RfobbKOA5vS2rDwjEv5fvL67QQ_srNRjKWnwaosEdACPnQUS7r5Qo5nDkwdnf_uLWX0BZYQEwtMjcLXHtNdapFkr60gfO1pOesOxoEpNLvqUrxj-lQvXA87X5IV0Yja3cm4VFIDvA8SnA-dhQBhRNX4VS4sXXY5HcYQSUjUaLqDL-dsyXuda3BfEpU"/>
+</div>
+</section>
+<!-- Content Area -->
+<section class="px-8 pt-8 pb-12 flex flex-col items-center text-center">
+<h1 class="text-[2.5rem] font-extrabold text-on-surface leading-[1.1] tracking-tight mb-4">
+                Post Your Project
+            </h1>
+<p class="text-on-surface-variant text-lg leading-relaxed px-2 font-body font-normal opacity-80">
+                Describe your needs, set your budget, and receive quotes from top-rated artisans in minutes.
+            </p>
+<!-- Pagination Dots -->
+<div class="flex gap-2 mt-10">
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-6 h-2 rounded-full bg-primary-container"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+</div>
+</section>
+<!-- Footer Navigation -->
+<footer class="px-8 pb-12 flex items-center justify-between w-full">
+<button class="px-6 py-4 text-on-surface-variant font-label font-semibold hover:opacity-70 transition-opacity active:scale-95">
+                Back
+            </button>
+<button class="bg-gradient-primary text-white flex items-center gap-2 pl-8 pr-6 py-4 rounded-xl shadow-Premium hover:opacity-90 transition-all active:scale-95 group">
+<span class="font-label font-bold text-lg tracking-wide">Next</span>
+<span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</footer>
+<!-- Bottom Home Indicator Area -->
+<div class="h-2 w-32 bg-on-surface/10 rounded-full mx-auto mb-2"></div>
+</main>
+<!-- Background Elements (Desktop Only) -->
+<div class="hidden md:block fixed -z-10 top-0 left-0 w-full h-full bg-surface-container-low overflow-hidden">
+<div class="absolute top-[10%] left-[10%] w-[40vw] h-[40vw] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[10%] right-[10%] w-[30vw] h-[30vw] bg-tertiary-container/5 rounded-full blur-[100px]"></div>
+</div>
+</body></html>

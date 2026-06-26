@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ServiceHub Prime - Post Your Project</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#ffdbcd",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-primary-container": "#eeefff",
+              "on-tertiary-container": "#ffede6",
+              "on-primary-fixed": "#00174b",
+              "error": "#ba1a1a",
+              "on-surface-variant": "#434655",
+              "primary-fixed": "#dbe1ff",
+              "surface-variant": "#e1e3e4",
+              "surface": "#f8f9fa",
+              "tertiary": "#943700",
+              "surface-tint": "#0053db",
+              "primary-fixed-dim": "#b4c5ff",
+              "secondary": "#855300",
+              "outline-variant": "#c3c6d7",
+              "background": "#f8f9fa",
+              "primary": "#004ac6",
+              "surface-container-high": "#e7e8e9",
+              "secondary-container": "#fea619",
+              "surface-container": "#edeeef",
+              "on-tertiary": "#ffffff",
+              "outline": "#737686",
+              "on-error": "#ffffff",
+              "surface-dim": "#d9dadb",
+              "secondary-fixed": "#ffddb8",
+              "primary-container": "#2563eb",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary-fixed": "#2a1700",
+              "tertiary-container": "#bc4800",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#191c1d",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#f0f1f2",
+              "on-tertiary-fixed": "#360f00",
+              "inverse-surface": "#2e3132",
+              "on-primary-fixed-variant": "#003ea8",
+              "inverse-primary": "#b4c5ff",
+              "tertiary-fixed-dim": "#ffb596",
+              "secondary-fixed-dim": "#ffb95f",
+              "on-secondary-container": "#684000",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "on-background": "#191c1d"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- Suppressed Navigation Shell for Onboarding Focus -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 py-12 max-w-6xl mx-auto w-full">
+<!-- Branding Header (Logo only) -->
+<div class="mb-12 text-center">
+<span class="text-2xl font-extrabold text-primary tracking-tighter">ServiceHub Prime</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+<!-- Left Side: Content Hierarchy -->
+<div class="space-y-8 order-2 lg:order-1">
+<div class="space-y-4">
+<h1 class="text-5xl font-extrabold text-on-surface tracking-tight leading-[1.1]">
+                        Post Your Project
+                    </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-md">
+                        Describe your needs, set your budget, and receive competitive quotes from top-rated artisans in minutes.
+                    </p>
+</div>
+<div class="space-y-6">
+<!-- Progress Indicator -->
+<div class="flex items-center space-x-3">
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant"></div>
+<div class="w-8 h-2.5 rounded-full bg-primary"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-outline-variant"></div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl text-lg shadow-xl hover:scale-[1.02] active:scale-95 transition-all">
+                            Next
+                        </button>
+<button class="px-6 py-4 text-primary font-semibold hover:bg-primary/5 rounded-xl transition-colors">
+                            Skip
+                        </button>
+</div>
+</div>
+</div>
+<!-- Right Side: Intentional Asymmetry UI Mockup -->
+<div class="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+<!-- Background decorative element -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/10 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-12 -left-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+<!-- Job Posting Form Mockup -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-[0px_20px_40px_rgba(25,28,29,0.06)] w-full max-w-md border border-outline-variant/10">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">edit_square</span>
+</div>
+<span class="font-bold text-on-surface">New Project</span>
+</div>
+<span class="text-xs font-bold text-secondary-container bg-on-secondary-fixed-variant/5 px-3 py-1 rounded-full uppercase tracking-wider">Draft</span>
+</div>
+<div class="space-y-6">
+<!-- Project Title -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant">Project Title</label>
+<div class="bg-surface-container-highest p-4 rounded-lg text-on-surface font-medium border-l-4 border-primary">
+                                Modern Kitchen Cabinetry
+                            </div>
+</div>
+<!-- Description Mock -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant">Description</label>
+<div class="bg-surface-container-low p-4 rounded-lg space-y-2">
+<div class="h-2 w-full bg-outline-variant/30 rounded-full"></div>
+<div class="h-2 w-5/6 bg-outline-variant/30 rounded-full"></div>
+<div class="h-2 w-4/6 bg-outline-variant/30 rounded-full"></div>
+</div>
+</div>
+<!-- Budget & Category Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant">Budget Range</label>
+<div class="bg-surface-container-highest p-3 rounded-lg flex items-center text-primary font-bold">
+<span class="material-symbols-outlined text-sm mr-1">payments</span>
+                                    $2.5k - $4k
+                                </div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant">Expertise</label>
+<div class="bg-surface-container-highest p-3 rounded-lg flex items-center text-on-surface">
+<span class="material-symbols-outlined text-sm mr-1">architecture</span>
+                                    Woodwork
+                                </div>
+</div>
+</div>
+<!-- Floating Feedback Card (Asymmetric Layer) -->
+<div class="absolute -right-4 -bottom-6 bg-white p-4 rounded-xl shadow-2xl border border-outline-variant/10 flex items-center space-x-4 max-w-[240px]">
+<div class="flex -space-x-2">
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="portrait of a professional craftsman in his workshop with warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUkMV8FYBaSfEbDNtltIVTZOIKciA8odMd5DmjA2xllio8_n2Nk6aQlSjKDJ__rtgW-By-PA-hirDFPLZxvcAuXrPF8DO3YQduAULoA9MQZe0-fxwzTQAMzA9P7FkbwxAriAgEnCpwBQ6tBfSsuGngmQnLH9GNTNo_DSAFN8nkBlk9TxzcKdabChyov-DvsuhrZSGNUbaM6ugLkc08eNmRrarxYwpabewBDn7jP-npc7OnBfjpBLSnweeB9em32NVPigXv4HkmmJI"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="close up headshot of a female architect smiling with blurred office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-dUilSmAHF92YfX-rViUCyQ8TojT-McmvIZWzIDlLqE0t4dTPb83NerU_wH8vGKkrwQHeSmEMlIDZXf7jFxidxrEfGoMNWPaC4T3FuQ5XKBpBJpUsZlQksuBiJEaEsuS0g3ZfmiazmYNZzYdgFCfSscXgkvjf2kP8CGmDEkFMxqYPKhUYFCToTc6rG_DC1pbECdPgWwuJBgX0HNkRQc2twVmgAny-KDnNxczVWitJaIrG0jx9W2R-wnSBBISRqOxsHN9Bx7Gvfz0"/>
+</div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant leading-none mb-1">PROS READY</p>
+<p class="text-xs font-medium text-primary">12 local artisans match this</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Visual Footer Texture -->
+<div class="w-full h-1 bg-surface-container-low">
+<div class="h-full w-2/3 bg-primary"></div>
+</div>
+</body></html>

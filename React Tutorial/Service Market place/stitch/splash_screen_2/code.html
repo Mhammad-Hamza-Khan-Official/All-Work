@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#ffb95f",
+              "on-tertiary-fixed": "#360f00",
+              "primary-fixed-dim": "#b4c5ff",
+              "tertiary-container": "#bc4800",
+              "primary": "#004ac6",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#003ea8",
+              "on-tertiary-container": "#ffede6",
+              "inverse-primary": "#b4c5ff",
+              "error": "#ba1a1a",
+              "tertiary-fixed-dim": "#ffb596",
+              "on-secondary-fixed": "#2a1700",
+              "on-background": "#191c1d",
+              "primary-container": "#2563eb",
+              "on-surface": "#191c1d",
+              "on-secondary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#dbe1ff",
+              "surface-container-high": "#e7e8e9",
+              "on-primary": "#ffffff",
+              "surface-dim": "#d9dadb",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "tertiary": "#943700",
+              "secondary-container": "#fea619",
+              "inverse-surface": "#2e3132",
+              "on-secondary-container": "#684000",
+              "secondary-fixed": "#ffddb8",
+              "surface": "#f8f9fa",
+              "secondary": "#855300",
+              "inverse-on-surface": "#f0f1f2",
+              "surface-container-low": "#f3f4f5",
+              "background": "#f8f9fa",
+              "on-secondary-fixed-variant": "#653e00",
+              "on-primary-container": "#eeefff",
+              "surface-tint": "#0053db",
+              "surface-container-highest": "#e1e3e4",
+              "tertiary-fixed": "#ffdbcd",
+              "on-error": "#ffffff",
+              "outline": "#737686",
+              "surface-bright": "#f8f9fa",
+              "surface-variant": "#e1e3e4",
+              "surface-container": "#edeeef",
+              "outline-variant": "#c3c6d7",
+              "on-surface-variant": "#434655",
+              "on-primary-fixed": "#00174b",
+              "surface-container-lowest": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes progress-load {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+        .animate-progress {
+            animation: progress-load 3s ease-in-out forwards;
+        }
+        .bg-mesh {
+            background-color: #f8f9fa;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.03) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(37, 99, 235, 0.03) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body h-screen w-full flex flex-col items-center justify-between selection:bg-primary-container selection:text-on-primary-container overflow-hidden bg-mesh">
+<!-- Top Spacing for Alignment -->
+<div class="h-16 w-full"></div>
+<!-- Central Branding Anchor -->
+<main class="flex flex-col items-center text-center px-8 flex-grow justify-center">
+<!-- Logo Container with Shadow-Premium -->
+<div class="relative mb-8 group">
+<div class="absolute -inset-4 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<div class="relative w-24 h-24 md:w-32 md:h-32 bg-surface-container-lowest rounded-[2rem] shadow-[0_20px_40px_rgba(25,28,29,0.06)] flex items-center justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-5xl md:text-6xl" style="font-variation-settings: 'FILL' 1;">
+                    home_work
+                </span>
+</div>
+</div>
+<!-- Identity Strings -->
+<h1 class="font-headline font-extrabold text-4xl md:text-5xl tracking-tighter text-on-surface mb-3">
+            ServiceHub
+        </h1>
+<p class="font-body text-on-surface-variant font-medium text-lg tracking-wide opacity-80">
+            Precision at Your Doorstep
+        </p>
+<!-- Loading Experience -->
+<div class="mt-16 w-48 md:w-64">
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container animate-progress rounded-full"></div>
+</div>
+<p class="mt-4 font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/40 font-bold">
+                Establishing Secure Connection
+            </p>
+</div>
+</main>
+<!-- Footer Identity (Enterprise Context) -->
+<footer class="pb-12 text-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'wght' 700;">
+                verified_user
+            </span>
+<span class="font-label text-[11px] font-semibold text-on-surface-variant/60 tracking-tight">
+                v2.4.0 • Enterprise Ready
+            </span>
+</div>
+</footer>
+<!-- Background Decorative Elements (Architectural/Editorial Style) -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none z-[-1]">
+<!-- Intentional Asymmetry Shapes -->
+<div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] bg-surface-container-low rounded-full opacity-40"></div>
+<div class="absolute bottom-[5%] left-[-10%] w-[30%] h-[30%] bg-surface-container-high rounded-full opacity-20"></div>
+</div>
+</body></html>

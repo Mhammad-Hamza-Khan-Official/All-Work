@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Worker Profile - ServiceHub</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#f0f1f2",
+              "on-primary-container": "#eeefff",
+              "error": "#ba1a1a",
+              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffdbcd",
+              "primary": "#004ac6",
+              "error-container": "#ffdad6",
+              "on-surface-variant": "#434655",
+              "tertiary": "#943700",
+              "surface": "#f8f9fa",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-background": "#191c1d",
+              "outline": "#737686",
+              "on-tertiary-fixed": "#360f00",
+              "on-error": "#ffffff",
+              "inverse-surface": "#2e3132",
+              "surface-dim": "#d9dadb",
+              "secondary-container": "#fea619",
+              "surface-bright": "#f8f9fa",
+              "primary-fixed": "#dbe1ff",
+              "outline-variant": "#c3c6d7",
+              "primary-container": "#2563eb",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-secondary-container": "#684000",
+              "on-primary-fixed-variant": "#003ea8",
+              "surface-container": "#edeeef",
+              "surface-container-low": "#f3f4f5",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "tertiary-container": "#bc4800",
+              "surface-tint": "#0053db",
+              "on-surface": "#191c1d",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb596",
+              "surface-variant": "#e1e3e4",
+              "on-secondary-fixed": "#2a1700",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#ffede6",
+              "secondary-fixed-dim": "#ffb95f",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#653e00",
+              "surface-container-high": "#e7e8e9",
+              "secondary-fixed": "#ffddb8",
+              "inverse-primary": "#b4c5ff",
+              "secondary": "#855300",
+              "on-primary-fixed": "#00174b"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/20">
+<!-- Top Navigation Anchor -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none fixed top-0 w-full z-50">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<button class="active:scale-95 duration-200 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-manrope font-bold tracking-tight text-lg text-on-surface">Professional Profile</h1>
+<button class="active:scale-95 duration-200 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32 max-w-2xl mx-auto px-4 space-y-8">
+<!-- Profile Header: Asymmetric Layout -->
+<section class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+<div class="relative group">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden shadow-2xl ring-4 ring-white">
+<img alt="Alex Johnson" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a smiling male master electrician in a clean branded work shirt, soft studio lighting, professional background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3iXrKCnVJmD0U3Z0hY9wxVK9VdvMM7vUALCsYMpoj8dWBkH7uzb_ehGWYsdvhi2mKEF8UESe4AQbC7FXvSXDuDGT83zsPryx3dvoqBf0slqe0-nlZKsFMLZmrtj7RKrQf7cUXpYMkCfuI_zW797S5KusdKtdFaqmWv_q7L25ygT_s5GKy0ACTgIwlzfn_Mjyd0AmGlwus-AvPy9yuZpsYBHpcvsNjquCO4xYzJ59q0CfdDeua-vTQWiSQSHcV5Lf8sv-V5r1dabA"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined !text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    VERIFIED PRO
+                </div>
+</div>
+<div class="space-y-1">
+<h2 class="text-3xl md:text-4xl font-headline font-extrabold tracking-tight text-on-surface">Alex Johnson</h2>
+<p class="text-primary font-semibold text-lg flex items-center gap-2">
+                    Master Electrician
+                    <span class="w-1.5 h-1.5 rounded-full bg-outline-variant/40"></span>
+<span class="text-on-surface-variant font-medium text-base">License #EL-99283</span>
+</p>
+<div class="flex items-center gap-2 pt-2">
+<span class="material-symbols-outlined text-secondary" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-on-surface-variant text-sm">(128 reviews)</span>
+</div>
+</div>
+</section>
+<!-- Stats Row: Layered Surface Container Low -->
+<section class="grid grid-cols-3 gap-3">
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-1 hover:bg-surface-container-high transition-colors">
+<span class="text-xs font-bold text-outline uppercase tracking-wider">Rating</span>
+<span class="text-xl font-headline font-extrabold text-on-surface">4.9/5</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-1 hover:bg-surface-container-high transition-colors">
+<span class="text-xs font-bold text-outline uppercase tracking-wider">Jobs</span>
+<span class="text-xl font-headline font-extrabold text-on-surface">142</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col items-center justify-center text-center space-y-1 hover:bg-surface-container-high transition-colors">
+<span class="text-xs font-bold text-outline uppercase tracking-wider">Exp.</span>
+<span class="text-xl font-headline font-extrabold text-on-surface">12+ Yrs</span>
+</div>
+</section>
+<!-- Bio: Editorial Style -->
+<section class="space-y-3">
+<h3 class="font-headline font-bold text-xl">Professional Bio</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                As a Master Electrician with over a decade of hands-on experience, I focus on delivering safe, efficient, and aesthetically integrated electrical solutions. My approach combines traditional craftsmanship with modern smart home innovations, ensuring every project meets the highest safety standards while exceeding client expectations.
+            </p>
+</section>
+<!-- Specializations: Chips -->
+<section class="space-y-4">
+<h3 class="font-headline font-bold text-xl">Specializations</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-primary/5 text-primary text-sm font-semibold rounded-full border border-primary/10">Electrical Systems</span>
+<span class="px-4 py-2 bg-primary/5 text-primary text-sm font-semibold rounded-full border border-primary/10">Smart Home Integration</span>
+<span class="px-4 py-2 bg-primary/5 text-primary text-sm font-semibold rounded-full border border-primary/10">EV Charger Install</span>
+<span class="px-4 py-2 bg-primary/5 text-primary text-sm font-semibold rounded-full border border-primary/10">Panel Upgrades</span>
+<span class="px-4 py-2 bg-primary/5 text-primary text-sm font-semibold rounded-full border border-primary/10">LED Lighting</span>
+</div>
+</section>
+<!-- Location: Ghost Boundary Map -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h3 class="font-headline font-bold text-xl">Service Area</h3>
+<span class="text-primary font-semibold text-sm flex items-center gap-1">
+<span class="material-symbols-outlined !text-sm" data-icon="location_on">location_on</span>
+                    Chicago, IL
+                </span>
+</div>
+<div class="relative h-48 w-full rounded-2xl overflow-hidden bg-surface-container-highest">
+<img alt="Service Area Map" class="w-full h-full object-cover grayscale opacity-60" data-alt="Minimalist map graphic of Downtown Chicago and surrounding suburbs with subtle blue highlighting of the service coverage area." data-location="Chicago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRA-norqxuXcYFibzULnjqSoqYJE5lUxAN6_3h7irT_TI74o1IMrOElc_9FmnNmX8Ef-_e1wq77uiJEEV0_cZ7Z9sy_wlJxaMibEjTVa0d9F2L0FqRWqnkpK72DQS_VdlHHwG7PJAbK3vbCmWhPyikO3iWUbOoRUQLI09CSJDzlpdXPxWC3k1l1OeRSDdC76zrXTeWtAq59I8kZ2kXLYGnmhGWrTyg9d5QvtzNgPBxdpuifzZ-0n5DlMxVvOWlVhNkxtn2Us0_74Q"/>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-xl animate-pulse">
+<span class="material-symbols-outlined" data-icon="person_pin_circle">person_pin_circle</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-xl shadow-lg border border-white/20">
+<p class="text-sm font-medium text-on-surface">Serving Downtown Chicago and surrounding suburbs within a 25-mile radius.</p>
+</div>
+</div>
+</section>
+<!-- Recent Projects: Horizontal Scroll -->
+<section class="space-y-4">
+<h3 class="font-headline font-bold text-xl">Recent Projects</h3>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-4 px-4">
+<div class="min-w-[280px] group">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface-container relative mb-3">
+<img alt="Kitchen Lighting Install" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern high-end kitchen with sophisticated LED pendant lighting and under-cabinet accents installed by a professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHfQjvGQEEG0L-FXNmcQw6XFFZmlUJtShp3egianeNhyKMzllW475XgBqHHq4NvOgo1UQgC8deKhOEto59cAAv3SeM3tUTc9WW8aprKDXZGgvT9i2ltOqLzS3iHFpCjVThKvwU2juiE_Kn11Qb_1trvrS20tv39XVfZLCKQqS6-xn9eenB7bRKai2zj6aD5Ele7X6lYxI_UTmccUH-iOa9xQM_wbcJfFpCVcmoIjmIV-f7RvegW-lH0FXySp5aciWxU124plvlaLY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 text-white">
+<p class="text-xs font-bold uppercase tracking-widest opacity-80">Lighting</p>
+<p class="font-semibold">Kitchen Lighting Install</p>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] group">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface-container relative mb-3">
+<img alt="Main Panel Upgrade" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Cleanly organized residential electrical circuit breaker panel with professional wiring labels and tidy cable management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkf70sQmy_XYlX2pEE3KVyArUtC1d_-Oxrl4OAGeqmQ_X41pQVhBcS1FIvnTvTdx3JNmxmrP3C3B8YkdcoD9ShwH3T_xDzshepQtrZoyROhSqG-OOpUU-e3POpVTJad3jH2ETGbk9d2Xbzv8uXkpUj256sqebTfes52kcT2VCZO56-X_GIRaZXIFnpgeixMF-KWbMQn1kxieY_lX4nKwWs86XeLqhmg5vou-ppnifS4CwgYz7WdSJWMttOnRoAZ6XEphzj32ut0dw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 text-white">
+<p class="text-xs font-bold uppercase tracking-widest opacity-80">Infrastructure</p>
+<p class="font-semibold">Main Panel Upgrade</p>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] group">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface-container relative mb-3">
+<img alt="EV Station Setup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Wall-mounted electric vehicle charging station in a clean garage setting, professionally installed with conduit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkgayCPGPSJMfc-k3jxBBuri3oniKI5FKmtqyJo-tgLgpHfMCWV33Bw-G8x21J0rztVLzWZY5hH9n3EMNaYiwrIKLamgRFL1-J8B6N1PRA8qbO99uVLl7Xok5lkKZmG8pzspCt6nTbiObuBOIOTZmC_AwQofQb4wVJ0EvzQGDCBU2hKzwct30biR7iSEIqx2G4AWVtvKTuZNTbhuV1ZxuetGuXU4dRWc8UGBTFsQxYs6K_XrPEAgKf959lrn-f8x9FF3WhWHbBS2c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 text-white">
+<p class="text-xs font-bold uppercase tracking-widest opacity-80">Green Energy</p>
+<p class="font-semibold">EV Station Setup</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom CTA -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 z-50">
+<div class="max-w-2xl mx-auto flex items-center gap-4">
+<button class="w-14 h-14 rounded-xl flex items-center justify-center border border-outline-variant text-on-surface-variant hover:bg-slate-50 transition-colors active:scale-90">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+<button class="flex-1 h-14 bg-gradient-to-br from-primary to-primary-container text-white font-manrope font-bold text-lg rounded-xl shadow-[0_8px_30px_rgb(0,74,198,0.3)] hover:brightness-110 transition-all active:scale-[0.98]">
+                Request Quote
+            </button>
+</div>
+</div>
+<!-- Nav Shell Suppression: Not top level, so BottomNavBar hidden, back navigation prioritized -->
+</body></html>
